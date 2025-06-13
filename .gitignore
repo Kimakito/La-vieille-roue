@@ -1,0 +1,32 @@
+# Dépendances Node (si tu utilises npm/yarn)
+node_modules/
+
+# Fichiers de cache de build
+dist/ # ou le dossier de sortie de ton CSS compilé si différent (ex: public/css)
+.parcel-cache/ # Exemple pour Parcel
+.next/ # Exemple pour Next.js
+
+# Fichiers de log
+*.log
+log/
+
+# Fichiers générés par le build de Tailwind ou autres outils
+dist/
+
+# Fichiers de configuration sensibles (si présents et non génériques)
+.env
+.env.local
+*.env
+
+# Fichiers d'IDE (comme VS Code, IntelliJ)
+.vscode/
+
+# Fichiers système
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# PHP spécifiques
+vendor/  # Si tu utilises Composer
+composer.lock # Souvent inclus, mais parfois ignoré
+php_error.log
+.phpunit.result.cache
