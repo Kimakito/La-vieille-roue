@@ -1,0 +1,21 @@
+{
+  "name": "la-vieille-roue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kimakito/La-vieille-roue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Kimakito/La-vieille-roue/issues"
+  },
+  "homepage": "https://github.com/Kimakito/La-vieille-roue#readme"
+}
