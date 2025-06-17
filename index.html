@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <header
       id="navbar"
-      class="bg-background-dark text-white hover:text-accent font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-10 w-full"
+      class="bg-background-dark text-white hover:text-accent font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-2 w-full"
     >
       <!-- Menu Burger pour petits écrans -->
       <div class="lg:hidden">
@@ -49,7 +49,7 @@
       <!-- Partie gauche - Lien principaux -->
       <div class="hidden lg:flex items-center gap-4">
         <a
-          href="/jantes"
+          href="public\jantes.html"
           class="page hover:bg- hover:bg-clip-text hover:text-transparent transition-all duration-300"
         >
           Réparation de jantes
@@ -57,7 +57,7 @@
 
         <!-- Lien "Devenez conseiller" -->
         <a
-          href="/vehicules-anciens"
+          href="public\renovation.html"
           class="px-2 py-1 rounded hover:opacity-90"
         >
           Rénovation de véhicules anciens
@@ -69,9 +69,9 @@
         <a href="/">
           <img
             id="logo"
-            src="./assets/images/logo.jpg"
+            src="./assets/images/LOGO.png"
             alt="logo"
-            class="h-12 lg:h-16"
+            class="max-w-[120px] h-auto"
           />
         </a>
       </div>
@@ -79,34 +79,11 @@
       <!-- Partie droite - Liens secondaires -->
       <div class="hidden lg:flex items-center gap-2">
         <a
-          href="/rendez-vous"
+          href="public\contact.html"
           class="page flex gap-1 items-center hover:bg- hover:bg-clip-text hover:text-transparent transition-all duration-300"
         >
           Contactez-nous
         </a>
-
-        <!-- Dropdown Sites -->
-            <a
-              href="#"
-              data-dropdown="sites"
-              class="page block p-1 flex items-center gap-2 rounded"
-            >
-              Prise de rendez-vous
-              <span class="icon-chevron"></span>
-            </a>
-            <div
-              class="absolute z-20 bg-white shadow-lg mt-2 rounded dropdown-custom dropdown-sites hidden"
-            >
-              <a
-                href="#"
-                target="blank"
-                class="block px-4 py-2 hover:bg-gray-200 "
-              >
-                Réparation Jantes
-              </a>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-200">
-                Rénovation véhicules anciens
-              </a>
             </div>
       </div>
     </header>
@@ -243,7 +220,7 @@
     </section>
 
     <section
-        class="relative h-[500px] flex items-center justify-center text-text-light text-center px-4 md:px-8"
+        class="relative h-full flex items-center justify-center text-text-light text-center px-4 md:px-8 py-12"
         style="background-image: url('./assets/images/porsche-8343861_1280.jpg'); background-attachment: fixed; background-size: cover; background-position: center;"
     >
         <div class="absolute inset-0 bg-background-dark bg-opacity-70"></div>
@@ -251,6 +228,15 @@
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
                 Une Passion Transmise de Génération en Génération
             </h2>
+            <p class="text-lg md:text-xl leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
+            </p> 
+            <p class="text-lg md:text-xl leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
+            </p> 
+            <p class="text-lg md:text-xl leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
+            </p> 
             <p class="text-lg md:text-xl leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
             </p>
@@ -301,7 +287,7 @@
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 border-b border-neutral-medium">
 
             <div class="md:col-span-1 flex justify-center md:justify-start mb-6 md:mb-0">
-                <img class="max-w-[180px] h-auto" src="./assets/images/logo.jpg" alt="Logo La Vieille Roue">
+                <img class="max-w-[180px] h-auto" src="./assets/images/LOGO.png" alt="Logo La Vieille Roue">
             </div>
 
             <div class="md:col-span-1 text-sm">
@@ -370,17 +356,18 @@
 
         <section class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
-                <a href="/confidentialite" 
+                <a href="/public/politique-confidentialite.html"
+ 
                    class="hover:text-text-light transition-colors duration-300">
                     Politique de confidentialité
                 </a>
                 <span class="text-accent">|</span>
-                <a href="mentions-legales" 
+                <a href="/public/mentions-legales.html" 
                    class="hover:text-text-light transition-colors duration-300">
                     Mentions légales
                 </a>
             </div>
-            <p class="text-center md:text-right">© 2025 La vieille roue. Tous droits réservés.</p>
+            <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
         </section>
     </div>
 </footer>
