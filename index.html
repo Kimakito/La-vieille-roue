@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <!-- Fonts -->
     <link rel="stylesheet" href="/assets/icomoon/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,76 +17,65 @@
   <body
     class="font-k2d bg-primary-medium text-text-dark min-h-screen flex flex-col"
   >
-    <!-- Navbar -->
-    <header
-      id="navbar"
-      class="bg-background-dark text-white hover:text-accent font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-2 w-full"
+<header
+  id="navbar"
+  class="bg-background-dark text-white font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-2 w-full"
+>
+  <div class="flex-shrink-0">
+    <a href="/">
+      <img
+        id="logo"
+        src="./assets/images/LOGO.png"
+        alt="logo"
+        class="max-w-[120px] h-auto"
+      />
+    </a>
+  </div>
+
+  <div class="lg:hidden">
+    <button
+      id="burgerMenu"
+      aria-label="Ouvrir le menu"
+      class="text-gray-800 focus:outline-none"
     >
-      <!-- Menu Burger pour petits écrans -->
-      <div class="lg:hidden">
-        <button
-          id="burgerMenu"
-          aria-label="Ouvrir le menu"
-          class="text-gray-800 focus:outline-none"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
-      </div>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
+    </button>
+  </div>
 
-      <!-- Partie gauche - Lien principaux -->
-      <div class="hidden lg:flex items-center gap-4">
-        <a
-          href="public\jantes.html"
-          class="page hover:bg- hover:bg-clip-text hover:text-transparent transition-all duration-300"
-        >
-          Réparation de jantes
-        </a>
-
-        <!-- Lien "Devenez conseiller" -->
-        <a
-          href="public\renovation.html"
-          class="px-2 py-1 rounded hover:opacity-90"
-        >
-          Rénovation de véhicules anciens
-        </a>
-      </div>
-
-      <!-- Logo au centre -->
-      <div class="flex justify-center flex-grow">
-        <a href="/">
-          <img
-            id="logo"
-            src="./assets/images/LOGO.png"
-            alt="logo"
-            class="max-w-[120px] h-auto"
-          />
-        </a>
-      </div>
-
-      <!-- Partie droite - Liens secondaires -->
-      <div class="hidden lg:flex items-center gap-2">
-        <a
-          href="public\contact.html"
-          class="page flex gap-1 items-center hover:bg- hover:bg-clip-text hover:text-transparent transition-all duration-300"
-        >
-          Contactez-nous
-        </a>
-            </div>
-      </div>
-    </header>
+  <nav class="hidden lg:flex items-center gap-4">
+    <a
+      href="public\jantes.html"
+      class="transition-all duration-300 hover:text-accent"
+    >
+      Réparation de jantes
+    </a>
+    <a
+      href="public\renovation.html"
+      class="transition-all duration-300 hover:text-accent"
+    >
+      Rénovation de véhicules anciens
+    </a>
+    <a
+      href="public\contact.html"
+      class="transition-all duration-300 hover:text-accent flex gap-1 items-center"
+    >
+      Contactez-nous
+    </a>
+  </nav>
+</header>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -220,11 +209,11 @@
     </section>
 
     <section
-        class="relative h-full flex items-center justify-center text-text-light text-center px-4 md:px-8 py-12"
+        class="relative h-full flex items-center justify-center text-text-light text-center px-4 md:px-8 py-26"
         style="background-image: url('./assets/images/porsche-8343861_1280.jpg'); background-attachment: fixed; background-size: cover; background-position: center;"
     >
         <div class="absolute inset-0 bg-background-dark bg-opacity-70"></div>
-        <div class="relative z-10 max-w-3xl mx-auto">
+        <div class="relative z-10 max-w-3xl mx-auto py-26">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
                 Une Passion Transmise de Génération en Génération
             </h2>
@@ -339,16 +328,13 @@
                 <h3 class="font-semibold text-lg text-text-light mb-4">Suivez-nous</h3>
                 <div class="flex gap-6">
                     <a href="https://www.instagram.com/ikami_france/" target="_blank" aria-label="Instagram">
-                        <img src="./assets/images/logos/instagram.svg" alt="Instagram" class="w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
-                    </a>
-                    <a href="https://www.youtube.com/user/votreChaine" target="_blank" aria-label="YouTube">
-                        <img src="./assets/images/logos/youtube.svg" alt="YouTube" class="w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                        <span class="icon-instagram w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
                     </a>
                     <a href="https://www.facebook.com/ikamifrance/" target="_blank" aria-label="Facebook">
-                        <img src="./assets/images/logos/facebook.svg" alt="Facebook" class="w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                        <span class="icon-facebook w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
                     </a>
                     <a href="https://www.linkedin.com/company/ikami-france/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
-                        <img src="./assets/images/logos/linkedin.svg" alt="LinkedIn" class="w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                        <span class="icon-linkedin w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
                     </a>
                 </div>
             </div>
