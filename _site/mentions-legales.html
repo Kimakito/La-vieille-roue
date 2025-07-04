@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
+
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="/assets/favicon/favicon-16x16.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="/assets/favicon/favicon-32x32.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="96x96"
+		href="/assets/favicon/favicon-96x96.png"
+	/>
+
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="/assets/favicon/apple-icon-180x180.png"
+	/>
+	<link rel="manifest" href="/assets/favicon/manifest.json" />
+
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta
+		name="msapplication-TileImage"
+		content="/assets/favicon/ms-icon-144x144.png"
+	/>
+	<meta name="theme-color" content="#ffffff" />
+
+	<link href="/dist/output.css" rel="stylesheet" />
+	<!-- Fonts -->
+	<link rel="stylesheet" href="/assets/icomoon/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;800&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+		rel="stylesheet"
+	/>
+	<title>La vieille roue</title>
+</head>
+
+  <body class="font-k2d bg-primary-medium text-text-dark min-h-screen flex flex-col">
+    <header id="navbar"
+    class="bg-background-dark text-white font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-2 w-full">
+    <div class="flex-shrink-0">
+        <a href="/">
+            <img id="logo" src="/assets/logo/logo.png" alt="logo" class="max-w-[120px] h-auto" />
+        </a>
+    </div>
+
+    <div class="lg:hidden">
+        <button id="burgerMenu" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-4">
+        <a href="jantes.html" class="transition-all duration-300 hover:text-accent">
+            Réparation de jantes
+        </a>
+        <a href="renovation.html" class="transition-all duration-300 hover:text-accent">
+            Rénovation de véhicules anciens
+        </a>
+        <a href="contact.html" class="transition-all duration-300 hover:text-accent flex gap-1 items-center">
+            Contactez-nous
+        </a>
+    </nav>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("navbar");
+        const logo = document.getElementById("logo");
+        const body = document.body;
+        const subHeader = document.getElementById("subHeader");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        // Fonction générique pour gérer les dropdowns
+        function setupDropdown(toggleSelector, dropdownSelector) {
+            document.querySelectorAll(toggleSelector).forEach((toggle) => {
+                const dropdown = toggle.nextElementSibling;
+
+                if (dropdown) {
+                    toggle.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        // Ferme tous les autres dropdowns
+                        document
+                            .querySelectorAll(dropdownSelector)
+                            .forEach((otherDropdown) => {
+                                if (otherDropdown !== dropdown) {
+                                    otherDropdown.classList.add("hidden");
+                                    otherDropdown.previousElementSibling
+                                        .querySelector(".icon-chevron")
+                                        ?.classList.remove("rotate-180");
+                                }
+                            });
+
+                        dropdown.classList.toggle("hidden");
+
+                        // Gérer l'icône du chevron
+                        const chevron = toggle.querySelector(".icon-chevron");
+                        if (chevron) {
+                            chevron.classList.toggle("rotate-180");
+                        }
+                    });
+                }
+            });
+
+            // Ferme les dropdowns si on clique ailleurs
+            document.addEventListener("click", function (event) {
+                document.querySelectorAll(dropdownSelector).forEach((dropdown) => {
+                    if (
+                        !dropdown.contains(event.target) &&
+                        !dropdown.previousElementSibling.contains(event.target)
+                    ) {
+                        dropdown.classList.add("hidden");
+                        dropdown.previousElementSibling
+                            .querySelector(".icon-chevron")
+                            ?.classList.remove("rotate-180");
+                    }
+                });
+            });
+        }
+
+        // Appliquer aux dropdowns (desktop et mobile)
+        setupDropdown("[data-dropdown='sites']", ".dropdown-sites");
+        setupDropdown("[data-dropdown='countries']", ".dropdown-countries");
+
+        const links = document.querySelectorAll(".page"); // Sélectionne tous les liens du menu
+        const mobileLinks = document.querySelectorAll("#mobileMenu a"); // Sélectionne les liens du menu mobile
+        const currentPath = window.location.pathname; // Récupère l'URL actuelle
+
+        function activateLink(linkElements) {
+            linkElements.forEach((link) => {
+                if (link.getAttribute("href") === currentPath) {
+                    link.classList.add("");
+                } else {
+                    link.classList.remove("");
+                }
+            });
+        }
+
+        activateLink(links); // Active le lien correspondant dans la navbar
+        activateLink(mobileLinks); // Active le lien correspondant dans le menu mobile
+    });
+</script>
+
+    <main class="flex-grow">
+      <article class="flex-grow container mx-auto py-16 px-4 md:px-8">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-12 text-primary-dark text-center">
+        Mentions Légales
+    </h1>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            1. Informations Légales
+        </h2>
+        <p class="mb-4 text-lg">
+            Conformément aux dispositions de l'article 6 III-1 de la loi n°
+            2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique,
+            nous vous informons que :
+        </p>
+        <ul class="list-disc list-inside space-y-3 text-lg">
+            <li>
+                Le présent site internet
+                <strong class="text-primary-dark">[Nom de votre site, ex: lavieilleroue.com]</strong>
+                est édité par :<br />
+                <strong>[Nom de l'entreprise ou Prénom Nom de
+                    l'auto-entrepreneur]</strong><br />
+                <strong>[Forme juridique : SARL, SAS, EI, etc.]</strong><br />
+                <strong>[Capital social : Si applicable, ex: Capital de 10 000
+                    euros]</strong><br />
+                <strong>[Adresse du siège social complet : N° Rue, Code Postal Ville,
+                    Pays]</strong><br />
+                <strong>[Numéro de téléphone : ex: +334 01 01 01 01]</strong><br />
+                <strong>[Adresse e-mail : ex: contact@lavieilleroue.com]</strong><br />
+                <strong>[Numéro d'immatriculation au RCS (Registre du Commerce et des
+                    Sociétés) ou Répertoire des Métiers : ex: RCS Annecy 123 456
+                    789]</strong><br />
+                <strong>[Numéro de TVA intracommunautaire : Si applicable, ex: FRXX
+                    123456789]</strong>
+            </li>
+            <li>
+                Le directeur de la publication est :
+                <strong class="text-primary-dark">[Nom & Prénom du directeur de publication]</strong>
+            </li>
+        </ul>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            2. Hébergement du Site
+        </h2>
+        <p class="mb-4 text-lg">Le présent site internet est hébergé par :</p>
+        <ul class="list-disc list-inside space-y-3 text-lg">
+            <li>
+                <strong>[Nom de l'hébergeur : ex: OVH, Gandi, AWS, etc.]</strong><br />
+                <strong>[Adresse du siège social de l'hébergeur]</strong><br />
+                <strong>[Numéro de téléphone de l'hébergeur]</strong><br />
+                <strong>[Site web de l'hébergeur]</strong>
+            </li>
+        </ul>
+        <p class="mt-4 text-lg">
+            Pour plus d'informations, veuillez consulter le site de l'hébergeur.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            3. Propriété Intellectuelle
+        </h2>
+        <p class="mb-4 text-lg">
+            L'ensemble de ce site relève de la législation française et
+            internationale sur le droit d'auteur et la propriété intellectuelle.
+            Tous les droits de reproduction sont réservés, y compris pour les
+            documents téléchargeables et les représentations iconographiques et
+            photographiques.
+        </p>
+        <p class="mb-4 text-lg">
+            La reproduction de tout ou partie de ce site sur un support
+            électronique quel qu'il soit est formellement interdite sauf
+            autorisation expresse du directeur de la publication.
+        </p>
+        <p class="mb-4 text-lg">
+            Les marques et logos figurant sur ce site sont des marques déposées
+            par l'entreprise **La Vieille Roue** ou par ses partenaires. Toute
+            reproduction totale ou partielle de ces marques ou logos sans
+            l'autorisation expresse de l'entreprise est prohibée.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            4. Données Personnelles (RGPD)
+        </h2>
+        <p class="mb-4 text-lg">
+            La Vieille Roue s'engage à ce que la collecte et le traitement de vos
+            données, effectués à partir du présent site, soient conformes au
+            Règlement Général sur la Protection des Données (RGPD) et à la loi
+            Informatique et Libertés.
+        </p>
+        <p class="mb-4 text-lg">
+            Chaque formulaire ou téléservice limite la collecte des données
+            personnelles au strict nécessaire (minimisation des données) et
+            indique notamment :
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg mb-4">
+            <li>quels sont les objectifs du recueil de ces données ;</li>
+            <li>
+                si ces données sont obligatoires ou facultatives pour la gestion de
+                votre demande ;
+            </li>
+            <li>
+                qui pourra en prendre connaissance (uniquement La Vieille Roue en
+                principe, sauf précision dans le formulaire lorsqu'une transmission
+                à un tiers est nécessaire à la gestion de votre demande) ;
+            </li>
+            <li>
+                vos droits Informatique et Libertés et la manière de les exercer
+                auprès de La Vieille Roue.
+            </li>
+        </ul>
+        <p class="mb-4 text-lg">
+            Pour toute information ou exercice de vos droits sur les traitements
+            de données personnelles gérés par La Vieille Roue, vous pouvez nous
+            contacter :
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg mb-4">
+            <li>Par courrier : [Adresse postale pour l'exercice des droits]</li>
+            <li>
+                Par e-mail : [Adresse e-mail pour l'exercice des droits, ex:
+                dpo@lavieilleroue.com ou contact@lavieilleroue.com]
+            </li>
+        </ul>
+        <p class="text-lg">
+            Pour une information plus détaillée concernant la gestion des données
+            personnelles et les cookies, veuillez consulter notre
+            <a href="/politique-confidentialite.html" class="text-accent hover:underline font-semibold">Politique de
+                Confidentialité</a>.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            5. Liens Hypertextes
+        </h2>
+        <p class="mb-4 text-lg">
+            Le site
+            <strong class="text-primary-dark">[Nom de votre site, ex: lavieilleroue.com]</strong>
+            peut contenir des liens hypertextes vers d'autres sites présents sur
+            le réseau Internet. Ces liens sont fournis à titre informatif et de
+            convenance. L'entreprise La Vieille Roue n'exerce aucun contrôle sur
+            le contenu de ces sites et ne saurait être tenue responsable de leur
+            contenu.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            6. Limitation de Responsabilité
+        </h2>
+        <p class="mb-4 text-lg">
+            La Vieille Roue s'efforce d'assurer au mieux de ses possibilités
+            l'exactitude et la mise à jour des informations diffusées sur ce site,
+            dont elle se réserve le droit de corriger, à tout moment et sans
+            préavis, le contenu. Toutefois, La Vieille Roue ne peut garantir
+            l'exactitude, la précision ou l'exhaustivité des informations mises à
+            la disposition sur ce site.
+        </p>
+        <p class="mb-4 text-lg">
+            En conséquence, La Vieille Roue décline toute responsabilité :
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg">
+            <li>pour toute interruption du site ;</li>
+            <li>pour la survenance de bugs ;</li>
+            <li>
+                pour toute inexactitude ou omission portant sur des informations
+                disponibles sur le site ;
+            </li>
+            <li>
+                pour tout dommage résultant d'une intrusion frauduleuse d'un tiers
+                ayant entraîné une modification des informations mises à la
+                disposition sur le site ;
+            </li>
+            <li>
+                et plus généralement de tout dommage direct et indirect, quelles
+                qu'en soient les causes, origines, natures ou conséquences,
+                provoqués à raison de l'accès de quiconque au site ou de
+                l'impossibilité d'y accéder, de l'utilisation du site et/ou du
+                crédit accordé à une quelconque information provenant directement ou
+                indirectement de ce dernier.
+            </li>
+        </ul>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            7. Droit Applicable et Attribution de Juridiction
+        </h2>
+        <p class="mb-4 text-lg">
+            Le présent site et ses conditions d'utilisation sont régis par le
+            droit français, quel que soit le lieu d'utilisation. En cas de litige,
+            et après l'échec de toute tentative de recherche d'une solution
+            amiable, les tribunaux français seront seuls compétents pour connaître
+            de ce litige.
+        </p>
+    </section>
+</article>
+    </main>
+
+        <!-- Footer -->
+<footer class="bg-background-dark font-k2d text-text-light px-5 md:px-28 py-8">
+    <div class="container mx-auto">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 border-b border-neutral-medium">
+
+            <div class="md:col-span-1 flex justify-center md:justify-start mb-6 md:mb-0">
+                <img class="max-w-[180px] h-auto" src="/assets/logo/logo.png" alt="Logo La Vieille Roue">
+            </div>
+
+            <div class="md:col-span-1 text-sm">
+                <address class="not-italic">
+                    <h4 class="text-accent font-semibold"><span class="text-text-light">La vieille roue</span></h4>
+                    <div class="w-10 h-0.5 bg-neutral-medium my-2"></div>
+                    <p>1 rue <br>73200 Grignon<br>Tél. : +334 01 01 01 01</p>
+                </address>
+                </div>
+
+            <div class="md:col-span-1 mt-8 md:mt-0">
+                <h3 class="font-semibold text-lg text-text-light">Navigation</h3>
+                <div class="w-10 h-0.5 bg-neutral-medium my-2"></div>
+                <nav>
+                    <ul class="text-sm space-y-2">
+                        <li>
+                            <a href="/jantes" class="hover:text-accent transition-colors duration-300">
+                                Réparation de jantes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/vehicules-anciens" class="hover:text-accent transition-colors duration-300">
+                                Rénovation de véhicules anciens
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/rendez-vous" class="hover:text-accent transition-colors duration-300">
+                                Contactez-nous
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-dropdown="sites" class="flex items-center gap-2 hover:text-accent transition-colors duration-300">
+                                Prise de rendez-vous
+                                <span class="icon-chevron"></span> </a>
+                            <div class="absolute z-20 bg-background-light text-text-dark shadow-lg mt-2 rounded dropdown-custom dropdown-sites hidden">
+                                <a href="#" target="_blank" class="block px-4 py-2 hover:bg-neutral-light">
+                                    Réparation Jantes
+                                </a>
+                                <a href="#" target="_blank" class="block px-4 py-2 hover:bg-neutral-light">
+                                    Rénovation véhicules anciens
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="md:col-span-1 mt-8 md:mt-0">
+                <h3 class="font-semibold text-lg text-text-light mb-4">Suivez-nous</h3>
+                <div class="flex gap-6">
+                    <a href="https://www.instagram.com/ikami_france/" target="_blank" aria-label="Instagram">
+                        <span class="icon-instagram w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                    </a>
+                    <a href="https://www.facebook.com/ikamifrance/" target="_blank" aria-label="Facebook">
+                        <span class="icon-facebook w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                    </a>
+                    <a href="https://www.linkedin.com/company/ikami-france/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
+                        <span class="icon-linkedin w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
+                <a href="/politique-confidentialite.html"
+ 
+                   class="hover:text-text-light transition-colors duration-300">
+                    Politique de confidentialité
+                </a>
+                <span class="text-accent">|</span>
+                <a href="/mentions-legales.html" 
+                   class="hover:text-text-light transition-colors duration-300">
+                    Mentions légales
+                </a>
+            </div>
+            <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
+        </section>
+    </div>
+</footer>
+    <button id="scrollTopBtn"
+    class="px-2 py-2 bg-ikami-gradient text-white rounded-md hover:bg-orange-600 border border-gray-200 shadow-lg hover:shadow-xl fixed bottom-8 right-8 hidden z-50 icon-chevron-up">
+</button>
+
+<script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            scrollTopBtn.classList.remove("hidden");
+            scrollTopBtn.classList.add("block");
+        } else {
+            scrollTopBtn.classList.add("hidden");
+            scrollTopBtn.classList.remove("block");
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+  </body>
+</html>

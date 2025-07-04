@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/contact.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/jantes.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/mentions-legales.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/politique-confidentialite.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/renovation.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/icomoon/demo.html</loc>
+<lastmod>2025-06-12T13:59:16+02:00</lastmod>
+</url>
+</urlset>

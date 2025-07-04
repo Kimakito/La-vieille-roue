@@ -1,0 +1,38 @@
+# netlify.toml
+
+# Settings for the main build context (production deploy)
+[build]
+  command = "npm run build"
+  publish = "_site"
+  # Le "base" directory si votre projet Jekyll n'est pas à la racine de votre dépôt.
+  # Laissez vide ou commentez si tout est à la racine.
+  # base = "/"
+
+# Environnement de build (peut être utile pour Jekyll lui-même)
+[build.environment]
+  # Définissez des variables d'environnement si nécessaire.
+  # Par exemple, pour forcer Jekyll à un certain environnement.
+  # JEKYLL_ENV = "production"
+
+# Déploiement en prévisualisation (pour les pull requests)
+# Ces paramètres héritent de [build] mais peuvent être écrasés.
+[context.deploy-preview]
+  command = "npm run build" # Souvent la même commande que pour le build principal
+
+# Contexte de branche spécifique (si vous avez une branche de staging par exemple)
+# [context.staging]
+#   command = "npm run build"
+#   publish = "_site"
+#   environment = { JEKYLL_ENV = "staging" }
+
+# Redirections (ex: forcer HTTPS, rediriger d'anciennes URLs)
+[[redirects]]
+  from = "/old-page"
+  to = "/new-page"
+  status = 301
+
+# Redirection pour les SPA ou pour gérer les 404 (important pour les sites statiques)
+[[redirects]]
+  from = "/*"
+  to = "/404.html" # Assurez-vous d'avoir une page 404.html à la racine de _site
+  status = 404

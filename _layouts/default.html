@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+  {% include header.html %}
+  <body class="font-k2d bg-primary-medium text-text-dark min-h-screen flex flex-col">
+    {% include navbar.html %}
+
+    <main class="flex-grow">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    {% include scroll-top.html %}
+  </body>
+</html>

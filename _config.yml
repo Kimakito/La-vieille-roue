@@ -1,0 +1,13 @@
+# _config.yml
+
+title: La vieille roue
+author: CodeJBL
+description: Atelier de rénovation de jantes et de restauration de véhicules anciens, prestige, collection, sport.
+url: "https://lavieilleroue.fr"
+baseurl: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+

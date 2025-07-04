@@ -1,361 +1,172 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <!-- Fonts -->
-    <link rel="stylesheet" href="/assets/icomoon/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;800&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
-    <title>La vieille roue</title>
-  </head>
-  <body
-    class="font-k2d bg-primary-medium text-text-dark min-h-screen flex flex-col"
-  >
-<header
-  id="navbar"
-  class="bg-background-dark text-white font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-2 w-full"
->
-  <div class="flex-shrink-0">
-    <a href="/">
-      <img
-        id="logo"
-        src="./assets/images/LOGO.png"
-        alt="logo"
-        class="max-w-[120px] h-auto"
-      />
-    </a>
-  </div>
+---
+layout: default
+title: Accueil de l'atelier
+---
 
-  <div class="lg:hidden">
-    <button
-      id="burgerMenu"
-      aria-label="Ouvrir le menu"
-      class="text-gray-800 focus:outline-none"
-    >
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+<section
+  class="w-full h-screen bg-cover bg-center relative"
+  style="background-image: url('/assets/images/automobile-8217167_1280.png')"
+>
+  <div
+    class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8"
+  >
+    <div class="text-center text-text-light max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+        La Vieille Roue: L'Art de la Rénovation Automobile
+      </h1>
+      <p class="text-lg md:text-2xl mb-8 opacity-90">
+        Découvrez notre passion pour les véhicules d'exception et notre
+        expertise inégalée en restauration.
+      </p>
+      <button
+        class="mt-6 bg-accent hover:bg-accent-hover text-text-light font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        ></path>
-      </svg>
+        Explorer nos services
+      </button>
+    </div>
+  </div>
+</section>
+
+<section
+  class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark"
+>
+  <h2 class="text-4xl font-bold mb-8 text-primary-dark text-center">
+    Notre Engagement : Redonner Vie à l'Histoire
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="mb-6 leading-relaxed text-lg">
+        <strong class="text-accent">Lorem ipsum dolor sit amet</strong>,
+        consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p class="mb-6 leading-relaxed text-lg">
+        Quisque aliquet nisi sed ipsum ultrices, at vestibulum ex varius. Proin
+        ac feugiat velit. Integer vel orci ac justo accumsan efficitur. Nam ac
+        mi eu ligula auctor efficitur. Mauris vitae mi vel purus tincidunt
+        mollis.
+      </p>
+      <button
+        class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md"
+      >
+        Nos valeurs
+      </button>
+    </div>
+    <div class="relative">
+      <img
+        src="/assets/images/automobile-3298890_1280.jpg"
+        alt="Voiture ancienne rénovée"
+        class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform hover:scale-102 transition duration-300"
+      />
+      <div
+        class="absolute bottom-4 left-4 bg-background-dark text-text-light px-4 py-2 rounded-lg text-sm md:text-base opacity-90"
+      >
+        L'excellence dans chaque détail.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="relative h-full flex items-center justify-center text-text-light text-center px-4 md:px-8 py-26"
+  style="
+    background-image: url('/assets/images/porsche-8343861_1280.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="absolute inset-0 bg-background-dark bg-opacity-70"></div>
+  <div class="relative z-10 max-w-3xl mx-auto py-26">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+      Une Passion Transmise de Génération en Génération
+    </h2>
+    <p class="text-lg md:text-xl leading-relaxed">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
+      sollicitudin efficitur.
+    </p>
+    <p class="text-lg md:text-xl leading-relaxed">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
+      sollicitudin efficitur.
+    </p>
+    <p class="text-lg md:text-xl leading-relaxed">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
+      sollicitudin efficitur.
+    </p>
+    <p class="text-lg md:text-xl leading-relaxed">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
+      sollicitudin efficitur.
+    </p>
+    <button
+      class="mt-8 bg-accent hover:bg-accent-hover text-text-light font-bold py-3 px-8 rounded-full shadow-lg transition duration-300"
+    >
+      Découvrir notre histoire
     </button>
   </div>
+</section>
 
-  <nav class="hidden lg:flex items-center gap-4">
-    <a
-      href="public\jantes.html"
-      class="transition-all duration-300 hover:text-accent"
+<section
+  class="container mx-auto py-16 px-4 md:px-8 bg-primary-light text-text-dark"
+>
+  <h2 class="text-4xl font-bold mb-12 text-primary-dark text-center">
+    Ce que disent nos clients
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div
+      class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium"
     >
-      Réparation de jantes
-    </a>
-    <a
-      href="public\renovation.html"
-      class="transition-all duration-300 hover:text-accent"
-    >
-      Rénovation de véhicules anciens
-    </a>
-    <a
-      href="public\contact.html"
-      class="transition-all duration-300 hover:text-accent flex gap-1 items-center"
-    >
-      Contactez-nous
-    </a>
-  </nav>
-</header>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.getElementById("navbar");
-        const logo = document.getElementById("logo");
-        const body = document.body;
-        const subHeader = document.getElementById("subHeader");
-        const mobileMenu = document.getElementById("mobileMenu");
-
-        // Fonction générique pour gérer les dropdowns
-        function setupDropdown(toggleSelector, dropdownSelector) {
-          document.querySelectorAll(toggleSelector).forEach((toggle) => {
-            const dropdown = toggle.nextElementSibling;
-
-            if (dropdown) {
-              toggle.addEventListener("click", function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                // Ferme tous les autres dropdowns
-                document
-                  .querySelectorAll(dropdownSelector)
-                  .forEach((otherDropdown) => {
-                    if (otherDropdown !== dropdown) {
-                      otherDropdown.classList.add("hidden");
-                      otherDropdown.previousElementSibling
-                        .querySelector(".icon-chevron")
-                        ?.classList.remove("rotate-180");
-                    }
-                  });
-
-                dropdown.classList.toggle("hidden");
-
-                // Gérer l'icône du chevron
-                const chevron = toggle.querySelector(".icon-chevron");
-                if (chevron) {
-                  chevron.classList.toggle("rotate-180");
-                }
-              });
-            }
-          });
-
-          // Ferme les dropdowns si on clique ailleurs
-          document.addEventListener("click", function (event) {
-            document.querySelectorAll(dropdownSelector).forEach((dropdown) => {
-              if (
-                !dropdown.contains(event.target) &&
-                !dropdown.previousElementSibling.contains(event.target)
-              ) {
-                dropdown.classList.add("hidden");
-                dropdown.previousElementSibling
-                  .querySelector(".icon-chevron")
-                  ?.classList.remove("rotate-180");
-              }
-            });
-          });
-        }
-
-        // Appliquer aux dropdowns (desktop et mobile)
-        setupDropdown("[data-dropdown='sites']", ".dropdown-sites");
-        setupDropdown("[data-dropdown='countries']", ".dropdown-countries");
-
-        const links = document.querySelectorAll(".page"); // Sélectionne tous les liens du menu
-        const mobileLinks = document.querySelectorAll("#mobileMenu a"); // Sélectionne les liens du menu mobile
-        const currentPath = window.location.pathname; // Récupère l'URL actuelle
-
-        function activateLink(linkElements) {
-          linkElements.forEach((link) => {
-            if (link.getAttribute("href") === currentPath) {
-              link.classList.add("");
-            } else {
-              link.classList.remove("");
-            }
-          });
-        }
-
-        activateLink(links); // Active le lien correspondant dans la navbar
-        activateLink(mobileLinks); // Active le lien correspondant dans le menu mobile
-      });
-    </script>
-
-<main class="flex-grow">
-    <section
-        class="w-full h-screen bg-cover bg-center relative"
-        style="background-image: url('./assets/images/automobile-8217167_1280.png');"
-    >
-        <div
-            class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8"
-        >
-            <div class="text-center text-text-light max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                    La Vieille Roue: L'Art de la Rénovation Automobile
-                </h1>
-                <p class="text-lg md:text-2xl mb-8 opacity-90">
-                    Découvrez notre passion pour les véhicules d'exception et notre expertise inégalée en restauration.
-                </p>
-                <button
-                    class="mt-6 bg-accent hover:bg-accent-hover text-text-light font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105"
-                >
-                    Explorer nos services
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark">
-        <h2 class="text-4xl font-bold mb-8 text-primary-dark text-center">
-            Notre Engagement : Redonner Vie à l'Histoire
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="mb-6 leading-relaxed text-lg">
-                    <strong class="text-accent">Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p class="mb-6 leading-relaxed text-lg">
-                    Quisque aliquet nisi sed ipsum ultrices, at vestibulum ex varius. Proin ac feugiat velit. Integer vel orci ac justo accumsan efficitur. Nam ac mi eu ligula auctor efficitur. Mauris vitae mi vel purus tincidunt mollis.
-                </p>
-                <button
-                    class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md"
-                >
-                    Nos valeurs
-                </button>
-            </div>
-            <div class="relative">
-                <img src="./assets/images/automobile-3298890_1280.jpg" alt="Voiture ancienne rénovée" class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform hover:scale-102 transition duration-300">
-                <div class="absolute bottom-4 left-4 bg-background-dark text-text-light px-4 py-2 rounded-lg text-sm md:text-base opacity-90">
-                    L'excellence dans chaque détail.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section
-        class="relative h-full flex items-center justify-center text-text-light text-center px-4 md:px-8 py-26"
-        style="background-image: url('./assets/images/porsche-8343861_1280.jpg'); background-attachment: fixed; background-size: cover; background-position: center;"
-    >
-        <div class="absolute inset-0 bg-background-dark bg-opacity-70"></div>
-        <div class="relative z-10 max-w-3xl mx-auto py-26">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
-                Une Passion Transmise de Génération en Génération
-            </h2>
-            <p class="text-lg md:text-xl leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
-            </p> 
-            <p class="text-lg md:text-xl leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
-            </p> 
-            <p class="text-lg md:text-xl leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
-            </p> 
-            <p class="text-lg md:text-xl leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi sollicitudin efficitur.
-            </p>
-            <button
-                class="mt-8 bg-accent hover:bg-accent-hover text-text-light font-bold py-3 px-8 rounded-full shadow-lg transition duration-300"
-            >
-                Découvrir notre histoire
-            </button>
-        </div>
-    </section>
-
-    <section class="container mx-auto py-16 px-4 md:px-8 bg-primary-light text-text-dark">
-        <h2 class="text-4xl font-bold mb-12 text-primary-dark text-center">
-            Ce que disent nos clients
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium">
-                <p class="italic mb-4 text-lg">"Un travail incroyable ! Ma voiture est comme neuve, même mieux qu'à l'origine. Le souci du détail est impressionnant."</p>
-                <p class="font-semibold text-primary-dark">- Jean Dupont</p>
-            </div>
-            <div class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium">
-                <p class="italic mb-4 text-lg">"Professionnalisme et passion se rencontrent ici. Je recommande chaudement La Vieille Roue pour toute rénovation."</p>
-                <p class="font-semibold text-primary-dark">- Marie Curie</p>
-            </div>
-            <div class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium">
-                <p class="italic mb-4 text-lg">"L'équipe est à l'écoute et le résultat est au-delà de mes espérances. Une véritable œuvre d'art sur roues !"</p>
-                <p class="font-semibold text-primary-dark">- Pierre Gauthier</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-background-dark py-16 px-4 md:px-8 text-center text-text-light">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Prêt à Redonner son Éclat à Votre Véhicule ?</h2>
-        <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de votre projet de rénovation. Nous sommes là pour concrétiser vos rêves automobiles.
-        </p>
-        <button
-            class="bg-accent hover:bg-accent-hover text-text-light font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105"
-        >
-            Prendre rendez-vous
-        </button>
-    </section>
-</main>
-
-    <!-- Footer -->
-<footer class="bg-background-dark font-k2d text-text-light px-5 md:px-28 py-8">
-    <div class="container mx-auto">
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 border-b border-neutral-medium">
-
-            <div class="md:col-span-1 flex justify-center md:justify-start mb-6 md:mb-0">
-                <img class="max-w-[180px] h-auto" src="./assets/images/LOGO.png" alt="Logo La Vieille Roue">
-            </div>
-
-            <div class="md:col-span-1 text-sm">
-                <address class="not-italic">
-                    <h4 class="text-accent font-semibold"><span class="text-text-light">La vieille roue</span></h4>
-                    <div class="w-10 h-0.5 bg-neutral-medium my-2"></div>
-                    <p>1 rue <br>73200 Grignon<br>Tél. : +334 01 01 01 01</p>
-                </address>
-                </div>
-
-            <div class="md:col-span-1 mt-8 md:mt-0">
-                <h3 class="font-semibold text-lg text-text-light">Navigation</h3>
-                <div class="w-10 h-0.5 bg-neutral-medium my-2"></div>
-                <nav>
-                    <ul class="text-sm space-y-2">
-                        <li>
-                            <a href="/jantes" class="hover:text-accent transition-colors duration-300">
-                                Réparation de jantes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/vehicules-anciens" class="hover:text-accent transition-colors duration-300">
-                                Rénovation de véhicules anciens
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/rendez-vous" class="hover:text-accent transition-colors duration-300">
-                                Contactez-nous
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-dropdown="sites" class="flex items-center gap-2 hover:text-accent transition-colors duration-300">
-                                Prise de rendez-vous
-                                <span class="icon-chevron"></span> </a>
-                            <div class="absolute z-20 bg-background-light text-text-dark shadow-lg mt-2 rounded dropdown-custom dropdown-sites hidden">
-                                <a href="#" target="_blank" class="block px-4 py-2 hover:bg-neutral-light">
-                                    Réparation Jantes
-                                </a>
-                                <a href="#" target="_blank" class="block px-4 py-2 hover:bg-neutral-light">
-                                    Rénovation véhicules anciens
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="md:col-span-1 mt-8 md:mt-0">
-                <h3 class="font-semibold text-lg text-text-light mb-4">Suivez-nous</h3>
-                <div class="flex gap-6">
-                    <a href="https://www.instagram.com/ikami_france/" target="_blank" aria-label="Instagram">
-                        <span class="icon-instagram w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
-                    </a>
-                    <a href="https://www.facebook.com/ikamifrance/" target="_blank" aria-label="Facebook">
-                        <span class="icon-facebook w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
-                    </a>
-                    <a href="https://www.linkedin.com/company/ikami-france/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
-                        <span class="icon-linkedin w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
-                <a href="/public/politique-confidentialite.html"
- 
-                   class="hover:text-text-light transition-colors duration-300">
-                    Politique de confidentialité
-                </a>
-                <span class="text-accent">|</span>
-                <a href="/public/mentions-legales.html" 
-                   class="hover:text-text-light transition-colors duration-300">
-                    Mentions légales
-                </a>
-            </div>
-            <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
-        </section>
+      <p class="italic mb-4 text-lg">
+        "Un travail incroyable ! Ma voiture est comme neuve, même mieux qu'à
+        l'origine. Le souci du détail est impressionnant."
+      </p>
+      <p class="font-semibold text-primary-dark">- Jean Dupont</p>
     </div>
-</footer>
-  </body>
-</html>
+    <div
+      class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium"
+    >
+      <p class="italic mb-4 text-lg">
+        "Professionnalisme et passion se rencontrent ici. Je recommande
+        chaudement La Vieille Roue pour toute rénovation."
+      </p>
+      <p class="font-semibold text-primary-dark">- Marie Curie</p>
+    </div>
+    <div
+      class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium"
+    >
+      <p class="italic mb-4 text-lg">
+        "L'équipe est à l'écoute et le résultat est au-delà de mes espérances.
+        Une véritable œuvre d'art sur roues !"
+      </p>
+      <p class="font-semibold text-primary-dark">- Pierre Gauthier</p>
+    </div>
+  </div>
+</section>
+
+<section
+  class="bg-background-dark py-16 px-4 md:px-8 text-center text-text-light"
+>
+  <h2 class="text-4xl md:text-5xl font-bold mb-6">
+    Prêt à Redonner son Éclat à Votre Véhicule ?
+  </h2>
+  <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto">
+    Contactez-nous dès aujourd'hui pour discuter de votre projet de rénovation.
+    Nous sommes là pour concrétiser vos rêves automobiles.
+  </p>
+  <button
+    class="bg-accent hover:bg-accent-hover text-text-light font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105"
+  >
+    Prendre rendez-vous
+  </button>
+</section>
