@@ -16,29 +16,25 @@ module.exports = {
         jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
       },
       colors: {
-        // Couleurs de fond et de texte
-        "background-light": "#F0F5F9", // Un blanc cassé très doux, presque gris clair, pour un fond subtil
-        "background-dark": "#0F1A2B", // Un bleu nuit très profond, presque noir, pour les sections importantes ou le footer
-        "text-dark": "#2E3A4B", // Bleu marine foncé pour le texte principal, plus doux que du noir pur
-        "text-light": "#E0E8F0", // Un gris très clair, presque blanc, pour le texte sur fond sombre
+        // Couleurs de fond et de texte (légèrement ajustées pour un meilleur contraste avec les nouvelles couleurs vives)
+        "background-light": "#F8F8F8", // Un blanc cassé plus pur, plus lumineux
+        "background-dark": "#0F1A2B", // Un bleu nuit encore plus profond, presque noir pour un contraste maximal
+        "text-dark": "#2C2C3E",       // Un gris-bleu très foncé, presque noir, pour la lisibilité sur fond clair
+        "text-light": "#F0F2F5",      // Un gris très clair, presque blanc, pour le texte sur fond sombre
 
-        // Couleurs principales (Tons de bleu profonds et élégants)
-        "primary-light": "#5A7D9A", // Bleu acier doux, pour des éléments secondaires
-        "primary-medium": "#3A5C78", // Bleu gris moyen, une base solide
-        "primary-dark": "#1C3B53", // Bleu saphir profond, très élégant
+        // Couleurs principales (Tons de bleu profonds et dynamiques)
+        "primary-light": "#6B7DE5", // Un bleu moyen éclatant, dérivé de votre bleu cible
+        "primary-medium": "#4C5CDA", // Le bleu principal, proche de votre #3333CC mais avec une touche plus moderne
+        "primary-dark": "#2B3ABF",  // Un bleu profond et intense, pour les éléments clés et les fonds sombres
 
-        // Couleur d'accent (pour boutons, icônes, liens actifs - peut être un or, un bronze ou un bleu plus vif)
-        // Option 1: Un Or/Bronze subtil pour le prestige
-        accent: "#B8860B", // Goldenrod foncé, très chic
-        "accent-hover": "#DAA520", // Goldenrod, plus clair pour le survol
-        // Option 2: Un Bleu vif mais profond pour le dynamisme (si vous préférez rester dans les bleus)
-        // 'accent': '#007FFF',          // Bleu Azur Profond
-        // 'accent-hover': '#0066CC',    // Bleu plus foncé pour le survol
+        // Couleur d'accent (un jaune vif et énergique)
+        accent: "#F1C40F",       // Votre jaune souhaité, très lumineux !
+        "accent-hover": "#E6B80A", // Un jaune légèrement plus foncé pour l'effet de survol
 
         // Couleurs secondaires / neutres (pour équilibrer et ajouter de la texture)
-        "neutral-light": "#D6DBDF", // Gris perle, très doux
-        "neutral-medium": "#9CAAB8", // Gris bleuté moyen
-        "neutral-dark": "#617B8E", // Gris ardoise plus prononcé
+        "neutral-light": "#E8ECEF", // Un gris clair et propre
+        "neutral-medium": "#B0B8C0", // Un gris moyen équilibré
+        "neutral-dark": "#7A8288",   // Un gris plus foncé, pour les ombres ou bordures secondaires
 
         // Couleurs d'état (inchangées car universelles)
         success: "#3CB371",

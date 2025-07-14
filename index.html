@@ -1,172 +1,236 @@
 ---
 layout: default
-title: Accueil de l'atelier
+title: Accueil de l'labo
 ---
 
-<section
-  class="w-full h-screen bg-cover bg-center relative"
-  style="background-image: url('/assets/images/automobile-8217167_1280.png')"
->
-  <div
-    class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8"
-  >
-    <div class="text-center text-text-light max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-        La Vieille Roue: L'Art de la Rénovation Automobile
-      </h1>
-      <p class="text-lg md:text-2xl mb-8 opacity-90">
-        Découvrez notre passion pour les véhicules d'exception et notre
-        expertise inégalée en restauration.
-      </p>
-      <button
-        class="mt-6 bg-accent hover:bg-accent-hover text-text-light font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105"
-      >
-        Explorer nos services
-      </button>
+<section class="w-full h-screen bg-cover bg-center relative overflow-hidden"
+    style="background-image: url('/assets/images/automobile-8217167_1280.png');">
+    <div class="absolute inset-0 bg-background-dark bg-opacity-70 flex items-center justify-center p-4 md:p-8">
+        <div class="text-center text-text-light max-w-5xl mx-auto z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight font-k2d drop-shadow-lg opacity-0"
+                data-animate="fade-in">
+                La Vieille Roue : <span class="text-accent">L'Art</span> de la Rénovation Automobile
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 opacity-90 font-jakarta opacity-0" data-animate="fade-in-up"
+                data-delay="100">
+                Découvrez notre passion pour les véhicules d'exception et notre expertise inégalée en restauration.
+                Nous redonnons vie aux légendes sur roues.
+            </p>
+            <nav class="flex gap-6 justify-center">
+                <a href="#jantes-section"
+                    class="mt-10 bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-8 rounded-full shadow-xl text-xl transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+                    data-animate="fade-in-up" data-delay="200">
+                    Réparation de jantes
+                </a>
+                <a href="#restauration-section"
+                    class="mt-10 bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-8 rounded-full shadow-xl text-xl transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+                    data-animate="fade-in-up" data-delay="200">
+                    Restauration de véhicules anciens
+                </a>
+            </nav>
+        </div>
     </div>
-  </div>
 </section>
 
-<section
-  class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark"
->
-  <h2 class="text-4xl font-bold mb-8 text-primary-dark text-center">
-    Notre Engagement : Redonner Vie à l'Histoire
-  </h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    <div>
-      <p class="mb-6 leading-relaxed text-lg">
-        <strong class="text-accent">Lorem ipsum dolor sit amet</strong>,
-        consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p class="mb-6 leading-relaxed text-lg">
-        Quisque aliquet nisi sed ipsum ultrices, at vestibulum ex varius. Proin
-        ac feugiat velit. Integer vel orci ac justo accumsan efficitur. Nam ac
-        mi eu ligula auctor efficitur. Mauris vitae mi vel purus tincidunt
-        mollis.
-      </p>
-      <button
-        class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md"
-      >
-        Nos valeurs
-      </button>
-    </div>
-    <div class="relative">
-      <img
-        src="/assets/images/automobile-3298890_1280.jpg"
-        alt="Voiture ancienne rénovée"
-        class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform hover:scale-102 transition duration-300"
-      />
-      <div
-        class="absolute bottom-4 left-4 bg-background-dark text-text-light px-4 py-2 rounded-lg text-sm md:text-base opacity-90"
-      >
-        L'excellence dans chaque détail.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section
-  class="relative h-full flex items-center justify-center text-text-light text-center px-4 md:px-8 py-26"
-  style="
-    background-image: url('/assets/images/porsche-8343861_1280.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-  "
->
-  <div class="absolute inset-0 bg-background-dark bg-opacity-70"></div>
-  <div class="relative z-10 max-w-3xl mx-auto py-26">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
-      Une Passion Transmise de Génération en Génération
+<section id="jantes-section" class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark">
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 text-primary-dark text-center font-k2d opacity-0"
+        data-animate="fade-in-up">
+        Notre Engagement : Redonner Vie aux Jantes abimées
     </h2>
-    <p class="text-lg md:text-xl leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
-      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
-      sollicitudin efficitur.
-    </p>
-    <p class="text-lg md:text-xl leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
-      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
-      sollicitudin efficitur.
-    </p>
-    <p class="text-lg md:text-xl leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
-      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
-      sollicitudin efficitur.
-    </p>
-    <p class="text-lg md:text-xl leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      Proin vel ex ut tortor aliquam aliquet. Vestibulum ante ipsum primis in
-      faucibus orci luctus et ultrices posuere cubilia Curae; Donec eu dui eu mi
-      sollicitudin efficitur.
-    </p>
-    <button
-      class="mt-8 bg-accent hover:bg-accent-hover text-text-light font-bold py-3 px-8 rounded-full shadow-lg transition duration-300"
-    >
-      Découvrir notre histoire
-    </button>
-  </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+            <p class="mb-6 leading-relaxed text-lg font-jakarta opacity-0" data-animate="fade-in-up" data-delay="100">
+                Votre véhicule mérite l'excellence, et <strong>La Vieille Roue</strong> est là pour lui offrir.
+                À Albertville et partout en Savoie, notre équipe de techniciens passionnés et méticuleux met son
+                savoir-faire unique au service de vos jantes. Qu'elles soient en aluminium ou en alliage,
+                abîmées par le temps ou les imprévus de la route, nous les examinons avec la plus grande attention.
+                Après un <strong>diagnostic gratuit et précis</strong>, nous vous proposons la solution de réparation
+                qui allie
+                performance, durabilité et respect de votre budget.
+            </p>
+            <p class="mb-6 leading-relaxed text-lg font-jakarta opacity-0" data-animate="fade-in-up" data-delay="200">
+                Donnez une nouvelle vie à vos jantes avec <strong>La Vieille Roue</strong> d'Albertville !
+                Notre laboratoire spécialisé est le sanctuaire où vos jantes retrouvent leur splendeur et leur
+                robustesse.
+                Nous utilisons des méthodes et des équipements à la pointe de l'innovation pour toutes les étapes de la
+                réparation,
+                de la restauration et de la personnalisation.
+            </p>
+            <p class="mb-6 leading-relaxed text-lg font-jakarta opacity-0" data-animate="fade-in-up" data-delay="300">
+                Que vos jantes aient besoin d'une simple rénovation esthétique ou d'une intervention plus complexe
+                — comme le redressage après un choc, la réparation de fissures, l'élimination de la corrosion,
+                ou une nouvelle peinture éclatante — nous avons la solution. Nos techniciens qualifiés et expérimentés
+                vous proposeront un plan d'action clair et personnalisé, assurant une qualité de finition exemplaire et
+                une prolongation significative de la durée de vie de vos jantes, le tout à un tarif juste.
+                Chez La Vieille Roue, nous ne réparons pas seulement des jantes, nous restaurons la confiance et
+                l'esthétique de votre véhicule.
+            </p>
+            <a href="/renovation"
+                class="mt-8 bg-primary-medium hover:bg-primary-dark text-text-light font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+                data-animate="fade-in-up" data-delay="400">
+                Découvrez la rénovation de jantes
+            </a>
+        </div>
+        <div class="relative group order-1 md:order-2 opacity-0" data-animate="fade-in" data-delay="500">
+            <img src="/assets/images/automobile-3298890_1280.jpg" alt="Rénovation de jantes de voiture ancienne"
+                class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-102 transition duration-500 ease-in-out" />
+            <div
+                class="absolute bottom-6 left-6 bg-background-dark text-text-light px-5 py-3 rounded-lg text-base md:text-lg opacity-90 font-jakarta shadow-lg">
+                Chaque jante, une œuvre d'art restaurée.
+            </div>
+        </div>
+    </div>
 </section>
 
-<section
-  class="container mx-auto py-16 px-4 md:px-8 bg-primary-light text-text-dark"
->
-  <h2 class="text-4xl font-bold mb-12 text-primary-dark text-center">
-    Ce que disent nos clients
-  </h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div
-      class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium"
-    >
-      <p class="italic mb-4 text-lg">
-        "Un travail incroyable ! Ma voiture est comme neuve, même mieux qu'à
-        l'origine. Le souci du détail est impressionnant."
-      </p>
-      <p class="font-semibold text-primary-dark">- Jean Dupont</p>
+<section id="restauration-section"
+    class="relative min-h-screen flex items-center justify-center text-text-light text-center px-4 md:px-8 py-24" style="
+        background-image: url('/assets/images/porsche-8343861_1280.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    ">
+    <div class="absolute inset-0 bg-background-dark bg-opacity-75"></div>
+    <div class="relative z-10 max-w-4xl mx-auto py-12 md:py-20">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-8 font-k2d leading-tight opacity-0" data-animate="fade-in-up">
+            La Vieille Roue : L'Art de la Restauration Automobile d'Exception
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed mb-6 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="100">
+            Chez La Vieille Roue, notre passion est bien plus qu'un métier ; c'est un véritable culte dédié à l'histoire
+            et à la performance automobile. Nous ne sommes pas un garage lambda. Ici, vous ne trouverez pas de véhicules
+            du quotidien, mais des trésors mécaniques, des icônes du passé et des merveilles de l'ingénierie moderne.
+            Notre expertise est <strong>exclusivement réservée à la restauration et à l'entretien des automobiles
+                anciennes, de
+                collection, de sport et de prestige.</strong>
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed mb-6 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="200">
+            Du charme intemporel d'une <strong>2 CV</strong> méticuleusement rafraîchie à la précision chirurgicale
+            requise par la
+            dernière <strong>Porsche 911 GT3 RS</strong>, notre atelier est le sanctuaire où ces véhicules retrouvent
+            leur splendeur et
+            leurs performances d'origine. Qu'il s'agisse de la carrosserie élégante d'une Jaguar Type E, du cœur battant
+            d'une Ferrari vintage, ou de la sophistication d'une Rolls-Royce classique, chaque véhicule est traité avec
+            le respect, la rigueur et l'amour qu'il mérite.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed mb-6 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="300">
+            Notre équipe est composée de <strong>techniciens hautement qualifiés et profondément expérimentés</strong>,
+            de véritables
+            artisans dotés d'une connaissance intime des spécificités de chaque marque et de chaque modèle. Formés aux
+            techniques ancestrales comme aux innovations les plus récentes, ils allient savoir-faire traditionnel et
+            technologies de pointe pour garantir un travail d'une qualité irréprochable.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed mb-6 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="400">
+            Dans notre atelier entièrement équipé, nous disposons de tout l'outillage nécessaire, conçu pour répondre
+            aux exigences les plus pointues en <strong>mécanique, carrosserie et peinture automobile</strong>. Chaque
+            recoin de notre
+            espace est optimisé pour prendre soin de votre véhicule avec une précision millimétrée, de la recherche de
+            panne la plus complexe à la réfection complète du moteur, en passant par une peinture qui respecte
+            scrupuleusement les teintes d'époque.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed mb-8 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="500">
+            Que votre automobile nécessite une <strong>restauration complète</strong> pour lui redonner sa gloire
+            d'antan, ou une
+            <strong>intervention partielle</strong> pour cibler des éléments spécifiques, nous sommes à même de réaliser
+            un travail sur
+            mesure. Nous comprenons que chaque pièce de votre véhicule raconte une histoire, et notre mission est de
+            préserver cette histoire tout en garantissant la pérennité de votre patrimoine roulant. Confiez-nous votre
+            passion ; nous en prendrons soin avec la nôtre.
+        </p>
+        <a href="#contact-section"
+            class="mt-8 bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+            data-animate="fade-in-up" data-delay="600">
+            Demandez un devis personnalisé
+        </a>
     </div>
-    <div
-      class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium"
-    >
-      <p class="italic mb-4 text-lg">
-        "Professionnalisme et passion se rencontrent ici. Je recommande
-        chaudement La Vieille Roue pour toute rénovation."
-      </p>
-      <p class="font-semibold text-primary-dark">- Marie Curie</p>
-    </div>
-    <div
-      class="bg-background-light p-6 rounded-lg shadow-xl border border-neutral-medium"
-    >
-      <p class="italic mb-4 text-lg">
-        "L'équipe est à l'écoute et le résultat est au-delà de mes espérances.
-        Une véritable œuvre d'art sur roues !"
-      </p>
-      <p class="font-semibold text-primary-dark">- Pierre Gauthier</p>
-    </div>
-  </div>
 </section>
 
-<section
-  class="bg-background-dark py-16 px-4 md:px-8 text-center text-text-light"
->
-  <h2 class="text-4xl md:text-5xl font-bold mb-6">
-    Prêt à Redonner son Éclat à Votre Véhicule ?
-  </h2>
-  <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-    Contactez-nous dès aujourd'hui pour discuter de votre projet de rénovation.
-    Nous sommes là pour concrétiser vos rêves automobiles.
-  </p>
-  <button
-    class="bg-accent hover:bg-accent-hover text-text-light font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105"
-  >
-    Prendre rendez-vous
-  </button>
+<section class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark">
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-12 text-primary-dark text-center font-k2d opacity-0"
+        data-animate="fade-in-up">
+        Les Voix de Notre Savoir-Faire
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-xl border border-neutral-medium testimonial-card-hover transition-all duration-300 opacity-0"
+            data-animate="fade-in-up" data-delay="200">
+            <p class="italic mb-4 text-lg font-jakarta">
+                "Un travail incroyable ! Ma voiture est comme neuve, même mieux qu'à
+                l'origine. Le souci du détail est impressionnant."
+            </p>
+            <p class="font-semibold text-primary-dark font-k2d">- Jean Dupont</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl border border-neutral-medium testimonial-card-hover transition-all duration-300 opacity-0"
+            data-animate="fade-in-up" data-delay="300">
+            <p class="italic mb-4 text-lg font-jakarta">
+                "Professionnalisme et passion se rencontrent ici. Je recommande
+                chaudement La Vieille Roue pour toute rénovation."
+            </p>
+            <p class="font-semibold text-primary-dark font-k2d">- Marie Curie</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-xl border border-neutral-medium testimonial-card-hover transition-all duration-300 opacity-0"
+            data-animate="fade-in-up" data-delay="400">
+            <p class="italic mb-4 text-lg font-jakarta">
+                "L'équipe est à l'écoute et le résultat est au-delà de mes espérances.
+                Une véritable œuvre d'art sur roues !"
+            </p>
+            <p class="font-semibold text-primary-dark font-k2d">- Pierre Gauthier</p>
+        </div>
+    </div>
 </section>
+
+<section id="contact-section"
+    class="bg-background-dark py-16 px-4 md:px-8 text-center text-text-light relative overflow-hidden">
+    <div class="absolute inset-0 bg-primary-dark opacity-20 transform -skew-y-3 scale-110"></div>
+    <div class="relative z-10 max-w-4xl mx-auto opacity-0" data-animate="fade-in-up">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 font-k2d leading-tight">
+            Votre <span class="text-accent">Véhicule d'Exception</span> Mérite l'Excellence.
+        </h2>
+        <p class="text-lg md:text-xl mb-10 font-jakarta opacity-90">
+            Contactez-nous dès aujourd'hui pour discuter de votre projet de rénovation.
+            Nous sommes là pour concrétiser vos rêves automobiles avec passion et savoir-faire.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="tel:+33401010101"
+                class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2 font-k2d">
+                <span class="icon-phone"></span>
+                <span>Appelez-nous : +334 01 01 01 01</span>
+            </a>
+            <a href="mailto:contact@lavieilleroue.com"
+                class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2 font-k2d">
+                    <span class="icon-mail"></span>
+                <span>Envoyez un e-mail</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const animateElements = document.querySelectorAll('[data-animate]');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const animationType = element.dataset.animate;
+                    const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
+
+                    setTimeout(() => {
+                        element.classList.remove('opacity-0');
+                        element.classList.add(`animate-${animationType}`);
+                    }, delay);
+                    observer.unobserve(element); // Arrête d'observer une fois l'animation déclenchée
+                }
+            });
+        }, { threshold: 0.1 }); // Déclenche l'animation quand 10% de l'élément est visible
+
+        animateElements.forEach(element => {
+            element.classList.add('opacity-0'); // Cache l'élément au chargement
+            observer.observe(element);
+        });
+    });
+</script>
