@@ -1,32 +1,31 @@
-# Dépendances Node (si tu utilises npm/yarn)
+# Dépendances Node.js
 node_modules/
 
-# Fichiers de cache de build
-dist/ # ou le dossier de sortie de ton CSS compilé si différent (ex: public/css)
-.parcel-cache/ # Exemple pour Parcel
-.next/ # Exemple pour Next.js
-
-# Fichiers de log
-*.log
-log/
-
-# Fichiers générés par le build de Tailwind ou autres outils
+# Dossiers de build / distribution
 dist/
+build/
+out/
 
-# Fichiers de configuration sensibles (si présents et non génériques)
+# Dossier généré par Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Dossier local Netlify
+.netlify/
+
+# Fichiers d’environnement
 .env
 .env.local
-*.env
 
-# Fichiers d'IDE (comme VS Code, IntelliJ)
-.vscode/
+# Fichiers système (macOS / Windows)
+.DS_Store
+Thumbs.db
 
-# Fichiers système
-.DS_Store # macOS
-Thumbs.db # Windows
-
-# PHP spécifiques
-vendor/  # Si tu utilises Composer
-composer.lock # Souvent inclus, mais parfois ignoré
-php_error.log
-.phpunit.result.cache
+# Fichiers temporaires et logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+*.tmp
+*.temp
