@@ -51,116 +51,65 @@
 </head>
 
   <body class="font-k2d bg-primary-medium text-text-dark min-h-screen flex flex-col">
-    <header id="navbar"
-    class="bg-background-dark text-white font-semibold font-k2d shadow-2xl flex items-center justify-between px-5 py-5 xl:px-10 xl:py-2 w-full">
-    <div class="flex-shrink-0">
-        <a href="/">
-            <img id="logo" src="/assets/logo/logo.png" alt="logo" class="max-w-[120px] h-auto" />
-        </a>
-    </div>
+    <header id="navbar" class="bg-background-dark/80 backdrop-blur-md text-text-light font-jakarta shadow-lg w-full fixed top-0 z-50 p-3">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8 lg:py-3">
+    
+    <!-- Logo + Nom entreprise -->
+    <a href="/" class="flex items-center space-x-3">
+      <img src="/assets/logo/logo.png" alt="logo La Vieille Roue" class="h-10 w-auto">
+      <span class="text-xl lg:text-2xl font-bold tracking-wide">La Vieille Roue</span>
+    </a>
 
-    <div class="lg:hidden">
-        <button id="burgerMenu" aria-label="Ouvrir le menu" class="text-gray-800 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
-    </div>
+    <!-- Burger menu (mobile only) -->
+    <button id="burgerMenu" class="lg:hidden text-text-light focus:outline-none" aria-label="Ouvrir le menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
 
-    <nav class="hidden lg:flex items-center gap-4">
-        <a href="jantes.html" class="transition-all duration-300 hover:text-accent">
-            Réparation de jantes
-        </a>
-        <a href="renovation.html" class="transition-all duration-300 hover:text-accent">
-            Rénovation de véhicules anciens
-        </a>
-        <a href="contact.html" class="transition-all duration-300 hover:text-accent flex gap-1 items-center">
-            Contactez-nous
-        </a>
+    <!-- Menu Desktop -->
+    <nav class="hidden lg:flex space-x-6 text-base font-medium">
+      <a href="jantes.html" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="renovation.html" class="hover:text-accent transition-colors duration-300 page">Rénovation de véhicules anciens</a>
+      <a href="contact.html" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
     </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-background-dark text-text-light px-4 pb-4 pt-2 transition-all duration-300 ease-in-out">
+    <nav class="flex flex-col space-y-2">
+      <a href="jantes.html" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="renovation.html" class="hover:text-accent transition-colors duration-300 page">Rénovation de véhicules anciens</a>
+      <a href="contact.html" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    </nav>
+  </div>
 </header>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.getElementById("navbar");
-        const logo = document.getElementById("logo");
-        const body = document.body;
-        const subHeader = document.getElementById("subHeader");
-        const mobileMenu = document.getElementById("mobileMenu");
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burgerMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-        // Fonction générique pour gérer les dropdowns
-        function setupDropdown(toggleSelector, dropdownSelector) {
-            document.querySelectorAll(toggleSelector).forEach((toggle) => {
-                const dropdown = toggle.nextElementSibling;
-
-                if (dropdown) {
-                    toggle.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-
-                        // Ferme tous les autres dropdowns
-                        document
-                            .querySelectorAll(dropdownSelector)
-                            .forEach((otherDropdown) => {
-                                if (otherDropdown !== dropdown) {
-                                    otherDropdown.classList.add("hidden");
-                                    otherDropdown.previousElementSibling
-                                        .querySelector(".icon-chevron")
-                                        ?.classList.remove("rotate-180");
-                                }
-                            });
-
-                        dropdown.classList.toggle("hidden");
-
-                        // Gérer l'icône du chevron
-                        const chevron = toggle.querySelector(".icon-chevron");
-                        if (chevron) {
-                            chevron.classList.toggle("rotate-180");
-                        }
-                    });
-                }
-            });
-
-            // Ferme les dropdowns si on clique ailleurs
-            document.addEventListener("click", function (event) {
-                document.querySelectorAll(dropdownSelector).forEach((dropdown) => {
-                    if (
-                        !dropdown.contains(event.target) &&
-                        !dropdown.previousElementSibling.contains(event.target)
-                    ) {
-                        dropdown.classList.add("hidden");
-                        dropdown.previousElementSibling
-                            .querySelector(".icon-chevron")
-                            ?.classList.remove("rotate-180");
-                    }
-                });
-            });
-        }
-
-        // Appliquer aux dropdowns (desktop et mobile)
-        setupDropdown("[data-dropdown='sites']", ".dropdown-sites");
-        setupDropdown("[data-dropdown='countries']", ".dropdown-countries");
-
-        const links = document.querySelectorAll(".page"); // Sélectionne tous les liens du menu
-        const mobileLinks = document.querySelectorAll("#mobileMenu a"); // Sélectionne les liens du menu mobile
-        const currentPath = window.location.pathname; // Récupère l'URL actuelle
-
-        function activateLink(linkElements) {
-            linkElements.forEach((link) => {
-                if (link.getAttribute("href") === currentPath) {
-                    link.classList.add("");
-                } else {
-                    link.classList.remove("");
-                }
-            });
-        }
-
-        activateLink(links); // Active le lien correspondant dans la navbar
-        activateLink(mobileLinks); // Active le lien correspondant dans le menu mobile
+    // Toggle menu mobile
+    burger?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
+
+    // Activer lien courant (desktop + mobile)
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll(".page");
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("text-accent", "underline");
+      } else {
+        link.classList.remove("text-accent", "underline");
+      }
+    });
+  });
 </script>
+
 
     <main class="flex-grow">
       <article class="flex-grow container mx-auto py-16 px-4 md:px-8">
