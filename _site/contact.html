@@ -56,7 +56,7 @@
     
     <!-- Logo + Nom entreprise -->
     <a href="/" class="flex items-center space-x-3">
-      <img src="/assets/logo/logo.png" alt="logo La Vieille Roue" class="h-10 w-auto">
+      <img src="/assets/logo/logo.png" alt="logo La Vieille Roue" class="h-20 w-auto">
       <span class="text-xl lg:text-2xl font-bold tracking-wide">La Vieille Roue</span>
     </a>
 
@@ -70,18 +70,18 @@
 
     <!-- Menu Desktop -->
     <nav class="hidden lg:flex space-x-6 text-base font-medium">
-      <a href="jantes.html" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
-      <a href="renovation.html" class="hover:text-accent transition-colors duration-300 page">Rénovation de véhicules anciens</a>
-      <a href="contact.html" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+      <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Rénovation de véhicules anciens</a>
+      <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
     </nav>
   </div>
 
   <!-- Menu Mobile -->
   <div id="mobileMenu" class="lg:hidden hidden bg-background-dark text-text-light px-4 pb-4 pt-2 transition-all duration-300 ease-in-out">
     <nav class="flex flex-col space-y-2">
-      <a href="jantes.html" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
-      <a href="renovation.html" class="hover:text-accent transition-colors duration-300 page">Rénovation de véhicules anciens</a>
-      <a href="contact.html" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+      <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Rénovation de véhicules anciens</a>
+      <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
     </nav>
   </div>
 </header>
@@ -112,44 +112,49 @@
 
 
     <main class="flex-grow">
-      <section class="py-16 md:py-28 px-4 md:px-8 bg-background-light text-text-dark">
-    <div class="container mx-auto">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 md:mb-12 text-primary-dark text-center">
-            Contactez La Vieille Roue
-        </h1>
-
-        <h2 class="text-2xl sm:text-3xl font-bold mb-4 md:mb-6 text-accent">
+      <section class="w-full h-screen bg-cover bg-center relative p-5"
+    style="background-image: url('/assets/images/old_car_panoramic.webp')">
+    <div class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8">
+        <div class="text-center text-text-light max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Contactez La Vieille Roue
+            </h1>
+           <h2 class="text-2xl sm:text-3xl font-bold mb-4 md:mb-6 text-accent">
             Trouvez-nous et Contactez-nous Directement
         </h2>
         <p class="text-base sm:text-lg mb-6 md:mb-8">
             Nous sommes impatients de discuter de votre projet de
             rénovation. Que ce soit pour une réparation de jantes ou la
-            restauration complète d'un véhicule de collection, nos équipes
-            sont à votre écoute.
+            restauration complète d'un véhicule de collection, notre équipe
+            est à votre écoute.
         </p>
+        </div>
+    </div>
+</section>
+<section class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark">
         <div class="flex gap-4 sm:gap-8 flex-col md:flex-row">
             <div class="bg-white p-4 sm:p-8 rounded-lg shadow-xl mb-6 sm:mb-10 border border-neutral-medium flex-1">
                 <h3 class="text-xl sm:text-2xl font-bold mb-4 text-primary-dark">
                     Nos Coordonnées
                 </h3>
                 <p class="mb-2 text-base sm:text-lg">
-                    <strong class="text-accent">Adresse :</strong> 1 Rue de
-                    l'Ancienne Forge (adresse provisoire) <br />
+                    <strong class="text-accent">Adresse :</strong> 22, ZA des Glières blanches <br />
                     73200 Grignon, Savoie
                 </p>
                 <p class="mb-2 text-base sm:text-lg">
                     <strong class="text-accent">Téléphone :</strong>
-                    <a href="tel:+33401010101" class="hover:underline">+334 01 01 01 01</a>
+                    <a href="tel:+33401010101" class="hover:underline">+336.42.09.12.07</a>
                 </p>
                 <p class="mb-4 text-base sm:text-lg">
                     <strong class="text-accent">Email :</strong>
-                    <a href="mailto:contact@lavieilleroue.com" class="hover:underline">contact@lavieilleroue.com</a>
+                    <a href="mailto:lavieilleroue@gmail.com" class="hover:underline">lavieilleroue@gmail.com</a>
                 </p>
                 <h3 class="text-xl sm:text-2xl font-bold mb-4 text-primary-dark">
                     Nos Horaires d'Ouverture
                 </h3>
                 <ul class="list-disc list-inside text-base sm:text-lg space-y-1">
-                    <li>Lundi - Vendredi : 9h00 - 12h00 & 14h00 - 18h00</li>
+                    <li>Lundi - Jeudi : 7h30 - 12h00 & 14h00 - 18h00</li>
+                    <li>Vendredi : 7h30 - 12h00 & 14h00 - 17h00</li>
                     <li>Samedi : Sur rendez-vous uniquement</li>
                     <li>Dimanche : Fermé</li>
                 </ul>
@@ -172,8 +177,8 @@
                     Pour un projet de restauration complet de votre voiture de
                     collection ou de prestige, veuillez remplir ce formulaire
                     détaillé ou contactez-nous directement par téléphone pour une
-                    discussion approfondie. Nous privilégions un contact
-                    personnalisé pour ces demandes uniques.
+                    discussion approfondie. Chaque voiture est unique et nous privilégions
+                    un contact direct pour mieux cerner vos attentes.
                 </p>
                 <form action="#" method="POST" class="space-y-4 sm:space-y-6">
                     <div>
@@ -229,16 +234,16 @@
                     Calendly ci-dessous. Choisissez le créneau qui vous convient
                     le mieux.
                 </p>
-                <div class="calendly-inline-widget" data-url="https://calendly.com/jbc-lacroix/30min"
-                    style="min-width: 280px; height: 600px; height: 700px"></div>                    async></script>
-            </div>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/jbc-lacroix/1h"
+                    style="min-width: 280px; height: 700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>            </div>
         </div>
     </div>
 </section>
 
     </main>
 
-        <!-- Footer -->
+    <!-- Footer -->
 <footer class="bg-background-dark font-k2d text-text-light px-5 md:px-28 py-8">
     <div class="container mx-auto">
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 border-b border-neutral-medium">
@@ -251,9 +256,12 @@
                 <address class="not-italic">
                     <h4 class="text-accent font-semibold"><span class="text-text-light">La vieille roue</span></h4>
                     <div class="w-10 h-0.5 bg-neutral-medium my-2"></div>
-                    <p>1 rue <br>73200 Grignon<br>Tél. : +334 01 01 01 01</p>
+                    <p>22, ZA des Glières blanches<br>73200 Grignon</p>
+                    <a href="tel:+33479326063" class="hover:text-accent transition-colors duration-300">
+                        Tél. : +334 79 32 60 63
+                    </a>
                 </address>
-                </div>
+            </div>
 
             <div class="md:col-span-1 mt-8 md:mt-0">
                 <h3 class="font-semibold text-lg text-text-light">Navigation</h3>
@@ -276,10 +284,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-dropdown="sites" class="flex items-center gap-2 hover:text-accent transition-colors duration-300">
+                            <a href="#" data-dropdown="sites"
+                                class="flex items-center gap-2 hover:text-accent transition-colors duration-300">
                                 Prise de rendez-vous
                                 <span class="icon-chevron"></span> </a>
-                            <div class="absolute z-20 bg-background-light text-text-dark shadow-lg mt-2 rounded dropdown-custom dropdown-sites hidden">
+                            <div
+                                class="absolute z-20 bg-background-light text-text-dark shadow-lg mt-2 rounded dropdown-custom dropdown-sites hidden">
                                 <a href="#" target="_blank" class="block px-4 py-2 hover:bg-neutral-light">
                                     Réparation Jantes
                                 </a>
@@ -296,13 +306,17 @@
                 <h3 class="font-semibold text-lg text-text-light mb-4">Suivez-nous</h3>
                 <div class="flex gap-6">
                     <a href="https://www.instagram.com/ikami_france/" target="_blank" aria-label="Instagram">
-                        <span class="icon-instagram w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                        <span
+                            class="icon-instagram w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
                     </a>
                     <a href="https://www.facebook.com/ikamifrance/" target="_blank" aria-label="Facebook">
-                        <span class="icon-facebook w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                        <span
+                            class="icon-facebook w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
                     </a>
-                    <a href="https://www.linkedin.com/company/ikami-france/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
-                        <span class="icon-linkedin w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
+                    <a href="https://www.linkedin.com/company/ikami-france/posts/?feedView=all" target="_blank"
+                        aria-label="LinkedIn">
+                        <span
+                            class="icon-linkedin w-8 h-8 md:w-10 md:h-10 transition-transform duration-200 hover:scale-110">
                     </a>
                 </div>
             </div>
@@ -310,14 +324,11 @@
 
         <section class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
-                <a href="/politique-confidentialite.html"
- 
-                   class="hover:text-text-light transition-colors duration-300">
+                <a href="/politique-confidentialite.html" class="hover:text-text-light transition-colors duration-300">
                     Politique de confidentialité
                 </a>
                 <span class="text-accent">|</span>
-                <a href="/mentions-legales.html" 
-                   class="hover:text-text-light transition-colors duration-300">
+                <a href="/mentions-legales.html" class="hover:text-text-light transition-colors duration-300">
                     Mentions légales
                 </a>
             </div>
