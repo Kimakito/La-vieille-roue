@@ -25,6 +25,12 @@
 #   publish = "_site"
 #   environment = { JEKYLL_ENV = "staging" }
 
+[[headers]]
+  for = "/assets/images/*" # Applique ces headers à toutes les images dans ce dossier
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable" # Mise en cache pour 1 an, et indique que le fichier ne changera pas
+
+
 # Redirections (ex: forcer HTTPS, rediriger d'anciennes URLs)
 [[redirects]]
   from = "/old-page"
