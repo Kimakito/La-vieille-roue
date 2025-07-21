@@ -7,6 +7,9 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/jantes.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/mentions-legales.html</loc>
 </url>
 <url>
@@ -18,9 +21,5 @@
 <url>
 <loc>http://localhost:4000/assets/icomoon/demo.html</loc>
 <lastmod>2025-06-12T13:59:16+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/jantes.html</loc>
-<lastmod>2025-07-21T15:40:04+02:00</lastmod>
 </url>
 </urlset>
