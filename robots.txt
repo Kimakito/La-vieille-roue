@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Point to your sitemap
-Sitemap: {{ site.url | append: site.baseurl }}/sitemap.xml
+Sitemap: https://lavieilleroue.fr/sitemap.xml
