@@ -24,7 +24,7 @@ module.exports = {
 
         // Couleurs principales (Tons de bleu profonds et dynamiques)
         "primary-light": "#6B7DE5", // Un bleu moyen éclatant, dérivé de votre bleu cible
-        "primary-medium": "#4C5CDA", // Le bleu principal, proche de votre #3333CC mais avec une touche plus moderne
+        "primary-medium": "#595959", // anthracite pour un usage polyvalent
         "primary-dark": "#2B3ABF",  // Un bleu profond et intense, pour les éléments clés et les fonds sombres
 
         // Couleur d'accent (un jaune vif et énergique)
