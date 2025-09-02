@@ -1,0 +1,72 @@
+<section id="opening-banner"
+    class="fixed left-0 w-full z-40 bg-primary-dark text-text-light py-3 px-4 shadow-lg transform transition-transform duration-500 ease-in-out -translate-y-full opacity-0 border-2 border-red-500"    role="alert" aria-live="polite" aria-label="Annonce d'ouverture prochaine"
+    style="top: var(--banner-top);">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-base sm:text-lg font-jakarta text-center md:text-left font-semibold">
+            <span class="text-accent">Grande nouvelle !</span> Notre atelier ouvre très bientôt, d'ici une dizaine de jours !
+            Restez à l'écoute pour la date exacte.
+        </p>
+        <div class="flex items-center gap-4">
+            <a href="#contact-section"
+                class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-2 px-6 rounded-full text-sm sm:text-base whitespace-nowrap transition-all duration-300 transform hover:scale-105"
+                aria-label="Contactez-nous pour plus d'informations">
+                Contactez-nous
+            </a>
+            <button id="close-banner-btn"
+                class="bg-transparent hover:bg-text-light hover:bg-opacity-10 text-text-light rounded-full p-2 transition-colors duration-300"
+                aria-label="Fermer ce bandeau d'annonce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('opening-banner');
+        const closeBtn = document.getElementById('close-banner-btn');
+        const header = document.getElementById('navbar');
+        const hasBeenClosed = localStorage.getItem('openingBannerClosed');
+        
+        const updatePositions = () => {
+            const headerHeight = header.offsetHeight;
+            const bannerHeight = banner.offsetHeight;
+            
+            // On définit la position 'top' du bandeau sous le header
+            banner.style.setProperty('--banner-top', headerHeight + 'px');
+
+            // On décale le contenu de la page
+            document.body.style.paddingTop = (headerHeight + bannerHeight) + 'px';
+        };
+
+        if (!hasBeenClosed) {
+            // Afficher le bandeau et ajuster le décalage
+            setTimeout(() => {
+                banner.classList.remove('-translate-y-full', 'opacity-0');
+                updatePositions();
+            }, 1000); 
+        } else {
+            // Si le bandeau est fermé, on s'assure que seul le padding du header est présent
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+        }
+
+        closeBtn.addEventListener('click', () => {
+            banner.classList.add('-translate-y-full', 'opacity-0');
+            // Réinitialiser le padding du body après la fermeture
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+            localStorage.setItem('openingBannerClosed', 'true');
+        });
+
+        // Mettre à jour les positions si la fenêtre est redimensionnée
+        window.addEventListener('resize', () => {
+             if (!hasBeenClosed) {
+                updatePositions();
+            } else {
+                document.body.style.paddingTop = header.offsetHeight + 'px';
+            }
+        });
+    });
+</script>
