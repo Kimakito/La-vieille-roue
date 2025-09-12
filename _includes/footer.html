@@ -1,68 +1,72 @@
 <footer class="bg-background-dark font-k2d text-text-light px-5 md:px-28 py-8">
     <div class="container mx-auto">
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 border-b border-neutral-medium">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 border-b border-neutral-medium">
 
-            <div class="md:col-span-1 flex justify-center md:justify-start mb-6 md:mb-0">
-                <img class="max-w-[180px] h-auto" src="/assets/logo/logo.png" alt="Logo La Vieille Roue">
+            <!-- Logo -->
+            <div class="flex justify-center md:justify-start items-center">
+                <img class="h-30 w-auto object-contain" src="/assets/logo/logo.png" alt="Logo La Vieille Roue">
             </div>
 
-            <div class="md:col-span-1 text-sm text-center md:text-left">
+            <!-- Image atelier (cachée sur mobile) -->
+            <div class="hidden md:flex justify-center md:justify-start items-center">
+                <img src="/assets/images/la-vieille-roue.jpeg" alt="l'atelier La Vieille Roue à Albertville"
+                    class="h-30 w-auto rounded-xl shadow-lg object-cover">
+            </div>
+
+            <!-- Adresse -->
+            <div class="flex items-center text-sm text-center md:text-left">
                 <address class="not-italic">
-                    <h4 class="text-accent font-semibold"><span class="text-text-light">La Vieille Roue</span></h4>
+                    <h4 class="text-accent font-semibold">
+                        <span class="text-text-light">La Vieille Roue</span>
+                    </h4>
                     <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
                     <p>22, rue des Glières - ZA des Glières Blanches<br>73200 Grignon</p>
                     <a href="tel:0479326063" class="hover:text-accent transition-colors duration-300 block mt-2">
                         Tél. : 04 79 32 60 63
                     </a>
-                    <a href="mailto:lavieilleroue@gmail.com" class="hover:text-accent transition-colors duration-300 block mt-1">
+                    <a href="mailto:lavieilleroue@gmail.com"
+                        class="hover:text-accent transition-colors duration-300 block mt-1">
                         Email : lavieilleroue@gmail.com
                     </a>
                 </address>
             </div>
 
-            <div class="md:col-span-1 mt-8 md:mt-0 text-center md:text-left">
-                <h3 class="font-semibold text-lg text-text-light">Navigation Rapide</h3>
-                <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
-                <nav>
-                    <ul class="text-sm space-y-2">
-                        <li>
-                            <a href="/" class="hover:text-accent transition-colors duration-300">
-                                Accueil
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/jantes" class="hover:text-accent transition-colors duration-300">
-                                Rénovation de jantes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/vehicules-anciens" class="hover:text-accent transition-colors duration-300">
-                                Restauration véhicules anciens
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/contact" class="hover:text-accent transition-colors duration-300">
-                                Nous contacter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://calendly.com/your-booking-link" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors duration-300">
-                                Prendre rendez-vous
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            <!-- Navigation -->
+            <div class="flex items-center text-center md:text-left">
+                <div>
+                    <h3 class="font-semibold text-lg text-text-light">Navigation Rapide</h3>
+                    <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
+                    <nav>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="/" class="hover:text-accent transition-colors duration-300">Accueil</a></li>
+                            <li><a href="/jantes" class="hover:text-accent transition-colors duration-300">Rénovation de
+                                    jantes</a></li>
+                            <li><a href="/vehicules-anciens"
+                                    class="hover:text-accent transition-colors duration-300">Restauration véhicules
+                                    anciens</a></li>
+                            <li><a href="/contact" class="hover:text-accent transition-colors duration-300">Nous
+                                    contacter</a></li>
+                            <li><a href="https://lavieilleroue.fr/contact" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-accent transition-colors duration-300">Prendre rendez-vous</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
         </section>
 
+        <!-- Bas de page -->
         <section class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
-                <a href="/politique-confidentialite.html" target="_blank" class="hover:text-text-light transition-colors duration-300">
+                <a href="/politique-confidentialite.html" target="_blank"
+                    class="hover:text-text-light transition-colors duration-300">
                     Politique de confidentialité
                 </a>
                 <span class="text-accent">|</span>
-                <a href="/mentions-legales.html" target="_blank" class="hover:text-text-light transition-colors duration-300">
+                <a href="/mentions-legales.html" target="_blank"
+                    class="hover:text-text-light transition-colors duration-300">
                     Mentions légales
                 </a>
             </div>
