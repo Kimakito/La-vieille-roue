@@ -23,7 +23,7 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
         </div>
     </div>
 </section>
-<section class="container mx-auto py-16 px-4 md:px-8 bg-background-light text-text-dark">
+<section class="container mx-auto py-16 px-4 md:px-8 text-text-dark">
         <div class="flex gap-4 sm:gap-8 flex-col md:flex-row">
             <div class="bg-white p-4 sm:p-8 rounded-lg shadow-xl mb-6 sm:mb-10 border border-neutral-medium flex-1">
                 <h3 class="text-xl sm:text-2xl font-bold mb-4 text-primary-dark">
@@ -72,34 +72,34 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
                     <div>
                         <label for="name" class="block text-base sm:text-lg font-medium text-text-dark">Nom Complet</label>
                         <input type="text" id="name" name="name"
-                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
+                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
                             placeholder="Votre nom" required />
                     </div>
                     <div>
                         <label for="email" class="block text-base sm:text-lg font-medium text-text-dark">Email</label>
                         <input type="email" id="email" name="email"
-                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
+                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
                             placeholder="votre.email@exemple.com" required />
                     </div>
                     <div>
                         <label for="phone" class="block text-base sm:text-lg font-medium text-text-dark">Téléphone
                             (recommandé)</label>
                         <input type="tel" id="phone" name="phone"
-                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
+                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
                             placeholder="+33 X XX XX XX XX" />
                     </div>
                     <div>
                         <label for="vehicle_type" class="block text-base sm:text-lg font-medium text-text-dark">Type de véhicule
                             (Marque, Modèle, Année)</label>
                         <input type="text" id="vehicle_type" name="vehicle_type"
-                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
+                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
                             placeholder="Ex: Porsche 911 (1972)" required />
                     </div>
                     <div>
                         <label for="message" class="block text-base sm:text-lg font-medium text-text-dark">Décrivez votre projet de
                             restauration</label>
                         <textarea id="message" name="message" rows="6"
-                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
+                            class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
                             placeholder="Décrivez les travaux envisagés : carrosserie, peinture, éléments spécifiques..."
                             required></textarea>
                     </div>
@@ -112,27 +112,39 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
                 </form>
             </div>
 
-            <div class="bg-white p-4 sm:p-8 rounded-lg shadow-xl mb-6 sm:mb-10 border border-neutral-medium">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-accent">
-                    Réparation de Jantes : Prenez Rendez-vous Facilement
-                </h2>
-                <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-rdv-jantes"></div>
-                <script type="text/javascript">
-                    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                    Cal("init", "rdv-jantes", { origin: "https://app.cal.com" });
+    <div class="bg-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl shadow-2xl mb-4 sm:mb-6 md:mb-8 lg:mb-12 border-2 border-neutral-medium hover:border-accent transition-colors duration-300">
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-accent border-b-2 border-accent pb-2 sm:pb-4">
+        Réparation de Jantes : Prenez Rendez-vous Facilement
+    </h2>
+    <div class="rounded-xl border border-neutral-light p-2 sm:p-4" style="width:100%;height:100%;min-height:400px;overflow:auto"
+        id="my-cal-inline-rdv-jantes"></div>
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "rdv-jantes", { origin: "https://app.cal.com" });
 
-                    Cal.ns["rdv-jantes"]("inline", {
-                        elementOrSelector: "#my-cal-inline-rdv-jantes",
-                        config: { "layout": "month_view" },
-                        calLink: "la-vieille-roue/rdv-jantes",
-                    });
+        Cal.ns["rdv-jantes"]("inline", {
+            elementOrSelector: "#my-cal-inline-rdv-jantes",
+            config: { 
+                "layout": "month_view",
+                "styles": {
+                    "branding": { "shouldDisplayBranding": false },
+                    "enableResponsive": true
+                }
+            },
+            calLink: "la-vieille-roue/rdv-jantes",
+        });
 
-                    Cal.ns["rdv-jantes"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
-                </script>
-                <!-- Début de widget en ligne Calendly -->
-                <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/lavieilleroue/rdv-renovation-de-jante" style="min-width:320px;height:700px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
-                <!-- Fin de widget en ligne Calendly -->
-        </div>
+        Cal.ns["rdv-jantes"]("ui", { 
+            "hideEventTypeDetails": false, 
+            "layout": "month_view",
+            "styles": {
+                "enableResponsive": true
+            }
+        });
+    </script>
+    <!-- Début de widget en ligne Calendly -->
+    <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/lavieilleroue/rdv-renovation-de-jante" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+    <!-- Fin de widget en ligne Calendly -->
     </div>
-</section>
+</div></section>

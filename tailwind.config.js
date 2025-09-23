@@ -1,47 +1,50 @@
 // tailwind.config.js
 module.exports = {
-  content: [
-    "./**/*.{html,md,js}",
-    "./_includes/**/*.html",
-    "./_layouts/**/*.html",
-    "./_posts/*.md",
-    "./_nouvelles/*.md",
-    "/assets/js/**/*.js",
-    "./index.html",
-  ],
-  theme: {
-    extend: {
-      fontFamily: {
-        k2d: ['"K2D"', "sans-serif"],
-        jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
-      },
-      colors: {
-        // Couleurs de fond et de texte (légèrement ajustées pour un meilleur contraste avec les nouvelles couleurs vives)
-        "background-light": "#F8F8F8", // Un blanc cassé plus pur, plus lumineux
-        "background-dark": "#0F1A2B", // Un bleu nuit encore plus profond, presque noir pour un contraste maximal
-        "text-dark": "#2C2C3E",       // Un gris-bleu très foncé, presque noir, pour la lisibilité sur fond clair
-        "text-light": "#F0F2F5",      // Un gris très clair, presque blanc, pour le texte sur fond sombre
+    content: [
+        "./**/*.{html,md,js}",
+        "./_includes/**/*.html",
+        "./_layouts/**/*.html",
+        "./_posts/*.md",
+        "./_nouvelles/*.md",
+        "/assets/js/**/*.js",
+        "./index.html",
+    ],
+    theme: {
+        extend: {
+            fontFamily: {
+                k2d: ['"K2D"', "sans-serif"],
+                jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            backgroundImage: {
+                'gradient-body': 'linear-gradient(90deg, #2B3ABF 0%, #61D4E8 100%)',
+            },
+            colors: {
+                // Couleurs de fond et de texte
+                "background-light": "#F7FBFD", // blanc légèrement bleuté, cohérent avec le bleu clair
+                "background-dark": "#0D1A2F", // bleu nuit presque noir, contraste fort
+                "text-dark": "#1C1F2E",       // gris-bleu très sombre pour la lisibilité
+                "text-light": "#F2F8FA",      // blanc bleuté pour le texte sur fond sombre
 
-        // Couleurs principales (Tons de bleu profonds et dynamiques)
-        "primary-light": "#6B7DE5", // Un bleu moyen éclatant, dérivé de votre bleu cible
-        "primary-medium": "#595959", // anthracite pour un usage polyvalent
-        "primary-dark": "#2B3ABF",  // Un bleu profond et intense, pour les éléments clés et les fonds sombres
+                // Couleurs principales (autour de tes deux couleurs)
+                "primary-light": "#61D4E8", // ton bleu clair officiel
+                "primary-medium": "#3B5BDC", // bleu intermédiaire, entre clair et foncé
+                "primary-dark": "#2B3ABF",   // ton bleu profond officiel
 
-        // Couleur d'accent (un jaune vif et énergique)
-        accent: "#F1C40F",       // Votre jaune souhaité, très lumineux !
-        "accent-hover": "#E6B80A", // Un jaune légèrement plus foncé pour l'effet de survol
+                // Couleur d'accent (complémentaire dynamique)
+                accent: "#FFB703",       // orange vif, bon contraste avec le bleu
+                "accent-hover": "#E89C02", // orange plus foncé au survol
 
-        // Couleurs secondaires / neutres (pour équilibrer et ajouter de la texture)
-        "neutral-light": "#E8ECEF", // Un gris clair et propre
-        "neutral-medium": "#B0B8C0", // Un gris moyen équilibré
-        "neutral-dark": "#7A8288",   // Un gris plus foncé, pour les ombres ou bordures secondaires
+                // Couleurs secondaires / neutres
+                "neutral-light": "#F2F2F2", // gris argent clair
+                "neutral-medium": "#C0C0C0", // gris alu
+                "neutral-dark": "#4A4A4A",   // anthracite
 
-        // Couleurs d'état (inchangées car universelles)
-        success: "#3CB371",
-        error: "#DC143C",
-        warning: "#FFD700",
-      },
+                // Couleurs d'état (inchangées car universelles)
+                success: "#3CB371",
+                error: "#DC143C",
+                warning: "#FFD700",
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 };
