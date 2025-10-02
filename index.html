@@ -114,7 +114,55 @@ image_share: /assets/logo/logo-vieille-roue.png
         </div>
     </div>
 </section>
+<section class="container mx-auto py-16 px-4 md:px-8">
+  <h3 class="text-3xl font-bold text-center mb-4">Exemples de rénovation</h3>
+  <p class="text-lg text-center mb-8">Rénovation de jantes d'une <strong>Clio Williams</strong></p>
 
+  <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl">
+    <!-- Conteneur avec ratio 16/9 -->
+    <div class="relative pt-[56.25%]"> 
+      <!-- Slider -->
+      <div id="slider-clio" class="absolute inset-0 flex transition-transform duration-500">
+        <img src="/assets/images/clio williams/IMG_20251001_175320.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Avant rénovation jante Clio Williams">
+        <img src="/assets/images/clio williams/IMG_20251001_175322.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Détails jante Clio Williams en rénovation">
+        <img src="/assets/images/clio williams/IMG_20251001_175327.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Usinage de jante Clio Williams">
+        <img src="/assets/images/clio williams/IMG_20251001_175334.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Peinture jante Clio Williams">
+        <img src="/assets/images/clio williams/IMG_20251001_175336.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Finition dorée Clio Williams">
+        <img src="/assets/images/clio williams/IMG_20251001_175355.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Vue atelier rénovation jante Clio Williams">
+        <img src="/assets/images/clio williams/IMG_20251001_175358.jpg" class="w-full h-full object-cover flex-shrink-0" alt="Résultat final jante Clio Williams">
+      </div>
+    </div>
+
+    <!-- Boutons navigation -->
+    <button onclick="prevClio()" aria-label="Image précédente"
+      class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full shadow-lg transition">
+      ◀
+    </button>
+    <button onclick="nextClio()" aria-label="Image suivante"
+      class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full shadow-lg transition">
+      ▶
+    </button>
+  </div>
+</section>
+<script>
+  const sliderClio = document.getElementById("slider-clio");
+  const totalSlidesClio = sliderClio.children.length;
+  let indexClio = 0;
+
+  function showSlideClio() {
+    sliderClio.style.transform = `translateX(-${indexClio * 100}%)`;
+  }
+
+  function nextClio() {
+    indexClio = (indexClio + 1) % totalSlidesClio;
+    showSlideClio();
+  }
+
+  function prevClio() {
+    indexClio = (indexClio - 1 + totalSlidesClio) % totalSlidesClio;
+    showSlideClio();
+  }
+</script>
 <section id="restauration-section"
     class="relative flex items-center justify-center text-text-light text-center px-4 md:px-8 py-6 md:py-24 text text-justify" style="
             background-image: url('/assets/images/porsche-8343861_1280.jpg');
