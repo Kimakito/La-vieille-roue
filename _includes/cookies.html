@@ -1,87 +1,118 @@
-<div id="cookie-banner"
-    class="fixed bottom-0 left-0 right-0 bg-background-dark text-text-light p-6 shadow-2xl z-50 transform translate-y-full transition-transform duration-500 ease-out">
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-background-dark text-text-light p-6 shadow-2xl z-50 transform translate-y-full transition-transform duration-500 ease-out">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex-grow text-center md:text-left">
-            <h3 class="text-2xl font-bold mb-2 text-accent">
-                Gérez vos préférences de cookies
-            </h3>
+            <h3 class="text-2xl font-bold mb-2 text-accent">Gérez vos préférences de cookies</h3>
             <p class="text-lg leading-relaxed">
-                Notre site utilise des cookies et autres traceurs pour améliorer votre
-                expérience de navigation, analyser le trafic et personnaliser nos
-                services. Certains sont essentiels pour le fonctionnement du site,
-                d'autres nécessitent votre consentement.
+                Notre site utilise des cookies pour le fonctionnement essentiel, l'analyse et les réseaux sociaux.
+                Vous pouvez activer ou désactiver chaque catégorie ci-dessous. Les cookies non essentiels ne seront
+                chargés qu'après votre consentement.
             </p>
-            <p class="mt-3 text-lg">
-                Pour en savoir plus sur les données que nous collectons, consultez
-                notre
-                <a href="/politique-confidentialite.html" class="text-accent hover:underline font-semibold">Politique de
-                    Confidentialité</a>.
-            </p>
+            <p class="mt-3 text-lg">Consultez notre <a href="/politique-confidentialite.html" class="text-accent hover:underline font-semibold">Politique de Confidentialité</a> pour plus de détails.</p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <button id="accept-cookies"
-                class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 transform hover:scale-105 text-lg w-full">
-                Accepter tout
-            </button>
-            <button id="reject-cookies"
-                class="bg-neutral-medium hover:bg-neutral-dark text-text-light font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 transform hover:scale-105 text-lg w-full">
-                Refuser tout
-            </button>
+
+        <div class="w-full md:w-auto">
+            <div class="flex flex-col gap-3 text-sm text-text-dark bg-background-light p-4 rounded-md mb-4">
+                <label class="flex items-center justify-between gap-4">
+                    <span class="font-medium">Essentiels</span>
+                    <input type="checkbox" id="cookie-essential" disabled checked class="w-5 h-5" />
+                </label>
+                <label class="flex items-center justify-between gap-4">
+                    <span class="font-medium">Analytics</span>
+                    <input type="checkbox" id="cookie-analytics" class="w-5 h-5" />
+                </label>
+                <label class="flex items-center justify-between gap-4">
+                    <span class="font-medium">Marketing / Social</span>
+                    <input type="checkbox" id="cookie-marketing" class="w-5 h-5" />
+                </label>
+            </div>
+
+            <div class="flex gap-3">
+                <button id="save-cookies" class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105">Sauvegarder</button>
+                <button id="accept-all-cookies" class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105">Accepter tout</button>
+                <button id="reject-all-cookies" class="bg-neutral-medium hover:bg-neutral-dark text-text-light font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105">Refuser tout</button>
+            </div>
         </div>
     </div>
 </div>
+
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const cookieBanner = document.getElementById("cookie-banner");
-        const acceptButton = document.getElementById("accept-cookies");
-        const rejectButton = document.getElementById("reject-cookies");
+    document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('cookie-banner');
+        const chkAnalytics = document.getElementById('cookie-analytics');
+        const chkMarketing = document.getElementById('cookie-marketing');
+        const btnSave = document.getElementById('save-cookies');
+        const btnAcceptAll = document.getElementById('accept-all-cookies');
+        const btnRejectAll = document.getElementById('reject-all-cookies');
 
-        // Check if the user has already made a choice
-        const cookieConsent = localStorage.getItem("cookieConsent");
+        // Default consent state
+        const defaultConsent = { essential: true, analytics: false, marketing: false };
 
-        if (!cookieConsent) {
-            // Show the banner if no choice has been made
-            setTimeout(() => {
-                cookieBanner.classList.remove("translate-y-full");
-            }, 500); // Small delay to ensure CSS transition works
-        } else {
-            // If a choice exists, remove the banner from the flow
-            cookieBanner.style.display = "none";
+        function readConsent() {
+            try {
+                const raw = localStorage.getItem('cookieConsent');
+                if (!raw) return null;
+                return JSON.parse(raw);
+            } catch (e) {
+                console.warn('cookieConsent read error', e);
+                return null;
+            }
         }
 
-        // Event listener for "Accept All" button
-        acceptButton.addEventListener("click", () => {
-            localStorage.setItem("cookieConsent", "accepted");
-            cookieBanner.classList.add("translate-y-full"); // Hide the banner
-            setTimeout(() => {
-                cookieBanner.style.display = "none";
-            }, 500); // Remove from display after transition
-            // Here, you would typically load/enable all tracking scripts (e.g., Google Analytics)
-            // Example: loadGoogleAnalytics();
-            console.log(
-                "Cookies accepted. (Placeholder: Load all analytics/tracking scripts)"
-            );
+        function writeConsent(consent) {
+            try {
+                localStorage.setItem('cookieConsent', JSON.stringify(consent));
+                // Emit a global event so other scripts can react
+                window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: consent }));
+            } catch (e) {
+                console.warn('cookieConsent write error', e);
+            }
+        }
+
+        function applyConsentToUI(consent) {
+            chkAnalytics.checked = !!consent.analytics;
+            chkMarketing.checked = !!consent.marketing;
+        }
+
+        function hideBanner() {
+            banner.classList.add('translate-y-full');
+            setTimeout(() => { banner.style.display = 'none'; }, 500);
+        }
+
+        // Initialize
+        const stored = readConsent();
+        if (!stored) {
+            setTimeout(() => { banner.classList.remove('translate-y-full'); }, 250);
+            applyConsentToUI(defaultConsent);
+        } else {
+            hideBanner();
+            applyConsentToUI(stored);
+        }
+
+        // Save buttons
+        btnSave.addEventListener('click', () => {
+            const consent = { essential: true, analytics: chkAnalytics.checked, marketing: chkMarketing.checked };
+            writeConsent(consent);
+            hideBanner();
+            console.log('Cookies saved', consent);
         });
 
-        // Event listener for "Reject All" button
-        rejectButton.addEventListener("click", () => {
-            localStorage.setItem("cookieConsent", "rejected");
-            cookieBanner.classList.add("translate-y-full"); // Hide the banner
-            setTimeout(() => {
-                cookieBanner.style.display = "none";
-            }, 500); // Remove from display after transition
-            // Here, you would typically disable/unload all non-essential tracking scripts
-            // Example: disableGoogleAnalytics();
-            console.log(
-                "Cookies rejected. (Placeholder: Disable non-essential scripts)"
-            );
+        btnAcceptAll.addEventListener('click', () => {
+            const consent = { essential: true, analytics: true, marketing: true };
+            writeConsent(consent);
+            hideBanner();
+            console.log('Accepted all cookies');
         });
 
-        // IMPORTANT FOR COMPLIANCE:
-        // By default, NO non-essential cookies/trackers should be loaded until 'accepted' is clicked.
-        // You need to implement this logic for each third-party script (e.g., Google Analytics, Calendly's tracking features if any).
-        // This basic script only manages the banner's visibility based on a simple 'accepted' or 'rejected' flag.
-        // For Calendly, you might need to check its documentation on how to defer its loading based on user consent.
-        // A robust CMP handles this script blocking automatically.
+        btnRejectAll.addEventListener('click', () => {
+            const consent = { essential: true, analytics: false, marketing: false };
+            writeConsent(consent);
+            hideBanner();
+            console.log('Rejected non-essential cookies');
+        });
+
+        // Make consent available globally via window.getCookieConsent()
+        window.getCookieConsent = function() { return readConsent() || defaultConsent; };
+
+        // If other scripts listen to cookieConsentChanged, they'll react (e.g., load SDKs)
     });
 </script>

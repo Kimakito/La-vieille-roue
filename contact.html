@@ -153,3 +153,170 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
     <!-- Fin de widget en ligne Calendly -->
 </div>
 </section>
+<!-- Facebook Page plugin section -->
+<section id="facebook-section" class="container mx-auto py-16 px-4 md:px-8" aria-labelledby="facebook-heading">
+    <h2 id="facebook-heading" class="text-3xl md:text-4xl font-extrabold mb-6 text-center">Suivez-nous sur Facebook</h2>
+    <p class="text-center mb-6">Retrouvez nos dernières rénovations et actualités. Si vous refusez les cookies, un lien direct vers notre page est affiché.</p>
+
+    <!-- Facebook SDK root -->
+    <div id="fb-root"></div>
+    <style>
+        /* Force Facebook Page plugin to center in our card */
+        #facebook-section .fb-page,
+        #facebook-section .fb-page .fb_iframe_widget,
+        #facebook-section .fb-page .fb_iframe_widget span,
+        #facebook-section .fb-page .fb_iframe_widget iframe,
+        #facebook-section .fb-page iframe,
+        #facebook-section .fb-page > div {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            display: block !important;
+            max-width: 100% !important;
+        }
+        /* Ensure inner iframe content is centered and doesn't float */
+        #facebook-section .fb_iframe_widget, 
+        #facebook-section .fb_iframe_widget span, 
+        #facebook-section .fb_iframe_widget iframe {
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
+            max-width: 100% !important;
+        }
+        /* Ensure fallback link is centered */
+        #facebook-section #fb-fallback { text-align: center; }
+    </style>
+
+
+    <!-- Wrapper: the actual page plugin will be inserted here if allowed -->
+    <div class="max-w-4xl mx-auto p-6 overflow-hidden relative z-10">
+        <!-- Consent-aware container -->
+    <div id="fb-container" class="w-full min-h-[360px] flex items-center justify-center mx-auto max-w-prose">
+            <!-- Fallback before SDK loads or if cookies blocked -->
+            <div id="fb-fallback" class="text-center">
+                <p class="mb-3">Chargement du fil Facebook...</p>
+                <p class="text-sm">Si rien n'apparaît, cliquez sur le lien ci-dessous pour ouvrir notre page Facebook.</p>
+                <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-accent underline">Ouvrir la page Facebook de La Vieille Roue</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const pageUrl = 'https://www.facebook.com/profile.php?id=61581564816236';
+
+            function loadFacebookSDK() {
+                if (document.getElementById('facebook-jssdk')) return;
+                var js = document.createElement('script');
+                js.id = 'facebook-jssdk';
+                js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v16.0';
+                js.async = true;
+                js.defer = true;
+                document.body.appendChild(js);
+            }
+
+            function renderPagePlugin() {
+                const container = document.getElementById('fb-container');
+                if (!container) return;
+                container.innerHTML = '';
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'fb-page';
+                wrapper.setAttribute('data-href', pageUrl);
+                wrapper.setAttribute('data-tabs', 'timeline');
+                // Let Facebook adapt to container width by avoiding fixed data-width/data-height
+                wrapper.setAttribute('data-small-header', 'false');
+                wrapper.setAttribute('data-adapt-container-width', 'true');
+                wrapper.setAttribute('data-hide-cover', 'false');
+                wrapper.setAttribute('data-show-facepile', 'true');
+                // Apply responsive inline styles to ensure the plugin stays inside the card
+                wrapper.style.cssText = 'width:100%; min-height:360px; max-width:100%; overflow:hidden; display:inline-block; margin:0 auto;';
+
+                const fbBlockquote = document.createElement('blockquote');
+                fbBlockquote.className = 'fb-xfbml-parse-ignore';
+                fbBlockquote.innerHTML = `<a href="${pageUrl}" target="_blank" rel="noopener noreferrer">La Vieille Roue</a>`;
+
+                wrapper.appendChild(fbBlockquote);
+                container.appendChild(wrapper);
+
+                // Render (if FB is ready)
+                if (window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function') {
+                    FB.XFBML.parse(container);
+                }
+            }
+
+            // Cookie consent integration note:
+            // If you use a cookie-consent manager, call loadFacebookSDK() only after user accepts marketing/social cookies.
+
+            // Integrate with cookie banner: load SDK only when marketing/social consent is given.
+            function checkConsentAndMaybeLoad() {
+                try {
+                    var consent = null;
+                    if (typeof window.getCookieConsent === 'function') {
+                        consent = window.getCookieConsent();
+                    } else {
+                        const raw = localStorage.getItem('cookieConsent');
+                        consent = raw ? JSON.parse(raw) : null;
+                    }
+
+                    if (consent && (consent.marketing === true || consent.social === true)) {
+                        loadFacebookSDK();
+                        window.addEventListener('fb_init', renderPagePlugin);
+                        setTimeout(renderPagePlugin, 1200);
+                        return true;
+                    }
+                } catch (e) {
+                    console.warn('Facebook integration: consent check failed', e);
+                }
+                return false;
+            }
+
+            // Initial check
+            var loadedByConsent = checkConsentAndMaybeLoad();
+
+            // If not loaded yet, offer a manual button (fallback) and listen for consent changes
+            if (!loadedByConsent) {
+                const fallback = document.getElementById('fb-fallback');
+                const enableBtn = document.createElement('button');
+                enableBtn.className = 'mt-4 bg-accent text-primary-dark font-bold py-2 px-4 rounded';
+                enableBtn.textContent = 'Afficher le fil Facebook (autoriser)';
+                enableBtn.onclick = function() {
+                    try {
+                        // Set marketing consent if possible
+                        const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent') || '{}'));
+                        const updated = Object.assign({}, current || {}, { marketing: true });
+                        localStorage.setItem('cookieConsent', JSON.stringify(updated));
+                        window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
+                    } catch (e) {
+                        localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
+                        window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
+                    }
+                    loadFacebookSDK();
+                    setTimeout(renderPagePlugin, 800);
+                };
+                fallback.appendChild(document.createElement('br'));
+                fallback.appendChild(enableBtn);
+
+                // Listen for consent changes from the cookie banner
+                window.addEventListener('cookieConsentChanged', function(e) {
+                    const detail = e && e.detail ? e.detail : null;
+                    if (detail && (detail.marketing === true || detail.social === true)) {
+                        loadFacebookSDK();
+                        setTimeout(renderPagePlugin, 1000);
+                    }
+                });
+            }
+
+            // Listen for FB SDK ready (the SDK itself doesn't emit a simple event, so we patch it when loaded)
+            var observer = new MutationObserver(function(mutationsList, observer) {
+                if (window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function') {
+                    // dispatch a custom event once FB is ready
+                    window.dispatchEvent(new Event('fb_init'));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.documentElement, { childList: true, subtree: true });
+        })();
+    </script>
+
+    <!-- End Facebook section -->
