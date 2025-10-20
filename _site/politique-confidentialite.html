@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="La Vieille Roue">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Add Google Search favicon -->
+    <link rel="search" type="application/opensearchdescription+xml" title="La Vieille Roue" href="/opensearch.xml">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="La Vieille Roue">
+    <meta property="og:title" content="Politique de confidentialité">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lavieilleroue.fr/politique-confidentialite.html">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Politique de confidentialité">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <link href="/assets/css/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/assets/icomoon/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;800&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://lavieilleroue.fr/politique-confidentialite.html">
+    <title>Politique de confidentialité</title>
+</head>
+
+  <body class="font-k2d bg-gradient-body text-text-light min-h-screen flex flex-col pt-[136px] md:pt-[128px]">
+    <header id="navbar" class="bg-background-dark/80 backdrop-blur-md text-text-light font-jakarta shadow-lg w-full fixed top-0 z-50 p-3">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8 lg:py-3">
+    
+    <!-- Logo + Nom entreprise -->
+    <a href="/" class="flex items-center space-x-3">
+      <img src="/assets/logo/LOGO.svg" alt="logo La Vieille Roue" class="h-20 w-auto">
+      <span class="text-xl lg:text-2xl font-bold tracking-wide">La Vieille Roue</span>
+    </a>
+
+    <!-- Burger menu (mobile only) -->
+    <button id="burgerMenu" class="lg:hidden text-text-light focus:outline-none" aria-label="Ouvrir le menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden lg:flex space-x-6 text-base font-medium">
+      <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Restauration de véhicules</a>
+      <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-background-dark text-text-light px-4 pb-4 pt-2 transition-all duration-300 ease-in-out">
+    <nav class="flex flex-col space-y-2">
+      <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Restauration de véhicules</a>
+      <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burgerMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    // Toggle menu mobile
+    burger?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Activer lien courant (desktop + mobile)
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll(".page");
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("text-accent", "underline");
+      } else {
+        link.classList.remove("text-accent", "underline");
+      }
+    });
+  });
+</script>
+<!-- <section id="opening-banner"
+    class="fixed left-0 w-full z-40 bg-primary-dark text-text-light py-3 px-4 shadow-lg transform transition-transform duration-500 ease-in-out -translate-y-full opacity-0 border-2 border-red-500"    role="alert" aria-live="polite" aria-label="Annonce d'ouverture prochaine"
+    style="top: var(--banner-top);">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-base sm:text-lg font-jakarta text-center md:text-left font-semibold">
+            <span class="text-accent">Grande nouvelle !</span> Notre atelier ouvre très bientôt, d'ici une dizaine de jours !
+            Restez à l'écoute pour la date exacte.
+        </p>
+        <div class="flex items-center gap-4">
+            <a href="#contact-section"
+                class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-2 px-6 rounded-full text-sm sm:text-base whitespace-nowrap transition-all duration-300 transform hover:scale-105"
+                aria-label="Contactez-nous pour plus d'informations">
+                Contactez-nous
+            </a>
+            <button id="close-banner-btn"
+                class="bg-transparent hover:bg-text-light hover:bg-opacity-10 text-text-light rounded-full p-2 transition-colors duration-300"
+                aria-label="Fermer ce bandeau d'annonce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('opening-banner');
+        const closeBtn = document.getElementById('close-banner-btn');
+        const header = document.getElementById('navbar');
+        const hasBeenClosed = localStorage.getItem('openingBannerClosed');
+        
+        const updatePositions = () => {
+            const headerHeight = header.offsetHeight;
+            const bannerHeight = banner.offsetHeight;
+            
+            // On définit la position 'top' du bandeau sous le header
+            banner.style.setProperty('--banner-top', headerHeight + 'px');
+
+            // On décale le contenu de la page
+            document.body.style.paddingTop = (headerHeight + bannerHeight) + 'px';
+        };
+
+        if (!hasBeenClosed) {
+            // Afficher le bandeau et ajuster le décalage
+            setTimeout(() => {
+                banner.classList.remove('-translate-y-full', 'opacity-0');
+                updatePositions();
+            }, 1000); 
+        } else {
+            // Si le bandeau est fermé, on s'assure que seul le padding du header est présent
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+        }
+
+        closeBtn.addEventListener('click', () => {
+            banner.classList.add('-translate-y-full', 'opacity-0');
+            // Réinitialiser le padding du body après la fermeture
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+            localStorage.setItem('openingBannerClosed', 'true');
+        });
+
+        // Mettre à jour les positions si la fenêtre est redimensionnée
+        window.addEventListener('resize', () => {
+             if (!hasBeenClosed) {
+                updatePositions();
+            } else {
+                document.body.style.paddingTop = header.offsetHeight + 'px';
+            }
+        });
+    });
+</script> -->
+
+
+    <main class="flex-grow">
+      <article class="container mx-auto py-16 px-4 md:px-8">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-12 text-primary-dark text-center">
+        Politique de Confidentialité
+    </h1>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">Introduction</h2>
+        <p class="mb-4 text-lg">
+            Chez La Vieille Roue, nous accordons une importance primordiale à la
+            protection de vos données personnelles. La présente Politique de
+            Confidentialité a pour objectif de vous informer de manière claire et
+            transparente sur la manière dont nous collectons, utilisons et
+            protégeons les informations que vous nous transmettez lorsque vous
+            utilisez notre site internet
+            <strong class="text-primary-dark">[Nom de votre site, ex: lavieilleroue.com]</strong>.
+        </p>
+        <p class="text-lg">
+            Nous nous engageons à respecter les dispositions du Règlement Général
+            sur la Protection des Données (RGPD) n°2016/679 du 27 avril 2016 et la
+            loi Informatique et Libertés n°78-17 du 6 janvier 1978 modifiée.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            1. Responsable du Traitement des Données
+        </h2>
+        <p class="mb-4 text-lg">
+            Le responsable du traitement de vos données personnelles est :<br />
+            <strong>[Nom de l'entreprise ou Prénom Nom de l'auto-entrepreneur]</strong><br />
+            <strong>[Adresse du siège social complet]</strong><br />
+            Email :
+            <a href="mailto:[votre.email@exemple.com]"
+                class="text-accent hover:underline">[votre.email@exemple.com]</a><br />
+            Téléphone :
+            <a href="tel:[votre-numero-tel]" class="text-accent hover:underline">[votre-numero-tel]</a>
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            2. Données Collectées et Finalités
+        </h2>
+        <p class="mb-4 text-lg">
+            Nous collectons des données personnelles par le biais des interactions
+            que vous avez avec notre site, notamment via notre formulaire de
+            contact et notre module de prise de rendez-vous Calendly.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-3 text-primary-dark">
+            2.1. Via le Formulaire de Contact (Demande de Restauration Véhicules
+            Anciens & Prestige)
+        </h3>
+        <ul class="list-disc list-inside space-y-2 text-lg mb-4">
+            <li>
+                <strong>Données collectées :</strong> Nom complet, adresse e-mail,
+                numéro de téléphone, type de véhicule (marque, modèle, année),
+                message décrivant le projet.
+            </li>
+            <li>
+                <strong>Finalités :</strong> Répondre à vos demandes d'informations,
+                établir un premier contact pour un devis ou une discussion
+                approfondie sur votre projet de restauration, gestion de la relation
+                client.
+            </li>
+            <li>
+                <strong>Base légale :</strong> Votre consentement (en soumettant le
+                formulaire) et/ou l'exécution de mesures précontractuelles (pour
+                répondre à votre demande de service).
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-3 text-primary-dark">
+            2.2. Via le Module de Prise de Rendez-vous Calendly (Réparation de
+            Jantes)
+        </h3>
+        <p class="mb-2 text-lg">
+            Lorsque vous utilisez notre module Calendly pour prendre rendez-vous,
+            certaines données sont collectées par Calendly en tant que
+            sous-traitant. Nous recevons ensuite ces informations pour gérer votre
+            rendez-vous.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg mb-4">
+            <li>
+                <strong>Données collectées (par Calendly et transmises à La Vieille Roue)
+                    :</strong>
+                Nom, adresse e-mail, numéro de téléphone, date et heure du
+                rendez-vous, et toute information complémentaire que vous pourriez
+                fournir via le formulaire Calendly.
+            </li>
+            <li>
+                <strong>Finalités :</strong> Gérer et confirmer votre rendez-vous
+                pour la réparation de jantes, vous contacter en cas de besoin
+                concernant votre rendez-vous.
+            </li>
+            <li>
+                <strong>Base légale :</strong> L'exécution d'un contrat ou de
+                mesures précontractuelles (prise de rendez-vous).
+            </li>
+            <li>
+                <strong>Politique de confidentialité de Calendly :</strong> Nous
+                vous invitons à consulter la politique de confidentialité de
+                Calendly pour comprendre comment ils traitent vos données :
+                <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer"
+                    class="text-accent hover:underline font-semibold">https://calendly.com/privacy</a>
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-3 text-primary-dark">
+            2.3. Données de Connexion et Cookies
+        </h3>
+        <ul class="list-disc list-inside space-y-2 text-lg mb-4">
+            <li>
+                <strong>Données collectées :</strong> Informations techniques telles
+                que votre adresse IP, type de navigateur, système d'exploitation,
+                pages visitées, temps passé sur le site. Ces données sont
+                généralement anonymisées.
+            </li>
+            <li>
+                <strong>Finalités :</strong> Assurer le bon fonctionnement de notre
+                site, analyser le trafic et l'utilisation de notre site pour
+                améliorer son ergonomie et ses services (via des outils comme Google
+                Analytics, si utilisé).
+            </li>
+            <li>
+                <strong>Base légale :</strong> Notre intérêt légitime à améliorer et
+                sécuriser notre site, ou votre consentement pour les cookies non
+                essentiels.
+            </li>
+            <li>
+                Pour plus d'informations sur les cookies et comment les gérer,
+                veuillez consulter notre
+                <a href="/politique-de-cookies" class="text-accent hover:underline font-semibold">Politique de
+                    Cookies</a>
+                (si vous en créez une séparée).
+            </li>
+        </ul>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            3. Destinataires des Données
+        </h2>
+        <p class="mb-4 text-lg">
+            Vos données personnelles sont traitées par l'équipe de La Vieille Roue
+            habilitée à gérer les demandes clients et les rendez-vous.
+        </p>
+        <p class="mb-4 text-lg">
+            Nous ne partageons pas vos données personnelles avec des tiers à des
+            fins commerciales sans votre consentement explicite. Cependant, nous
+            pouvons partager vos données avec des sous-traitants agissant
+            strictement pour notre compte et sur nos instructions (ex: hébergeur
+            du site, fournisseur du service Calendly, outils d'analyse de trafic).
+            Ces sous-traitants sont tenus par contrat de garantir la sécurité et
+            la confidentialité des données et de se conformer au RGPD.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            4. Transfert de Données Hors UE
+        </h2>
+        <p class="mb-4 text-lg">
+            Nous nous efforçons de traiter vos données au sein de l'Union
+            Européenne. Cependant, certains de nos prestataires de services (comme
+            Calendly ou Google Analytics) peuvent stocker ou traiter des données
+            en dehors de l'Union Européenne. Dans ce cas, nous nous assurons que
+            ces transferts sont effectués dans le respect des garanties prévues
+            par le RGPD (ex: clauses contractuelles types de la Commission
+            Européenne, décisions d'adéquation).
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            5. Durée de Conservation des Données
+        </h2>
+        <p class="mb-4 text-lg">
+            Nous conservons vos données personnelles uniquement le temps
+            nécessaire aux finalités pour lesquelles elles ont été collectées,
+            conformément à la législation en vigueur :
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg">
+            <li>
+                <strong>Données de contact et de projet (formulaire) :</strong>
+                Conservées pendant la durée de la relation commerciale et jusqu'à [À
+                COMPLÉTER, ex: 3 ans] après le dernier contact pour des raisons de
+                suivi commercial.
+            </li>
+            <li>
+                <strong>Données de rendez-vous (Calendly) :</strong> Conservées
+                pendant la durée de gestion du rendez-vous et jusqu'à [À COMPLÉTER,
+                ex: 1 an] après la date du rendez-vous.
+            </li>
+            <li>
+                <strong>Données techniques/cookies :</strong> Conservées pour des
+                durées définies par la CNIL et les paramètres des outils d'analyse.
+            </li>
+        </ul>
+        <p class="mt-4 text-lg">
+            Au-delà de ces durées, les données sont archivées de manière sécurisée
+            pour les durées légales de conservation ou supprimées définitivement
+            si elles ne sont plus nécessaires.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">6. Vos Droits</h2>
+        <p class="mb-4 text-lg">
+            Conformément au RGPD, vous disposez des droits suivants concernant vos
+            données personnelles :
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg">
+            <li>
+                <strong>Droit d'accès :</strong> Obtenir la confirmation que vos
+                données sont traitées ou non, et, le cas échéant, y avoir accès.
+            </li>
+            <li>
+                <strong>Droit de rectification :</strong> Demander la correction des
+                données inexactes ou incomplètes.
+            </li>
+            <li>
+                <strong>Droit à l'effacement ("droit à l'oubli") :</strong> Demander
+                la suppression de vos données, dans certaines conditions.
+            </li>
+            <li>
+                <strong>Droit à la limitation du traitement :</strong> Demander la
+                suspension du traitement de vos données, dans certaines conditions.
+            </li>
+            <li>
+                <strong>Droit d'opposition :</strong> Vous opposer à tout moment au
+                traitement de vos données pour des raisons tenant à votre situation
+                particulière.
+            </li>
+            <li>
+                <strong>Droit à la portabilité :</strong> Recevoir les données que
+                vous nous avez fournies, dans un format structuré, couramment
+                utilisé et lisible par machine, et les transmettre à un autre
+                responsable de traitement.
+            </li>
+            <li>
+                <strong>Droit de retirer votre consentement :</strong> À tout
+                moment, pour les traitements basés sur le consentement.
+            </li>
+            <li>
+                <strong>Droit de définir des directives post-mortem :</strong> Sur
+                le sort de vos données après votre décès.
+            </li>
+        </ul>
+        <p class="mt-4 text-lg">
+            Pour exercer ces droits, vous pouvez nous contacter :
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-lg mb-4">
+            <li>Par courrier : [Adresse postale pour l'exercice des droits]</li>
+            <li>
+                Par e-mail :
+                <a href="mailto:[adresse-email-RGPD@exemple.com]"
+                    class="text-accent hover:underline">[adresse-email-RGPD@exemple.com]</a>
+            </li>
+        </ul>
+        <p class="text-lg">
+            Nous nous engageons à vous répondre dans un délai d'un mois suivant la
+            réception de votre demande. En cas de doute raisonnable sur votre
+            identité, nous pourrions vous demander un justificatif d'identité.
+        </p>
+        <p class="mt-4 text-lg">
+            Si vous estimez que vos droits n'ont pas été respectés, vous avez
+            également le droit d'introduire une réclamation auprès de la CNIL
+            (Commission Nationale de l'Informatique et des Libertés) :
+            <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer"
+                class="text-accent hover:underline font-semibold">https://www.cnil.fr/fr/plaintes</a>
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            7. Sécurité des Données
+        </h2>
+        <p class="text-lg">
+            Nous mettons en œuvre toutes les mesures techniques et
+            organisationnelles appropriées pour assurer la sécurité, l'intégrité
+            et la confidentialité de vos données personnelles et éviter qu'elles
+            ne soient déformées, endommagées ou que des tiers non autorisés y
+            aient accès.
+        </p>
+    </section>
+
+    <section class="bg-white p-8 rounded-lg shadow-xl mb-10 border border-neutral-medium">
+        <h2 class="text-3xl font-bold mb-6 text-accent">
+            8. Modification de la Politique de Confidentialité
+        </h2>
+        <p class="text-lg">
+            La Vieille Roue se réserve le droit de modifier la présente Politique
+            de Confidentialité à tout moment. Toute modification prendra effet
+            immédiatement après sa publication sur le site. Nous vous encourageons
+            à consulter régulièrement cette page pour prendre connaissance des
+            éventuelles mises à jour.
+        </p>
+        <p class="mt-4 text-lg">
+            Dernière mise à jour : [Date de la dernière mise à jour, ex: 17 juin
+            2025]
+        </p>
+    </section>
+</article>
+    </main>
+
+    <footer class="bg-background-dark font-k2d text-text-light px-5 md:px-28 py-8">
+    <div class="container mx-auto">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Logo -->
+            <div class="flex justify-center md:justify-start items-center md:pl-4 lg:pl-8">
+                <img class="h-20 sm:h-24 md:h-32 lg:h-40 w-auto object-contain" src="/assets/logo/logo.png"
+                    alt="Logo La Vieille Roue">
+            </div>
+
+
+            <!-- Image atelier (cachée sur mobile) -->
+            <div
+                class="hidden md:flex justify-center md:justify-start items-center p-2 md:p-5 bg-background-medium rounded-xl shadow-lg">
+                <img src="/assets/images/la-vieille-roue_by-night.jpeg" alt="l'atelier La Vieille Roue à Albertville"
+                    class="h-40 w-auto rounded-xl shadow-lg object-cover">
+            </div>
+
+            <!-- Adresse -->
+            <div class="flex items-center justify-center text-sm text-center md:text-left">
+                <address class="not-italic">
+                    <h4 class="text-accent font-semibold">
+                        <span class="text-text-light">La Vieille Roue</span>
+                    </h4>
+                    <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
+                    <p>22, rue des Glières - ZA des Glières Blanches<br>73200 Grignon</p>
+                    <a href="tel:0479326063" class="hover:text-accent transition-colors duration-300 block mt-2">
+                        Tél. : 04 79 32 60 63
+                    </a>
+                    <a href="mailto:lavieilleroue@gmail.com"
+                        class="hover:text-accent transition-colors duration-300 block mt-1">
+                        Email : lavieilleroue@gmail.com
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61581564816236"
+                        class="hover:text-accent transition-colors duration-300 block mt-1">
+                        <span class="icon-facebook text-primary-medium font-bold font-xl"></span>
+                        Rejoignez-nous sur Facebook
+                    </a>
+                </address>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex items-center justify-center md:text-left">
+                <div class="w-full pb-6">
+                    <h3 class="font-semibold text-lg text-text-light">Navigation Rapide</h3>
+                    <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
+                    <nav class="text-center md:text-left" aria-label="Navigation de pied de page">
+                        <ul class="text-sm space-y-2">
+                            <li><a href="/" class="hover:text-accent transition-colors duration-300">Accueil</a></li>
+                            <li><a href="/jantes" class="hover:text-accent transition-colors duration-300">Rénovation de
+                                    jantes</a></li>
+                            <li><a href="/vehicules-anciens"
+                                    class="hover:text-accent transition-colors duration-300">Restauration véhicules
+                                    anciens</a></li>
+                            <li><a href="/contact" class="hover:text-accent transition-colors duration-300">Nous
+                                    contacter</a></li>
+                            <li><a href="https://lavieilleroue.fr/contact" target="_blank" rel="noopener noreferrer"
+                                    class="hover:text-accent transition-colors duration-300 pb-6">Prendre
+                                    rendez-vous</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bas de page -->
+        <section
+            class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4 border-t border-neutral-medium">
+            <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
+                <a href="/politique-confidentialite.html" target="_blank"
+                    class="hover:text-text-light transition-colors duration-300">
+                    Politique de confidentialité
+                </a>
+                <span class="text-accent">|</span>
+                <a href="/mentions-legales.html" target="_blank"
+                    class="hover:text-text-light transition-colors duration-300">
+                    Mentions légales
+                </a>
+            </div>
+            <a href="https://peakcl.com/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <img src="assets/logo/PeakCL.svg" class="h-6 w-auto" alt="logo du développeur">
+                <span class="text-violet-600">Peak<span class="text-yellow-500">CL</span></span>
+            </a>
+            <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
+        </section>
+    </div>
+</footer>
+    <button id="scrollTopBtn"
+    class="px-2 py-2 bg-ikami-gradient text-white rounded-md hover:bg-orange-600 border border-gray-200 shadow-lg hover:shadow-xl fixed bottom-8 right-8 hidden z-50 icon-chevron-up">
+</button>
+
+<script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            scrollTopBtn.classList.remove("hidden");
+            scrollTopBtn.classList.add("block");
+        } else {
+            scrollTopBtn.classList.add("hidden");
+            scrollTopBtn.classList.remove("block");
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+  </body>
+</html>

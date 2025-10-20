@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="La Vieille Roue">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Add Google Search favicon -->
+    <link rel="search" type="application/opensearchdescription+xml" title="La Vieille Roue" href="/opensearch.xml">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="La Vieille Roue, votre expert à Albertville (Savoie), spécialisé en rénovation et réparation de jantes pour professionnels et particuliers, et en restauration de véhicules anciens, de collection, de sport et de prestige.">
+    <meta name="keywords" content="jantes savoie, jantes Savoie, savoie jantes, rénovation jantes Albertville, réparation jantes Savoie, restauration véhicule ancien Albertville, restauration auto collection Savoie, jantes alu Albertville, dévoilage jantes Savoie, peinture jantes Albertville, personnalisation jantes Savoie, carrosserie voiture ancienne Albertville, véhicule prestige Savoie, atelier automobile Albertville, spécialiste autos anciennes Savoie, garage Albertville, entretien véhicules collection Savoie, services auto Albertville, La Vieille Roue, Albertville, Savoie, Isère, Haute-Savoie">
+    <meta name="author" content="La Vieille Roue">
+    <meta property="og:title" content="La Vieille Roue | Rénovation Jantes & Restauration Véhicules Anciens à Albertville (Savoie)">
+    <meta property="og:description" content="La Vieille Roue, votre expert à Albertville (Savoie), spécialisé en rénovation et réparation de jantes pour professionnels et particuliers, et en restauration de véhicules anciens, de collection, de sport et de prestige.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lavieilleroue.fr/">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Vieille Roue | Rénovation Jantes & Restauration Véhicules Anciens à Albertville (Savoie)">
+    <meta name="twitter:description" content="La Vieille Roue, votre expert à Albertville (Savoie), spécialisé en rénovation et réparation de jantes pour professionnels et particuliers, et en restauration de véhicules anciens, de collection, de sport et de prestige.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <link href="/assets/css/output.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/assets/icomoon/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;800&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://lavieilleroue.fr/">
+    <title>La Vieille Roue | Rénovation Jantes & Restauration Véhicules Anciens à Albertville (Savoie)</title>
+</head>
+
+  <body class="font-k2d bg-gradient-body text-text-light min-h-screen flex flex-col pt-[136px] md:pt-[128px]">
+    <header id="navbar" class="bg-background-dark/80 backdrop-blur-md text-text-light font-jakarta shadow-lg w-full fixed top-0 z-50 p-3">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8 lg:py-3">
+    
+    <!-- Logo + Nom entreprise -->
+    <a href="/" class="flex items-center space-x-3">
+      <img src="/assets/logo/LOGO.svg" alt="logo La Vieille Roue" class="h-20 w-auto">
+      <span class="text-xl lg:text-2xl font-bold tracking-wide">La Vieille Roue</span>
+    </a>
+
+    <!-- Burger menu (mobile only) -->
+    <button id="burgerMenu" class="lg:hidden text-text-light focus:outline-none" aria-label="Ouvrir le menu">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden lg:flex space-x-6 text-base font-medium">
+      <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Restauration de véhicules</a>
+      <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-background-dark text-text-light px-4 pb-4 pt-2 transition-all duration-300 ease-in-out">
+    <nav class="flex flex-col space-y-2">
+      <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
+      <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Restauration de véhicules</a>
+      <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burgerMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    // Toggle menu mobile
+    burger?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Activer lien courant (desktop + mobile)
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll(".page");
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("text-accent", "underline");
+      } else {
+        link.classList.remove("text-accent", "underline");
+      }
+    });
+  });
+</script>
+<!-- <section id="opening-banner"
+    class="fixed left-0 w-full z-40 bg-primary-dark text-text-light py-3 px-4 shadow-lg transform transition-transform duration-500 ease-in-out -translate-y-full opacity-0 border-2 border-red-500"    role="alert" aria-live="polite" aria-label="Annonce d'ouverture prochaine"
+    style="top: var(--banner-top);">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-base sm:text-lg font-jakarta text-center md:text-left font-semibold">
+            <span class="text-accent">Grande nouvelle !</span> Notre atelier ouvre très bientôt, d'ici une dizaine de jours !
+            Restez à l'écoute pour la date exacte.
+        </p>
+        <div class="flex items-center gap-4">
+            <a href="#contact-section"
+                class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-2 px-6 rounded-full text-sm sm:text-base whitespace-nowrap transition-all duration-300 transform hover:scale-105"
+                aria-label="Contactez-nous pour plus d'informations">
+                Contactez-nous
+            </a>
+            <button id="close-banner-btn"
+                class="bg-transparent hover:bg-text-light hover:bg-opacity-10 text-text-light rounded-full p-2 transition-colors duration-300"
+                aria-label="Fermer ce bandeau d'annonce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('opening-banner');
+        const closeBtn = document.getElementById('close-banner-btn');
+        const header = document.getElementById('navbar');
+        const hasBeenClosed = localStorage.getItem('openingBannerClosed');
+        
+        const updatePositions = () => {
+            const headerHeight = header.offsetHeight;
+            const bannerHeight = banner.offsetHeight;
+            
+            // On définit la position 'top' du bandeau sous le header
+            banner.style.setProperty('--banner-top', headerHeight + 'px');
+
+            // On décale le contenu de la page
+            document.body.style.paddingTop = (headerHeight + bannerHeight) + 'px';
+        };
+
+        if (!hasBeenClosed) {
+            // Afficher le bandeau et ajuster le décalage
+            setTimeout(() => {
+                banner.classList.remove('-translate-y-full', 'opacity-0');
+                updatePositions();
+            }, 1000); 
+        } else {
+            // Si le bandeau est fermé, on s'assure que seul le padding du header est présent
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+        }
+
+        closeBtn.addEventListener('click', () => {
+            banner.classList.add('-translate-y-full', 'opacity-0');
+            // Réinitialiser le padding du body après la fermeture
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+            localStorage.setItem('openingBannerClosed', 'true');
+        });
+
+        // Mettre à jour les positions si la fenêtre est redimensionnée
+        window.addEventListener('resize', () => {
+             if (!hasBeenClosed) {
+                updatePositions();
+            } else {
+                document.body.style.paddingTop = header.offsetHeight + 'px';
+            }
+        });
+    });
+</script> -->
+
+
+    <main class="flex-grow">
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "La Vieille Roue",
+  "description": "Spécialiste jantes Savoie - Rénovation et réparation de jantes à Albertville",
+  "url": "https://lavieilleroue.fr",
+  "telephone": "04 79 32 60 63",
+  "email": "lavieilleroue@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Albertville",
+    "addressRegion": "Savoie",
+    "postalCode": "73200",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "45.6759",
+    "longitude": "6.3926"
+  },
+  "openingHours": "Mo-Fr 07:30-18:00",
+  "priceRange": "€€",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "45.6759",
+      "longitude": "6.3926"
+    },
+    "geoRadius": "50000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services jantes Savoie",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation jantes Savoie",
+          "description": "Rénovation et réparation de jantes aluminium et alliage"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dévoilage jantes",
+          "description": "Redressage de jantes voilées"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Peinture jantes personnalisée",
+          "description": "Personnalisation et peinture de jantes"
+        }
+      }
+    ]
+  },
+  "areaServed": [
+    "Savoie",
+    "Haute-Savoie", 
+    "Isère",
+    "Albertville",
+    "Chambéry",
+    "Annecy"
+  ],
+  "keywords": ["jantes savoie", "rénovation jantes", "jantes albertville", "réparation jantes savoie"]
+}
+</script>
+<section class="w-full h-[75vh] bg-cover bg-center relative overflow-hidden p-5"
+    style="background-image: url('/assets/images/automobile-8217167_1280.png');" role="banner"
+    aria-label="Présentation de La Vieille Roue">
+    <div class="absolute inset-0 bg-background-dark bg-opacity-70 flex items-center p-4 md:p-8">
+        <div class="text-center text-text-light max-w-5xl mx-auto z-10">
+            <h1 class="text-4xl text-accent sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight font-k2d drop-shadow-lg opacity-0"
+                data-animate="fade-in">
+                La Vieille Roue
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 opacity-90 font-jakarta" data-animate="fade-in-up" data-delay="100">
+                Basée à <strong>Albertville</strong>, au cœur de la <strong>Savoie</strong>, l'équipe de La Vieille Roue
+                est votre spécialiste de la <strong>rénovation de jantes pour professionnels</strong> et particuliers,
+                ainsi que de la <strong>restauration de véhicules de collection, de prestige et young timers</strong>.
+                Nous
+                redonnons vie aux légendes sur roues avec passion et expertise.
+            </p>
+            <nav class="flex flex-wrap gap-3 md:gap-6 justify-center" aria-label="Navigation principale">
+                <a href="#jantes-section"
+                    class="mt-10 bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-8 rounded-full shadow-xl text-xl transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+                    data-animate="fade-in-up" data-delay="200" aria-label="Découvrir la réparation de jantes">
+                    Rénovation de Jantes
+                </a>
+                <a href="#restauration-section"
+                    class="mt-10 bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-8 rounded-full shadow-xl text-xl transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+                    data-animate="fade-in-up" data-delay="200"
+                    aria-label="Découvrir la restauration de véhicules anciens">
+                    Restauration Véhicules Anciens
+                </a>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section id="jantes-section" class="container mx-auto py-16 px-4 md:px-8 text-text-dark"
+    aria-labelledby="jantes-heading">
+    <h2 id="jantes-heading"
+        class="text-4xl sm:text-5xl font-extrabold mb-8 text-text-dark text-center font-k2d opacity-0"
+        data-animate="fade-in-up">
+        <strong>Jantes Savoie</strong> : Rénovation et Réparation à Albertville
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-justify">
+        <div class="order-2 md:order-1 col-span-2">
+            <!-- Mise à jour pour inclure les images dans le texte -->
+            <p class="mb-6 leading-relaxed text-lg font-jakarta opacity-0" data-animate="fade-in-up" data-delay="100">
+                Votre parc automobile professionnel ou votre véhicule personnel mérite l'excellence. <strong>La Vieille
+                    Roue à Albertville</strong> est votre partenaire idéal pour tous vos besoins de <strong>jantes Savoie</strong>.
+                Notre équipe est spécialisée dans la <strong>rénovation de jantes</strong> en <strong>Savoie</strong>.
+                Expert reconnu en <strong>jantes Savoie</strong>, nous redonnons vie à vos jantes en aluminium ou en alliage, qu'elles soient abîmées par le temps, les
+                chocs ou la corrosion. Après un <strong>diagnostic précis</strong> réalisé dans notre atelier
+                d'<strong>Albertville</strong>, nous vous offrons une solution de réparation sur mesure, alliant
+                performance et durabilité, au tarif le plus juste.
+
+                <img src="/assets/images/jante-rouge-abimée.JPG" alt="Jantes Savoie - Jante abîmée avant rénovation à Albertville"
+                    class="float-left mr-6 my-4 w-40 h-40 rounded-xl shadow-md border-2 border-red-500 transform transition duration-500 ease-in-out hover:scale-105" />
+                Nous comprenons les exigences des professionnels de l'automobile et nous nous engageons sur des délais
+                rapides pour minimiser l'immobilisation de vos véhicules.
+            </p>
+            <p class="mb-6 leading-relaxed text-lg font-jakarta opacity-0" data-animate="fade-in-up" data-delay="200">
+                Situé au cœur de la <strong>Savoie</strong>, notre atelier spécialisé est le sanctuaire où vos jantes
+                retrouvent leur splendeur et leur robustesse. Nous utilisons des méthodes et des équipements à la pointe
+                de l'innovation pour toutes les étapes de la <strong>réparation de jantes</strong>, de la restauration à
+                la personnalisation. Que ce soit pour un <strong>redressage de jantes voilées</strong>, une
+                <strong>réparation de fissures</strong>, l'<strong>élimination de la corrosion</strong>, ou une nouvelle
+                <strong>peinture de jantes personnalisée</strong>, nous avons la solution.
+                <img src="/assets/images/jante-rouge-en-renovation.JPG"
+                    alt="Jantes Savoie - Jante en cours de restauration dans l'atelier Albertville"
+                    class="float-right ml-6 my-4 w-40 h-40 rounded-xl shadow-md border-2 border-orange-500 transform transition duration-500 ease-in-out hover:scale-105" />
+            </p>
+            <p class="mb-6 leading-relaxed text-lg font-jakarta opacity-0" data-animate="fade-in-up" data-delay="300">
+                Que vos jantes aient besoin d'une simple rénovation esthétique ou d'une intervention plus complexe, nous
+                avons la solution.
+                Notre expérience nous permet de vous proposer un
+                plan d'action clair et personnalisé, assurant une qualité de finition exemplaire. Avec nos services,
+                vous prolongerez significativement la durée de vie de vos jantes. Spécialistes <strong>jantes Savoie</strong>, chez La
+                Vieille Roue, nous ne réparons pas seulement des jantes, nous restaurons la confiance dans la stabilité
+                et l'esthétique de votre véhicule.
+                <img src="/assets/images/jante-rouge-rénovée.JPG" alt="Jante entièrement restaurée et brillante"
+                    class="float-left mr-6 my-4 w-40 h-40 rounded-xl shadow-md border-2 border-green-500 transform transition duration-500 ease-in-out hover:scale-105" />
+                Référence en <strong>jantes Savoie</strong>, nous desservons <strong>Albertville, Chambéry, Annecy</strong>,
+                et tout le secteur Savoie - Haute-Savoie.
+            </p>
+            <a href="/jantes"
+                class="mt-8 bg-primary-medium hover:bg-primary-dark text-text-light font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+                data-animate="fade-in-up" data-delay="400" aria-label="En savoir plus sur la rénovation de jantes">
+                Découvrez la rénovation de jantes
+            </a>
+        </div>
+    </div>
+</section>
+<section class="container mx-auto py-16 px-4 md:px-8">
+    <h3 class="text-3xl font-bold text-center mb-4">Exemples de rénovation</h3>
+    <p class="text-lg text-center mb-8">Rénovation de jantes d'une <strong>Clio Williams</strong></p>
+
+    <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl">
+        <!-- Conteneur avec ratio 16/9 -->
+        <div class="relative pt-[56.25%]">
+            <!-- Slider -->
+            <div id="slider-clio" class="absolute inset-0 flex transition-transform duration-500">
+                <img src="/assets/images/clio williams/IMG_20251001_175320.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Avant rénovation jante Clio Williams">
+                <img src="/assets/images/clio williams/IMG_20251001_175322.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Détails jante Clio Williams en rénovation">
+                <img src="/assets/images/clio williams/IMG_20251001_175327.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Usinage de jante Clio Williams">
+                <img src="/assets/images/clio williams/IMG_20251001_175334.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Peinture jante Clio Williams">
+                <img src="/assets/images/clio williams/IMG_20251001_175336.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Finition dorée Clio Williams">
+                <img src="/assets/images/clio williams/IMG_20251001_175355.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Vue atelier rénovation jante Clio Williams">
+                <img src="/assets/images/clio williams/IMG_20251001_175358.jpg"
+                    class="w-full h-full object-cover flex-shrink-0" alt="Résultat final jante Clio Williams">
+            </div>
+        </div>
+
+        <!-- Boutons navigation -->
+        <button onclick="prevClio()" aria-label="Image précédente"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full shadow-lg transition">
+            ◀
+        </button>
+        <button onclick="nextClio()" aria-label="Image suivante"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full shadow-lg transition">
+            ▶
+        </button>
+    </div>
+</section>
+<script>
+    const sliderClio = document.getElementById("slider-clio");
+    const totalSlidesClio = sliderClio.children.length;
+    let indexClio = 0;
+
+    function showSlideClio() {
+        sliderClio.style.transform = `translateX(-${indexClio * 100}%)`;
+    }
+
+    function nextClio() {
+        indexClio = (indexClio + 1) % totalSlidesClio;
+        showSlideClio();
+    }
+
+    function prevClio() {
+        indexClio = (indexClio - 1 + totalSlidesClio) % totalSlidesClio;
+        showSlideClio();
+    }
+</script>
+<section id="restauration-section"
+    class="relative flex items-center justify-center text-text-light text-center px-4 md:px-8 py-6 md:py-24 text text-justify"
+    style="
+            background-image: url('/assets/images/porsche-8343861_1280.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        " aria-labelledby="restauration-heading">
+    <div class="absolute inset-0 bg-background-dark bg-opacity-75"></div>
+    <div class="relative z-10 max-w-4xl mx-auto py-12 md:py-20">
+        <h2 id="restauration-heading"
+            class="text-4xl md:text-5xl text-center font-extrabold mb-8 font-k2d leading-tight opacity-0"
+            data-animate="fade-in-up">
+            <strong>Restauration de Véhicules de Collection, de Prestige et Young Timers</strong> à <strong>Albertville
+                en
+                Savoie</strong>
+        </h2>
+        <p class="text-lg md:text-xl leading-relaxed mb-6 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="100">
+            Chez La Vieille Roue, notre passion va au-delà du métier. C'est un engagement total pour la préservation du
+            patrimoine automobile. À Albertville, nous redonnons leur splendeur et leurs performances d'origine aux
+            véhicules de collection, de prestige et young timers. Chaque projet, d'une 2 CV à une Porsche 911 GT3 RS,
+            est traité avec le respect qu'il mérite.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed mb-6 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="200">
+            Notre atelier est équipé des derniers outils pour répondre aux exigences les plus pointues. Nos techniciens
+            qualifiés sont des artisans experts en carrosserie automobile. Nous nous engageons à
+            vous offrir un travail d'une qualité irréprochable et un service personnalisé, de la simple réparation à la
+            réfection complète du moteur.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed mb-8 font-jakarta opacity-0" data-animate="fade-in-up"
+            data-delay="300">
+            Que votre automobile nécessite une restauration totale ou partielle, notre mission est de préserver son
+            histoire tout en garantissant sa pérennité. Confiez-nous votre passion : nous en prendrons soin avec la
+            nôtre, depuis notre atelier d'Albertville, au service de toute la Savoie et au-delà.
+        </p>
+        <a href="/restauration"
+            class="mt-8 bg-primary-medium hover:bg-primary-dark text-text-light text-center font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+            data-animate="fade-in-up" data-delay="400" aria-label="En savoir plus sur la rénovation de jantes">
+            Découvrez la restauration de véhicules
+        </a>
+        <a href="#contact-section" target="_blank"
+            class="mt-8 bg-accent hover:bg-accent-hover text-primary-dark text-center font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block font-k2d opacity-0"
+            data-animate="fade-in-up" data-delay="600" aria-label="Demander un devis personnalisé pour la restauration">
+            Demandez un devis personnalisé
+        </a>
+    </div>
+</section>
+
+<section id="contact-section" class="py-16 px-4 md:px-8 text-center text-text-light relative overflow-hidden"
+    aria-labelledby="contact-heading">
+    <div class="absolute inset-0 bg-primary-dark opacity-20 transform -skew-y-3 scale-110"></div>
+    <div class="relative z-10 max-w-4xl mx-auto opacity-0" data-animate="fade-in-up">
+        <h2 id="contact-heading" class="text-4xl md:text-5xl font-extrabold mb-6 font-k2d leading-tight">
+            Votre <span class="text-accent">Véhicule d'Exception</span> Mérite l'Excellence
+        </h2>
+        <img src="assets/images/la-vieille-roue.jpeg" alt="l'atelier La Vieille Roue à Albertville"
+            class="w-full h-auto rounded-xl mx-auto mb-6 border-4 border-accent shadow-lg object-cover">
+        <p class="text-lg md:text-xl mb-10 font-jakarta opacity-90">
+            À<strong> Albertville, en Savoie</strong>, nous sommes votre expert local pour la <strong>rénovation de
+                jantes</strong> et la <strong>restauration automobile</strong>. Contactez-nous dès aujourd'hui pour
+            discuter de votre projet et bénéficier de notre savoir-faire unique dans la région <strong>Savoie, Isère et
+                Haute-Savoie</strong>.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="tel:0479326063"
+                class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2 font-k2d"
+                aria-label="Appeler La Vieille Roue pour un devis">
+                <span class="icon-phone" aria-hidden="true"></span>
+                <span>Appelez-nous : 04 79 32 60 63</span>
+            </a>
+            <a href="mailto:lavieilleroue@gmail.com"
+                class="bg-primary-medium hover:bg-primary-dark text-text-light font-bold py-4 px-10 rounded-full shadow-2xl text-xl transition duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2 font-k2d"
+                aria-label="Envoyer un e-mail à La Vieille Roue">
+                <span class="icon-mail" aria-hidden="true"></span>
+                <span>Envoyez un e-mail</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Facebook Page plugin section -->
+<section id="facebook-section" class="container mx-auto py-16 px-4 md:px-8" aria-labelledby="facebook-heading">
+    <h2 id="facebook-heading" class="text-3xl md:text-4xl font-extrabold mb-6 text-center">Suivez-nous sur Facebook</h2>
+    <p class="text-center mb-6">Retrouvez nos dernières rénovations et actualités. Si vous refusez les cookies, un lien direct vers notre page est affiché.</p>
+
+    <!-- Facebook SDK root -->
+    <div id="fb-root"></div>
+    <style>
+        /* Force Facebook Page plugin to center in our card */
+        #facebook-section .fb-page,
+        #facebook-section .fb-page .fb_iframe_widget,
+        #facebook-section .fb-page .fb_iframe_widget span,
+        #facebook-section .fb-page .fb_iframe_widget iframe,
+        #facebook-section .fb-page iframe,
+        #facebook-section .fb-page > div {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            display: block !important;
+            max-width: 100% !important;
+        }
+        /* Ensure inner iframe content is centered and doesn't float */
+        #facebook-section .fb_iframe_widget, 
+        #facebook-section .fb_iframe_widget span, 
+        #facebook-section .fb_iframe_widget iframe {
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
+            max-width: 100% !important;
+        }
+        /* Ensure fallback link is centered */
+        #facebook-section #fb-fallback { text-align: center; }
+    </style>
+
+
+    <!-- Wrapper: the actual page plugin will be inserted here if allowed -->
+    <div class="max-w-4xl mx-auto p-6 overflow-hidden relative z-10">
+        <!-- Consent-aware container -->
+    <div id="fb-container" class="w-full min-h-[360px] flex items-center justify-center mx-auto max-w-prose">
+            <!-- Fallback before SDK loads or if cookies blocked -->
+            <div id="fb-fallback" class="text-center">
+                <p class="mb-3">Chargement du fil Facebook...</p>
+                <p class="text-sm">Si rien n'apparaît, cliquez sur le lien ci-dessous pour ouvrir notre page Facebook.</p>
+                <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-accent underline">Ouvrir la page Facebook de La Vieille Roue</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const pageUrl = 'https://www.facebook.com/profile.php?id=61581564816236';
+
+            function loadFacebookSDK() {
+                if (document.getElementById('facebook-jssdk')) return;
+                var js = document.createElement('script');
+                js.id = 'facebook-jssdk';
+                js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v16.0';
+                js.async = true;
+                js.defer = true;
+                document.body.appendChild(js);
+            }
+
+            function renderPagePlugin() {
+                const container = document.getElementById('fb-container');
+                if (!container) return;
+                container.innerHTML = '';
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'fb-page';
+                wrapper.setAttribute('data-href', pageUrl);
+                wrapper.setAttribute('data-tabs', 'timeline');
+                // Let Facebook adapt to container width by avoiding fixed data-width/data-height
+                wrapper.setAttribute('data-small-header', 'false');
+                wrapper.setAttribute('data-adapt-container-width', 'true');
+                wrapper.setAttribute('data-hide-cover', 'false');
+                wrapper.setAttribute('data-show-facepile', 'true');
+                // Apply responsive inline styles to ensure the plugin stays inside the card
+                wrapper.style.cssText = 'width:100%; min-height:360px; max-width:100%; overflow:hidden; display:inline-block; margin:0 auto;';
+
+                const fbBlockquote = document.createElement('blockquote');
+                fbBlockquote.className = 'fb-xfbml-parse-ignore';
+                fbBlockquote.innerHTML = `<a href="${pageUrl}" target="_blank" rel="noopener noreferrer">La Vieille Roue</a>`;
+
+                wrapper.appendChild(fbBlockquote);
+                container.appendChild(wrapper);
+
+                // Render (if FB is ready)
+                if (window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function') {
+                    FB.XFBML.parse(container);
+                }
+            }
+
+            // Cookie consent integration note:
+            // If you use a cookie-consent manager, call loadFacebookSDK() only after user accepts marketing/social cookies.
+
+            // Integrate with cookie banner: load SDK only when marketing/social consent is given.
+            function checkConsentAndMaybeLoad() {
+                try {
+                    var consent = null;
+                    if (typeof window.getCookieConsent === 'function') {
+                        consent = window.getCookieConsent();
+                    } else {
+                        const raw = localStorage.getItem('cookieConsent');
+                        consent = raw ? JSON.parse(raw) : null;
+                    }
+
+                    if (consent && (consent.marketing === true || consent.social === true)) {
+                        loadFacebookSDK();
+                        window.addEventListener('fb_init', renderPagePlugin);
+                        setTimeout(renderPagePlugin, 1200);
+                        return true;
+                    }
+                } catch (e) {
+                    console.warn('Facebook integration: consent check failed', e);
+                }
+                return false;
+            }
+
+            // Initial check
+            var loadedByConsent = checkConsentAndMaybeLoad();
+
+            // If not loaded yet, offer a manual button (fallback) and listen for consent changes
+            if (!loadedByConsent) {
+                const fallback = document.getElementById('fb-fallback');
+                const enableBtn = document.createElement('button');
+                enableBtn.className = 'mt-4 bg-accent text-primary-dark font-bold py-2 px-4 rounded';
+                enableBtn.textContent = 'Afficher le fil Facebook (autoriser)';
+                enableBtn.onclick = function() {
+                    try {
+                        // Set marketing consent if possible
+                        const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent') || '{}'));
+                        const updated = Object.assign({}, current || {}, { marketing: true });
+                        localStorage.setItem('cookieConsent', JSON.stringify(updated));
+                        window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
+                    } catch (e) {
+                        localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
+                        window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
+                    }
+                    loadFacebookSDK();
+                    setTimeout(renderPagePlugin, 800);
+                };
+                fallback.appendChild(document.createElement('br'));
+                fallback.appendChild(enableBtn);
+
+                // Listen for consent changes from the cookie banner
+                window.addEventListener('cookieConsentChanged', function(e) {
+                    const detail = e && e.detail ? e.detail : null;
+                    if (detail && (detail.marketing === true || detail.social === true)) {
+                        loadFacebookSDK();
+                        setTimeout(renderPagePlugin, 1000);
+                    }
+                });
+            }
+
+            // Listen for FB SDK ready (the SDK itself doesn't emit a simple event, so we patch it when loaded)
+            var observer = new MutationObserver(function(mutationsList, observer) {
+                if (window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function') {
+                    // dispatch a custom event once FB is ready
+                    window.dispatchEvent(new Event('fb_init'));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.documentElement, { childList: true, subtree: true });
+        })();
+    </script>
+
+    <!-- End Facebook section -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const animateElements = document.querySelectorAll('[data-animate]');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const animationType = element.dataset.animate;
+                    const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
+
+                    setTimeout(() => {
+                        element.classList.remove('opacity-0');
+                        element.classList.add(`animate-${animationType}`);
+                    }, delay);
+                    observer.unobserve(element); // Arrête d'observer une fois l'animation déclenchée
+                }
+            });
+        }, { threshold: 0.1 }); // Déclenche l'animation quand 10% de l'élément est visible
+
+        animateElements.forEach(element => {
+            element.classList.add('opacity-0'); // Cache l'élément au chargement
+            observer.observe(element);
+        });
+    });
+</script>
+    </main>
+
+    <footer class="bg-background-dark font-k2d text-text-light px-5 md:px-28 py-8">
+    <div class="container mx-auto">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Logo -->
+            <div class="flex justify-center md:justify-start items-center md:pl-4 lg:pl-8">
+                <img class="h-20 sm:h-24 md:h-32 lg:h-40 w-auto object-contain" src="/assets/logo/logo.png"
+                    alt="Logo La Vieille Roue">
+            </div>
+
+
+            <!-- Image atelier (cachée sur mobile) -->
+            <div
+                class="hidden md:flex justify-center md:justify-start items-center p-2 md:p-5 bg-background-medium rounded-xl shadow-lg">
+                <img src="/assets/images/la-vieille-roue_by-night.jpeg" alt="l'atelier La Vieille Roue à Albertville"
+                    class="h-40 w-auto rounded-xl shadow-lg object-cover">
+            </div>
+
+            <!-- Adresse -->
+            <div class="flex items-center justify-center text-sm text-center md:text-left">
+                <address class="not-italic">
+                    <h4 class="text-accent font-semibold">
+                        <span class="text-text-light">La Vieille Roue</span>
+                    </h4>
+                    <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
+                    <p>22, rue des Glières - ZA des Glières Blanches<br>73200 Grignon</p>
+                    <a href="tel:0479326063" class="hover:text-accent transition-colors duration-300 block mt-2">
+                        Tél. : 04 79 32 60 63
+                    </a>
+                    <a href="mailto:lavieilleroue@gmail.com"
+                        class="hover:text-accent transition-colors duration-300 block mt-1">
+                        Email : lavieilleroue@gmail.com
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61581564816236"
+                        class="hover:text-accent transition-colors duration-300 block mt-1">
+                        <span class="icon-facebook text-primary-medium font-bold font-xl"></span>
+                        Rejoignez-nous sur Facebook
+                    </a>
+                </address>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex items-center justify-center md:text-left">
+                <div class="w-full pb-6">
+                    <h3 class="font-semibold text-lg text-text-light">Navigation Rapide</h3>
+                    <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
+                    <nav class="text-center md:text-left" aria-label="Navigation de pied de page">
+                        <ul class="text-sm space-y-2">
+                            <li><a href="/" class="hover:text-accent transition-colors duration-300">Accueil</a></li>
+                            <li><a href="/jantes" class="hover:text-accent transition-colors duration-300">Rénovation de
+                                    jantes</a></li>
+                            <li><a href="/vehicules-anciens"
+                                    class="hover:text-accent transition-colors duration-300">Restauration véhicules
+                                    anciens</a></li>
+                            <li><a href="/contact" class="hover:text-accent transition-colors duration-300">Nous
+                                    contacter</a></li>
+                            <li><a href="https://lavieilleroue.fr/contact" target="_blank" rel="noopener noreferrer"
+                                    class="hover:text-accent transition-colors duration-300 pb-6">Prendre
+                                    rendez-vous</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bas de page -->
+        <section
+            class="py-6 text-sm text-neutral-light flex flex-col md:flex-row justify-between items-center gap-4 border-t border-neutral-medium">
+            <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
+                <a href="/politique-confidentialite.html" target="_blank"
+                    class="hover:text-text-light transition-colors duration-300">
+                    Politique de confidentialité
+                </a>
+                <span class="text-accent">|</span>
+                <a href="/mentions-legales.html" target="_blank"
+                    class="hover:text-text-light transition-colors duration-300">
+                    Mentions légales
+                </a>
+            </div>
+            <a href="https://peakcl.com/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <img src="assets/logo/PeakCL.svg" class="h-6 w-auto" alt="logo du développeur">
+                <span class="text-violet-600">Peak<span class="text-yellow-500">CL</span></span>
+            </a>
+            <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
+        </section>
+    </div>
+</footer>
+    <button id="scrollTopBtn"
+    class="px-2 py-2 bg-ikami-gradient text-white rounded-md hover:bg-orange-600 border border-gray-200 shadow-lg hover:shadow-xl fixed bottom-8 right-8 hidden z-50 icon-chevron-up">
+</button>
+
+<script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            scrollTopBtn.classList.remove("hidden");
+            scrollTopBtn.classList.add("block");
+        } else {
+            scrollTopBtn.classList.add("hidden");
+            scrollTopBtn.classList.remove("block");
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+  </body>
+</html>
