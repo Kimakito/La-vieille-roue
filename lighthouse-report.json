@@ -245,7 +245,7 @@
             "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
             "sourceLocation": {
               "type": "source-location",
-              "url": "http://127.0.0.1:4000/ssetsimagesporsche-8343861_1280.webp",
+              "url": "http://127.0.0.1:4000/assets/imagesporsche-8343861_1280.webp",
               "urlProvider": "network",
               "line": 0,
               "column": 0
