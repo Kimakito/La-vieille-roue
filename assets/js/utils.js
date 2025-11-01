@@ -1,189 +1,215 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ============================ //
-    //          SLIDER HANDLER      //
-    // ============================ //
-     document.addEventListener('DOMContentLoaded', () => {
-        const rangeInput = document.getElementById('rangeInput');
-        const distanceValue = document.getElementById('distanceValue');
+// Combined utilities: gallery lightbox, Facebook consent loader, slider, and animation observer
+(function(){
+  // Wait for DOM
+  function ready(fn){
+    if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn);
+  }
 
-        // Vérification des éléments
-        if (rangeInput && distanceValue) {
-            rangeInput.addEventListener('input', () => {
-                distanceValue.textContent = `${rangeInput.value} km`;
-            });
-        } else {
-            console.error('Les éléments avec les IDs rangeInput ou distanceValue sont manquants.');
+  ready(function(){
+    /* ---------- Lightbox & gallery (works on pages that include gallery/flyer markup) ---------- */
+    (function(){
+      const items = Array.from(document.querySelectorAll('.gallery-item-btn, .flyer-item-btn'));
+      if(!items || items.length === 0) return;
+
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lbImage = document.getElementById('lb-image');
+      const lbCaption = document.getElementById('lb-caption');
+      const lbClose = document.getElementById('lb-close');
+      const lbNext = document.getElementById('lb-next');
+      const lbPrev = document.getElementById('lb-prev');
+      let current = 0;
+
+      // ensure lightbox exists
+      if(!lightbox || !lbImage) return;
+
+      // Create caption overlays from img alt for each gallery item
+      items.forEach(btn => {
+        const img = btn.querySelector('img');
+        if(img){
+          const caption = document.createElement('div');
+          caption.className = 'caption';
+          caption.textContent = img.alt || '';
+          const galleryItem = btn.closest('.gallery-item');
+          if(galleryItem) galleryItem.appendChild(caption);
         }
-    });
+      });
 
+      function openAt(i){
+        const btn = items[i];
+        if(!btn) return;
+        const img = btn.querySelector('img');
+        lbImage.src = img.dataset.full || img.src;
+        lbImage.alt = img.alt || '';
+        if(lbCaption) lbCaption.textContent = img.alt || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden','false');
+        current = i;
+        // focus trap: focus close button
+        if(lbClose) lbClose.focus();
+      }
 
-    // ============================ //
-    //          SHOW MORE BTN       //
-    // ============================ //
-        document.querySelectorAll('.showMoreBtn').forEach(button => {
-        button.addEventListener('click', () => {
-            const parent = button.closest('div'); // Trouve le parent contenant les éléments
-            const dots = parent.querySelector('.dots');
-            const more = parent.querySelector('.more');
+      function closeLB(){
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden','true');
+        lbImage.src = '';
+        if(lbCaption) lbCaption.textContent = '';
+      }
 
-            if (dots.style.display === 'none') {
-                dots.style.display = 'inline';
-                more.style.display = 'none';
-                button.textContent = 'Afficher plus';
-            } else {
-                dots.style.display = 'none';
-                more.style.display = 'inline';
-                button.textContent = 'Afficher moins';
+      items.forEach((btn, idx) => {
+        btn.addEventListener('click', (e) => { e.preventDefault(); openAt(idx); });
+        btn.addEventListener('keyup', (e) => { if(e.key === 'Enter' || e.key === ' ') { openAt(items.indexOf(btn)); } });
+      });
+
+      if(lbClose) lbClose.addEventListener('click', closeLB);
+      if(lightbox) lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
+      document.addEventListener('keydown', (e)=>{
+        if(lightbox.classList.contains('open')){
+          if(e.key === 'Escape') closeLB();
+          if(e.key === 'ArrowRight') openAt((current+1)%items.length);
+          if(e.key === 'ArrowLeft') openAt((current-1+items.length)%items.length);
+        }
+      });
+      if(lbNext) lbNext.addEventListener('click', ()=> openAt((current+1)%items.length));
+      if(lbPrev) lbPrev.addEventListener('click', ()=> openAt((current-1+items.length)%items.length));
+    })();
+
+    /* ---------- Facebook SDK & consent gating (index.html) ---------- */
+    (function(){
+      const pageUrl = 'https://www.facebook.com/profile.php?id=61581564816236';
+
+      function loadFacebookSDK(){
+        if (document.getElementById('facebook-jssdk')) return;
+        var js = document.createElement('script');
+        js.id = 'facebook-jssdk';
+        js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v16.0';
+        js.async = true;
+        js.defer = true;
+        document.body.appendChild(js);
+      }
+
+      function renderPagePlugin(){
+        const container = document.getElementById('fb-container');
+        if(!container) return;
+        if(container.querySelector('.fb-page')) return; // already rendered
+        container.innerHTML = '';
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'fb-page';
+        wrapper.setAttribute('data-href', pageUrl);
+        wrapper.setAttribute('data-tabs', 'timeline');
+        wrapper.setAttribute('data-small-header', 'false');
+        wrapper.setAttribute('data-adapt-container-width', 'true');
+        wrapper.setAttribute('data-hide-cover', 'false');
+        wrapper.setAttribute('data-show-facepile', 'true');
+        wrapper.style.cssText = 'width:100%; min-height:360px; max-width:100%; overflow:hidden; display:inline-block; margin:0 auto;';
+
+        const fbBlockquote = document.createElement('blockquote');
+        fbBlockquote.className = 'fb-xfbml-parse-ignore';
+        fbBlockquote.innerHTML = `<a href="${pageUrl}" target="_blank" rel="noopener noreferrer">La Vieille Roue</a>`;
+
+        wrapper.appendChild(fbBlockquote);
+        container.appendChild(wrapper);
+
+        if(window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function'){
+          FB.XFBML.parse(container);
+        }
+      }
+
+      function checkConsentAndMaybeLoad(){
+        try{
+          var consent = null;
+          if(typeof window.getCookieConsent === 'function'){
+            consent = window.getCookieConsent();
+          } else {
+            const raw = localStorage.getItem('cookieConsent');
+            consent = raw ? JSON.parse(raw) : null;
+          }
+          if(consent && (consent.marketing === true || consent.social === true)){
+            loadFacebookSDK();
+            window.addEventListener('fb_init', renderPagePlugin);
+            setTimeout(renderPagePlugin, 1200);
+            return true;
+          }
+        }catch(e){ console.warn('Facebook integration: consent check failed', e); }
+        return false;
+      }
+
+      var loadedByConsent = checkConsentAndMaybeLoad();
+
+      if(!loadedByConsent){
+        const fallback = document.getElementById('fb-fallback');
+        if(fallback){
+          const enableBtn = document.createElement('button');
+          enableBtn.className = 'mt-4 bg-accent text-primary-dark font-bold py-2 px-4 rounded';
+          enableBtn.textContent = 'Afficher le fil Facebook (autoriser)';
+          enableBtn.onclick = function(){
+            try{
+              const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent') || '{}'));
+              const updated = Object.assign({}, current || {}, { marketing: true });
+              localStorage.setItem('cookieConsent', JSON.stringify(updated));
+              window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
+            }catch(e){
+              localStorage.setItem('cookieConsent', JSON.stringify({ essential: true, analytics: false, marketing: true }));
+              window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential: true, analytics: false, marketing: true } }));
             }
-        });
-    });
+            loadFacebookSDK();
+            setTimeout(renderPagePlugin, 800);
+          };
+          fallback.appendChild(document.createElement('br'));
+          fallback.appendChild(enableBtn);
 
-
-   // ================================== //
-    //          Gestion des favoris       //
-    // ================================== //
-
-    // Fonction pour lire les cookies
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    }
-
-    // Fonction pour définir un cookie
-    function setCookie(name, value, days) {
-        const expires = new Date();
-        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = `${name}=${value}; path=/; expires=${expires.toUTCString()}; SameSite=Lax; Secure`;
-    }
-
-    // Fonction pour supprimer un cookie
-    function deleteCookie(name) {
-        document.cookie = `${name}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
-    }
-
-    // Gestion des favoris : ajout/suppression
-    function handleFavoriteButton(button) {
-        const annonceId = parseInt(button.getAttribute('data-id-annonce'), 10);
-        const heartIcon = button.querySelector('span');
-        let favoris = [];
-        try {
-            favoris = JSON.parse(getCookie('favoris') || '[]').map(id => parseInt(id, 10));
-        } catch (e) {
-            console.error("Erreur lors de la lecture des favoris :", e);
-        }
-
-        const isFavori = favoris.includes(annonceId);
-
-        // Ajout ou suppression dans les favoris
-        if (isFavori) {
-            favoris = favoris.filter(id => id !== annonceId);
-        } else {
-            favoris.push(annonceId);
-        }
-
-        // Mise à jour des cookies
-        setCookie('favoris', JSON.stringify(favoris), 30);
-
-        // Mise à jour des classes du bouton
-        if (isFavori) {
-            heartIcon.classList.remove('icon-heart-full');
-            heartIcon.classList.add('icon-coeur');
-        } else {
-            heartIcon.classList.remove('icon-coeur');
-            heartIcon.classList.add('icon-heart-full');
-        }
-
-        // Met à jour dynamiquement la section des favoris si elle existe
-        refreshFavoritesSection();
-    }
-
-    // Rafraîchissement dynamique des favoris
-    function refreshFavoritesSection() {
-        const favoris = JSON.parse(getCookie('favoris') || '[]');
-        const favoritesContainer = document.getElementById('favoritesContainer');
-        if (!favoritesContainer) return; // Si le conteneur n'existe pas
-
-        // Si aucun favori, afficher un message
-        if (favoris.length === 0) {
-            favoritesContainer.innerHTML = `
-                <p class="text-center text-gray-500">Aucune annonce favorite trouvée.</p>
-            `;
-            return;
-        }
-
-        // Ajouter les gestionnaires pour les boutons "Supprimer"
-        document.querySelectorAll('.removeFavorite').forEach(button => {
-            button.addEventListener('click', () => handleRemoveFavorite(button));
-        });
-    }
-
-    // Gestion de la suppression d'un favori spécifique
-    function handleRemoveFavorite(annonceId) {
-        let favorites = JSON.parse(getCookie('favoris') || '[]');
-
-        // Suppression
-        favorites = favorites.filter(id => id !== annonceId);
-        setCookie('favoris', JSON.stringify(favorites), 30);
-
-
-        // Mise à jour visuelle
-        const elementToRemove = document.querySelector(`[data-id="${annonceId}"]`).closest('.favorite-item');
-        if (elementToRemove) {
-            elementToRemove.remove();
-        }
-    }
-    document.querySelectorAll('.removeFavorite').forEach(button => {
-        button.addEventListener('click', function () {
-            const annonceId = parseInt(this.getAttribute('data-id'), 10);
-            handleRemoveFavorite(annonceId);
-        });
-    });
-
-    // Gestion de la suppression de tous les favoris
-    function handleClearAllFavorites() {
-        deleteCookie('favoris');
-
-        // Vider dynamiquement la section des favoris
-        const favoritesContainer = document.getElementById('favoritesContainer');
-        if (favoritesContainer) {
-            favoritesContainer.innerHTML = `
-                <p class="text-center text-gray-500">Aucune annonce favorite trouvée.</p>
-            `;
-        }
-        // Recharger la page pour refléter les changements
-        location.reload();
-    }
-
-    // Initialisation des événements
-    document.querySelectorAll('.heartBtn').forEach(button => {
-        button.addEventListener('click', () => handleFavoriteButton(button));
-    });
-
-    // Gestion de la suppression de tous les favoris
-    const clearFavoritesBtn = document.getElementById('clearFavoritesBtn');
-    if (clearFavoritesBtn) {
-        clearFavoritesBtn.addEventListener('click', handleClearAllFavorites);
-    }
-
-    // Initialisation au chargement pour refléter les favoris existants
-    function initializeFavorites() {
-        const favoris = JSON.parse(getCookie('favoris') || '[]').map(id => parseInt(id, 10));
-        document.querySelectorAll('.heartBtn').forEach(button => {
-            const annonceId = parseInt(button.getAttribute('data-id-annonce'), 10);
-            const heartIcon = button.querySelector('span');
-            if (favoris.includes(annonceId)) {
-                heartIcon.classList.add('icon-heart-full');
-                heartIcon.classList.remove('icon-coeur');
-            } else {
-                heartIcon.classList.add('icon-coeur');
-                heartIcon.classList.remove('icon-heart-full');
+          window.addEventListener('cookieConsentChanged', function(e){
+            const detail = e && e.detail ? e.detail : null;
+            if(detail && (detail.marketing === true || detail.social === true)){
+              loadFacebookSDK();
+              setTimeout(renderPagePlugin, 1000);
             }
-        });
-    }
+          });
+        }
+      }
 
-    // Appeler l'initialisation
-    initializeFavorites();
-    
-});
+      // Observe FB SDK ready
+      var observer = new MutationObserver(function(mutationsList, observer){
+        if(window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function'){
+          window.dispatchEvent(new Event('fb_init'));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+    })();
+
+    /* ---------- Slider Clio (if present) ---------- */
+    (function(){
+      const sliderClio = document.getElementById('slider-clio');
+      if(!sliderClio) return;
+      const totalSlidesClio = sliderClio.children.length;
+      let indexClio = 0;
+      function showSlideClio(){ sliderClio.style.transform = `translateX(-${indexClio * 100}%)`; }
+      window.nextClio = function(){ indexClio = (indexClio + 1) % totalSlidesClio; showSlideClio(); };
+      window.prevClio = function(){ indexClio = (indexClio - 1 + totalSlidesClio) % totalSlidesClio; showSlideClio(); };
+    })();
+
+    /* ---------- IntersectionObserver for animations ---------- */
+    (function(){
+      const animateElements = document.querySelectorAll('[data-animate]');
+      if(!animateElements || animateElements.length === 0) return;
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            const animationType = element.dataset.animate;
+            const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
+            setTimeout(() => {
+              element.classList.remove('opacity-0');
+              element.classList.add(`animate-${animationType}`);
+            }, delay);
+            observer.unobserve(element);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animateElements.forEach(element => { element.classList.add('opacity-0'); observer.observe(element); });
+    })();
+
+  }); // ready
+})();

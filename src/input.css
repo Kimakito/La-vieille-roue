@@ -57,3 +57,39 @@
 .delay-800 { animation-delay: 0.8s; }
 .delay-900 { animation-delay: 0.9s; }
 .delay-1000 { animation-delay: 1s; }
+
+/* Gallery & Lightbox styles moved from inline in templates */
+/* Compact homepage gallery */
+#jantes-gallery.compact { display: grid; grid-template-columns: repeat(2,1fr); gap:0.75rem; }
+@media (min-width:640px){ #jantes-gallery.compact { grid-template-columns: repeat(4,1fr); } }
+#jantes-gallery.compact img { height: 110px; object-fit:cover; }
+
+/* Enhanced gallery visuals (full gallery page) */
+#jantes-gallery { column-gap: 1rem; }
+#jantes-gallery .gallery-item { display: inline-block; width: 100%; margin: 0 0 1rem; break-inside: avoid; position: relative; overflow: hidden; }
+#jantes-gallery img { width: 100%; height: auto; display: block; border-radius: .5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease; }
+#jantes-gallery img:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 18px 40px rgba(0,0,0,0.18); }
+#jantes-gallery .badge { position: absolute; left: .5rem; top: .5rem; background: rgba(0,0,0,0.72); color: #fff; font-weight:700; font-size:.75rem; padding:.25rem .5rem; border-radius:.375rem; }
+
+/* Caption overlay (created by JS) */
+#jantes-gallery .caption { position:absolute; left:.5rem; right:.5rem; bottom:.5rem; padding:.4rem .6rem; background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%); color:#fff; font-size:0.95rem; border-radius:.375rem; opacity:0; transform:translateY(6px); transition:opacity .18s ease, transform .18s ease; pointer-events:none; }
+#jantes-gallery .gallery-item:hover .caption { opacity:1; transform:translateY(0); }
+
+/* Responsive: larger masonry on jantes page */
+@media (min-width: 640px) { #jantes-gallery { column-count: 2; } }
+@media (min-width: 900px) { #jantes-gallery { column-count: 3; } }
+@media (min-width: 1280px) { #jantes-gallery { column-count: 4; } }
+
+/* Flyers thumbnails styling */
+.flyer-item-btn img { width:140px; height:auto; border-radius:.5rem; box-shadow:0 8px 20px rgba(0,0,0,0.12); transition: transform .18s ease; }
+.flyer-item-btn:focus img, .flyer-item-btn:hover img { transform: translateY(-4px); }
+
+/* Lightbox */
+.lightbox { position: fixed; inset:0; background: rgba(0,0,0,0.92); display:flex; align-items:center; justify-content:center; z-index:9999; opacity:0; pointer-events:none; transition: opacity .18s ease; }
+.lightbox.open { opacity:1; pointer-events:auto; }
+.lightbox-inner { max-width: 95vw; max-height: 90vh; display:flex; flex-direction:column; align-items:center; gap:.6rem; }
+.lightbox img { max-width: 95vw; max-height: 78vh; border-radius:.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+.lightbox .lb-caption { color:#fff; font-size:0.95rem; text-align:center; max-width:90vw; }
+.lightbox .controls { position: absolute; left: 1rem; right:1rem; top:50%; transform:translateY(-50%); display:flex; justify-content:space-between; pointer-events:auto; }
+.lightbox .controls button { background: rgba(255,255,255,0.06); color:#fff; border:0; padding:.6rem .9rem; border-radius:.5rem; cursor:pointer; }
+.lightbox .close { position:absolute; right:1rem; top:1rem; background:transparent; border:0; color:#fff; font-size:1.4rem; }

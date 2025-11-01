@@ -11,7 +11,7 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
                 Contactez La Vieille Roue
             </h1>
-           <h2 class="text-2xl sm:text-3xl font-bold mb-4 md:mb-6 text-accent">
+           <h2 class="text-2xl sm:text-3xl font-bold mb-4 md:mb-6 text-primary-dark">
             Trouvez-nous et Contactez-nous Directement
         </h2>
         <p class="text-base sm:text-lg mb-6 md:mb-8">
@@ -30,19 +30,20 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
                     Nos Coordonnées
                 </h3>
                 <p class="mb-2 text-base sm:text-lg">
-                    <strong class="text-accent">Adresse :</strong> 229-397 Rue des Glières,<br />
+                    <strong class="text-primary-dark">Adresse :</strong> 229-397 Rue des Glières,<br />
                     73200 Grignon, Savoie
                 </p>
+                <p class="text-sm mt-2 text-text-dark">La Vieille Roue exerce également sous le nom commercial <strong>Jantes 73</strong>.</p>
                 <p class="mb-2 text-base sm:text-lg">
-                    <strong class="text-accent">Téléphone :</strong>
+                    <strong class="text-primary-dark">Téléphone :</strong>
                     <a href="tel:0479326063" class="hover:underline">0479326063</a>
                 </p>
                 <p class="mb-4 text-base sm:text-lg">
-                    <strong class="text-accent">Email :</strong>
+                    <strong class="text-primary-dark">Email :</strong>
                     <a href="mailto:lavieilleroue@gmail.com" class="hover:underline">lavieilleroue@gmail.com</a>
                 </p>
                 <p class="mb-4 text-base sm:text-lg">
-                    <strong class="text-accent">Facebook :</strong>
+                    <strong class="text-primary-dark">Facebook :</strong>
                     <a href="https://www.facebook.com/profile.php?id=61581564816236" class="hover:underline">
                         <span class="icon-facebook text-primary-medium font-bold font-xl"></span> La Vieille Roue
                     </a>
@@ -64,7 +65,7 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
         </div>
 
             <div class="bg-white p-4 sm:p-8 rounded-lg shadow-xl mb-6 sm:mb-10 border border-neutral-medium">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-accent">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-primary-dark">
                     Restauration Véhicules Anciens & Prestige : Demande Spécifique
                 </h2>
                 <p class="mb-4 sm:mb-6 text-base sm:text-lg">
@@ -110,7 +111,7 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
                     </div>
                     <div>
                         <button type="submit"
-                            class="w-full bg-accent hover:bg-accent-hover text-primary-dark font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg">
+                            class="w-full bg-accent hover:bg-accent-hover text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent/30 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg">
                             Envoyer ma demande de restauration
                         </button>
                     </div>
@@ -118,34 +119,96 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
             </div>
 
     <div class="bg-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl shadow-2xl mb-4 sm:mb-6 md:mb-8 lg:mb-12 border-2 border-neutral-medium hover:border-accent transition-colors duration-300">
-    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-accent border-b-2 border-accent pb-2 sm:pb-4">
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-primary-dark border-b-2 border-accent pb-2 sm:pb-4">
         Réparation de Jantes : Prenez Rendez-vous Facilement
     </h2>
     <div class="rounded-xl border border-neutral-light p-2 sm:p-4" style="width:100%;height:100%;min-height:400px;overflow:auto"
         id="my-cal-inline-rdv-jantes"></div>
+
+    <!-- Consent-aware Cal.com embed: load only after marketing consent or user action -->
     <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "rdv-jantes", { origin: "https://app.cal.com" });
+        (function(){
+            const calContainerId = 'my-cal-inline-rdv-jantes';
 
-        Cal.ns["rdv-jantes"]("inline", {
-            elementOrSelector: "#my-cal-inline-rdv-jantes",
-            config: { 
-                "layout": "month_view",
-                "styles": {
-                    "branding": { "shouldDisplayBranding": false },
-                    "enableResponsive": true
-                }
-            },
-            calLink: "la-vieille-roue/rdv-jantes",
-        });
-
-        Cal.ns["rdv-jantes"]("ui", { 
-            "hideEventTypeDetails": false, 
-            "layout": "month_view",
-            "styles": {
-                "enableResponsive": true
+            function loadCalScriptAndInit(){
+                if (window.Cal && window.Cal.loaded) { initCal(); return; }
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                // allow a short delay for the external script to load before initializing
+                setTimeout(initCal, 600);
             }
-        });
+
+            function initCal(){
+                try {
+                    Cal("init", "rdv-jantes", { origin: "https://app.cal.com" });
+                    Cal.ns["rdv-jantes"]("inline", {
+                        elementOrSelector: "#"+calContainerId,
+                        config: { 
+                            "layout": "month_view",
+                            "styles": {
+                                "branding": { "shouldDisplayBranding": false },
+                                "enableResponsive": true
+                            }
+                        },
+                        calLink: "la-vieille-roue/rdv-jantes",
+                    });
+
+                    Cal.ns["rdv-jantes"]("ui", { 
+                        "hideEventTypeDetails": false, 
+                        "layout": "month_view",
+                        "styles": {
+                            "enableResponsive": true
+                        }
+                    });
+                } catch(e){ console.warn('Cal init failed', e); }
+            }
+
+            function checkConsentAndMaybeLoad() {
+                let consent = null;
+                try {
+                    if (typeof window.getCookieConsent === 'function') consent = window.getCookieConsent();
+                    else {
+                        const raw = localStorage.getItem('cookieConsent');
+                        consent = raw ? JSON.parse(raw) : null;
+                    }
+                } catch(e){ consent = null; }
+                if (consent && consent.marketing === true) {
+                    loadCalScriptAndInit();
+                    return true;
+                }
+                return false;
+            }
+
+            const loaded = checkConsentAndMaybeLoad();
+
+            if (!loaded) {
+                const container = document.getElementById(calContainerId);
+                if (container) {
+                    container.innerHTML = '<div class="p-6 text-center"><p class="mb-3">Module de prise de rendez-vous désactivé (consentement requis).</p></div>';
+                    const btn = document.createElement('button');
+                    btn.className = 'mt-4 bg-accent text-primary-dark font-bold py-2 px-4 rounded';
+                    btn.textContent = 'Afficher le module de rendez-vous (autoriser)';
+                    btn.onclick = function(){
+                        try {
+                            const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent')||'{}'));
+                            const updated = Object.assign({}, current || {}, { marketing: true });
+                            localStorage.setItem('cookieConsent', JSON.stringify(updated));
+                            window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
+                        } catch(e){
+                            localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
+                            window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
+                        }
+                        loadCalScriptAndInit();
+                    };
+                    container.appendChild(btn);
+
+                    // Listen for consent changes from the cookie banner
+                    window.addEventListener('cookieConsentChanged', function(e){
+                        const detail = e && e.detail ? e.detail : null;
+                        if (detail && detail.marketing === true) loadCalScriptAndInit();
+                    });
+                }
+            }
+        })();
     </script>
     <!-- Début de widget en ligne Calendly -->
     <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/lavieilleroue/rdv-renovation-de-jante" style="min-width:320px;height:700px;"></div>
@@ -196,7 +259,7 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
             <div id="fb-fallback" class="text-center">
                 <p class="mb-3">Chargement du fil Facebook...</p>
                 <p class="text-sm">Si rien n'apparaît, cliquez sur le lien ci-dessous pour ouvrir notre page Facebook.</p>
-                <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-accent underline">Ouvrir la page Facebook de La Vieille Roue</a>
+                <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-primary-dark underline">Ouvrir la page Facebook de La Vieille Roue</a>
             </div>
         </div>
     </div>
@@ -320,3 +383,5 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
     </script>
 
     <!-- End Facebook section -->
+
+

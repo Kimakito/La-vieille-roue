@@ -5,34 +5,34 @@
             <!-- Logo -->
             <div class="flex justify-center md:justify-start items-center md:pl-4 lg:pl-8">
                 <img class="h-20 sm:h-24 md:h-32 lg:h-40 w-auto object-contain" src="/assets/logo/logo.png"
-                    alt="Logo La Vieille Roue">
+                    alt="Logo La Vieille Roue" loading="lazy" decoding="async" fetchpriority="low">
             </div>
 
 
             <!-- Image atelier (cachée sur mobile) -->
             <div
                 class="hidden md:flex justify-center md:justify-start items-center p-2 md:p-5 bg-background-medium rounded-xl shadow-lg">
-                <img src="/assets/images/la-vieille-roue_by-night.jpeg" alt="l'atelier La Vieille Roue à Albertville"
-                    class="h-40 w-auto rounded-xl shadow-lg object-cover">
+                <img src="/assets/images/la-vieille-roue_by-night.webp" alt="l'atelier La Vieille Roue à Albertville"
+                    class="h-40 w-auto rounded-xl shadow-lg object-cover" loading="lazy" decoding="async" fetchpriority="low">
             </div>
 
             <!-- Adresse -->
             <div class="flex items-center justify-center text-sm text-center md:text-left">
                 <address class="not-italic">
-                    <h4 class="text-accent font-semibold">
+                    <h4 class="text-primary-dark font-semibold">
                         <span class="text-text-light">La Vieille Roue</span>
                     </h4>
                     <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
                     <p>22, rue des Glières - ZA des Glières Blanches<br>73200 Grignon</p>
-                    <a href="tel:0479326063" class="hover:text-accent transition-colors duration-300 block mt-2">
+                    <a href="tel:0479326063" class="hover:text-primary-dark transition-colors duration-300 block mt-2">
                         Tél. : 04 79 32 60 63
                     </a>
                     <a href="mailto:lavieilleroue@gmail.com"
-                        class="hover:text-accent transition-colors duration-300 block mt-1">
+                        class="hover:text-primary-dark transition-colors duration-300 block mt-1">
                         Email : lavieilleroue@gmail.com
                     </a>
                     <a href="https://www.facebook.com/profile.php?id=61581564816236"
-                        class="hover:text-accent transition-colors duration-300 block mt-1">
+                        class="hover:text-primary-dark transition-colors duration-300 block mt-1">
                         <span class="icon-facebook text-primary-medium font-bold font-xl"></span>
                         Rejoignez-nous sur Facebook
                     </a>
@@ -46,18 +46,18 @@
                     <div class="w-10 h-0.5 bg-neutral-medium my-2 mx-auto md:mx-0"></div>
                     <nav class="text-center md:text-left" aria-label="Navigation de pied de page">
                         <ul class="text-sm space-y-2">
-                            <li><a href="/" class="hover:text-accent transition-colors duration-300">Accueil</a></li>
-                            <li><a href="/jantes" class="hover:text-accent transition-colors duration-300">Rénovation de
-                                    jantes</a></li>
-                            <li><a href="/vehicules-anciens"
-                                    class="hover:text-accent transition-colors duration-300">Restauration véhicules
-                                    anciens</a></li>
-                            <li><a href="/contact" class="hover:text-accent transition-colors duration-300">Nous
-                                    contacter</a></li>
-                            <li><a href="https://lavieilleroue.fr/contact" target="_blank" rel="noopener noreferrer"
-                                    class="hover:text-accent transition-colors duration-300 pb-6">Prendre
-                                    rendez-vous</a>
-                            </li>
+                <li><a href="/" class="hover:text-primary-dark transition-colors duration-300">Accueil</a></li>
+                <li><a href="/jantes" class="hover:text-primary-dark transition-colors duration-300">Rénovation de
+                    jantes</a></li>
+                <li><a href="/vehicules-anciens"
+                    class="hover:text-primary-dark transition-colors duration-300">Restauration véhicules
+                    anciens</a></li>
+                <li><a href="/contact" class="hover:text-primary-dark transition-colors duration-300">Nous
+                    contacter</a></li>
+                <li><a href="https://lavieilleroue.fr/contact" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-primary-dark transition-colors duration-300 pb-6">Prendre
+                    rendez-vous</a>
+                </li>
                         </ul>
                     </nav>
                 </div>
@@ -72,17 +72,26 @@
                     class="hover:text-text-light transition-colors duration-300">
                     Politique de confidentialité
                 </a>
-                <span class="text-accent">|</span>
+                <span class="text-primary-dark">|</span>
+                <a href="/politique-des-cookies" target="_blank" class="hover:text-text-light transition-colors duration-300">
+                    Politique des cookies
+                </a>
+                <span class="text-primary-dark">|</span>
                 <a href="/mentions-legales.html" target="_blank"
                     class="hover:text-text-light transition-colors duration-300">
                     Mentions légales
                 </a>
             </div>
             <a href="https://peakcl.com/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <img src="assets/logo/PeakCL.svg" class="h-6 w-auto" alt="logo du développeur">
+                <img src="/assets/logo/PeakCL.svg" class="h-6 w-auto" alt="logo du développeur" loading="lazy" decoding="async" fetchpriority="low">
                 <span class="text-violet-600">Peak<span class="text-yellow-500">CL</span></span>
             </a>
-            <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
+            <div class="flex flex-col items-center md:items-end gap-1">
+                <p class="text-center md:text-right">© 2025 La Vieille Roue. Tous droits réservés.</p>
+                <p class="text-xs text-neutral-medium mt-1">Exerce également sous le nom commercial <strong>Jantes 73</strong>.</p>
+            </div>
         </section>
     </div>
 </footer>
+
+
