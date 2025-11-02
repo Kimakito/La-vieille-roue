@@ -93,3 +93,30 @@
 .lightbox .controls { position: absolute; left: 1rem; right:1rem; top:50%; transform:translateY(-50%); display:flex; justify-content:space-between; pointer-events:auto; }
 .lightbox .controls button { background: rgba(255,255,255,0.06); color:#fff; border:0; padding:.6rem .9rem; border-radius:.5rem; cursor:pointer; }
 .lightbox .close { position:absolute; right:1rem; top:1rem; background:transparent; border:0; color:#fff; font-size:1.4rem; }
+
+/* Facebook Page plugin layout fixes (extracted from inline <style> in index.html and contact.html)
+   These rules keep the FB iframe centered and responsive inside our card. They intentionally
+   use !important to override inline styles injected by the Facebook widget. */
+#facebook-section .fb-page,
+#facebook-section .fb-page .fb_iframe_widget,
+#facebook-section .fb-page .fb_iframe_widget span,
+#facebook-section .fb-page .fb_iframe_widget iframe,
+#facebook-section .fb-page iframe,
+#facebook-section .fb-page>div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    max-width: 100% !important;
+}
+
+#facebook-section .fb_iframe_widget,
+#facebook-section .fb_iframe_widget span,
+#facebook-section .fb_iframe_widget iframe {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    max-width: 100% !important;
+}
+
+#facebook-section #fb-fallback { text-align: center; }
