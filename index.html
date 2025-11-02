@@ -27,6 +27,7 @@ keywords:
   - Isère
   - Haute-Savoie
 image_share: /assets/logo/logo-vieille-roue.png
+hero_preload: /assets/images/automobile-8217167_1280.png
 ---
 <script type="application/ld+json">
 {
@@ -102,9 +103,12 @@ image_share: /assets/logo/logo-vieille-roue.png
   "keywords": ["jantes savoie", "rénovation jantes", "jantes albertville", "réparation jantes savoie"]
 }
 </script>
-<section class="w-full h-[75vh] bg-cover bg-center relative overflow-hidden p-5"
-    style="background-image: url('/assets/images/automobile-8217167_1280.png');" role="banner"
-    aria-label="Présentation de La Vieille Roue">
+<section class="w-full h-[75vh] relative overflow-hidden p-5" role="banner" aria-label="Présentation de La Vieille Roue">
+    <!-- Hero image: use picture/img for better LCP control (fetchpriority, loading, webp source) -->
+    <picture aria-hidden="true">
+        <source type="image/webp" srcset="/assets/images/automobile-8217167_1280.png">
+        <img src="/assets/images/automobile-8217167_1280.png" alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-70 flex items-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
             <h1 class="text-4xl text-accent sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight font-k2d drop-shadow-lg opacity-0"
@@ -360,17 +364,45 @@ image_share: /assets/logo/logo-vieille-roue.png
     <div class="max-w-4xl mx-auto p-6 overflow-hidden relative z-10">
         <!-- Consent-aware container -->
         <div id="fb-container" class="w-full min-h-[360px] flex items-center justify-center mx-auto max-w-prose">
-            <!-- Fallback before SDK loads or if cookies blocked -->
-            <div id="fb-fallback" class="text-center">
-                <p class="mb-3">Chargement du fil Facebook...</p>
-                <p class="text-sm">Si rien n'apparaît, cliquez sur le lien ci-dessous pour ouvrir notre page Facebook.
-                </p>
-                <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank"
-                    rel="noopener noreferrer" class="mt-4 inline-block text-primary-dark underline">Ouvrir la page Facebook de
-                    La Vieille Roue</a>
+            <!-- Fallback before SDK loads or if cookies blocked: prettier card UI -->
+            <div id="fb-fallback" class="fb-card" role="region" aria-label="Fil Facebook — La Vieille Roue">
+                <div class="meta">
+                    <div class="logo" aria-hidden="true">
+                        <!-- optional small logo; keep empty if not present -->
+                        <img src="/assets/logo/favicon-96x96.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                    </div>
+                    <div>
+                        <div class="title">La Vieille Roue — Facebook</div>
+                        <div class="snippet">Suivez nos rénovations, photos avant/après et actualités d'atelier sur notre page Facebook.</div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="cta">Ouvrir la page</a>
+                    <!-- The JS may append a separate enable button; if not, provide a progressive enhancement button -->
+                    <button id="fb-local-enable" class="cta" aria-label="Afficher le fil Facebook (autoriser)">Afficher le fil</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Hook progressive-enable button to dispatch the same consent change as the interactive enable created by the inline script
+        (function(){
+            var btn = document.getElementById('fb-local-enable');
+            if(!btn) return;
+            btn.addEventListener('click', function(){
+                try{
+                    const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent')||'{}'));
+                    const updated = Object.assign({}, current || {}, { marketing: true });
+                    localStorage.setItem('cookieConsent', JSON.stringify(updated));
+                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
+                } catch(e){
+                    localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
+                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
+                }
+            });
+        })();
+    </script>
 
             <!-- Facebook script moved to /assets/js/utils.js -->
 

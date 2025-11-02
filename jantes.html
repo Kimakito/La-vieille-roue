@@ -28,10 +28,14 @@ keywords:
   - rénover jantes auto Savoie
   - customisation jantes Albertville
 image_share: /assets/images/jantes/jante-renovee.webp
+hero_preload: /assets/images/jante-mercedes.webp
 ---
-<section class="w-full h-[75vh] bg-cover bg-center relative p-5"
-    style="background-image: url('/assets/images/jante-mercedes.webp')" role="banner"
-    aria-label="Expertise en rénovation et personnalisation de jantes">
+<section class="w-full h-[75vh] relative p-5" role="banner" aria-label="Expertise en rénovation et personnalisation de jantes">
+    <!-- Hero image for jantes page: use picture/img for LCP control -->
+    <picture aria-hidden="true">
+        <source type="image/webp" srcset="/assets/images/jante-mercedes.webp">
+        <img src="/assets/images/jante-mercedes.webp" alt="Rénovation jantes La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">

@@ -24,21 +24,25 @@ keywords:
   - restauration châssis Albertville
   - moteur ancien réparation Savoie
 image_share: /assets/images/car-4202678_1280.webp
+hero_preload: /assets/images/car-4202678_1280.webp
 ---
-<section class="w-full h-[75vh] bg-cover bg-center relative overflow-hidden p-5"
-    style="background-image: url('/assets/images/car-4202678_1280.webp');"
-    role="banner" aria-label="Restauration d'automobiles de légende à Albertville">
+<section class="w-full h-[75vh] relative overflow-hidden p-5" role="banner" aria-label="Restauration d'automobiles de légende à Albertville">
+    <!-- Hero image: picture/img for prioritized loading -->
+    <picture aria-hidden="true">
+        <source type="image/webp" srcset="/assets/images/car-4202678_1280.webp">
+        <img src="/assets/images/car-4202678_1280.webp" alt="Restauration automobile La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-75 flex items-center justify-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 leading-tight font-k2d drop-shadow-lg opacity-0"
                 data-animate="fade-in">
                 L'Art de la Restauration à <strong>Albertville</strong> : <span class="text-primary-dark">Automobiles de Légende</span>
             </h1>
-            <p class="text-lg md:text-2xl mb-8 opacity-90 font-jakarta opacity-0" data-animate="fade-in-up"
+            <p class="text-lg md:text-2xl mb-8 font-jakarta opacity-0" data-animate="fade-in-up"
                 data-delay="100">
                 Chez La Vieille Roue, votre spécialiste à <strong>Albertville</strong>, nous insufflons une nouvelle vie aux <strong>automobiles de collection, de prestige et young timers</strong>, avec un savoir-faire et une passion inégalés.
             </p>
-            <p class="text-md md:text-xl opacity-80 mt-4 font-jakarta opacity-0" data-animate="fade-in-up"
+            <p class="text-md md:text-xl mt-4 font-jakarta opacity-0" data-animate="fade-in-up"
                 data-delay="200">
                 Notre expertise est dédiée exclusivement aux véhicules d'exception et de caractère qui sillonnent la <strong>Savoie</strong> et les départements voisins.
             </p>

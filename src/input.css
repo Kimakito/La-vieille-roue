@@ -120,3 +120,27 @@
 }
 
 #facebook-section #fb-fallback { text-align: center; }
+
+/* Visual improvements for the Facebook card fallback and container */
+.fb-card {
+    background: #ffffff;
+    color: #111827; /* neutral-800 */
+    border-radius: .75rem;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.08);
+    padding: 0.85rem;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.fb-card .meta { display:flex; align-items:center; gap:0.6rem; }
+.fb-card .logo { width:46px; height:46px; border-radius:50%; overflow:hidden; background:#f3f4f6; flex:0 0 46px; display:inline-block; }
+.fb-card .title { font-weight:700; font-size:1rem; color:#0f172a; }
+.fb-card .snippet { color:#475569; font-size:0.95rem; line-height:1.2; }
+.fb-card .actions { display:flex; gap:0.5rem; justify-content:flex-end; }
+.fb-card .cta { background:#f59e0b; color:#08203a; padding:0.45rem 0.75rem; border-radius:0.5rem; text-decoration:none; font-weight:700; font-size:0.95rem; }
+
+/* Make the FB plugin itself sit inside a card-like container */
+#facebook-section .fb-page { border-radius: .6rem; overflow: hidden; }
+#facebook-section .fb-page iframe { border-radius: .6rem; }

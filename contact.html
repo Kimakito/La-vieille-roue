@@ -3,9 +3,14 @@ layout: default
 title: Contactez La Vieille Roue
 description: Contactez La Vieille Roue pour vos projets de restauration de véhicules anciens et de réparation de jantes. Trouvez nos coordonnées, horaires d'ouverture et un formulaire de contact.
 keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "La Vieille Roue", "Albertville Savoie", "rénovation de jantes", "voitures de collection"]
+hero_preload: /assets/images/old_car_panoramic.webp
 ---
-<section class="w-full h-[75vh] bg-cover bg-center relative p-5"
-    style="background-image: url('/assets/images/old_car_panoramic.webp')">
+<section class="w-full h-[75vh] relative p-5">
+    <!-- Hero image: picture/img for prioritized loading -->
+    <picture aria-hidden="true">
+        <source type="image/webp" srcset="/assets/images/old_car_panoramic.webp">
+        <img src="/assets/images/old_car_panoramic.webp" alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -230,14 +235,43 @@ keywords: ["contact", "restauration véhicules anciens", "réparation jantes", "
     <div class="max-w-4xl mx-auto p-6 overflow-hidden relative z-10">
         <!-- Consent-aware container -->
     <div id="fb-container" class="w-full min-h-[360px] flex items-center justify-center mx-auto max-w-prose">
-            <!-- Fallback before SDK loads or if cookies blocked -->
-            <div id="fb-fallback" class="text-center">
-                <p class="mb-3">Chargement du fil Facebook...</p>
-                <p class="text-sm">Si rien n'apparaît, cliquez sur le lien ci-dessous pour ouvrir notre page Facebook.</p>
-                <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-primary-dark underline">Ouvrir la page Facebook de La Vieille Roue</a>
+            <!-- Fallback before SDK loads or if cookies blocked: nicer card UI -->
+            <div id="fb-fallback" class="fb-card" role="region" aria-label="Fil Facebook — La Vieille Roue">
+                <div class="meta">
+                    <div class="logo" aria-hidden="true">
+                        <img src="/assets/logo/favicon-96x96.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                    </div>
+                    <div>
+                        <div class="title">La Vieille Roue — Facebook</div>
+                        <div class="snippet">Retrouvez nos dernières rénovations et actualités. Cliquez pour ouvrir notre page.</div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a id="fb-link" href="https://www.facebook.com/profile.php?id=61581564816236" target="_blank" rel="noopener noreferrer" class="cta">Ouvrir la page</a>
+                    <button id="fb-local-enable" class="cta" aria-label="Afficher le fil Facebook (autoriser)">Afficher le fil</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Bind our local enable button to the cookie consent change so the FB loader will pick it up
+        (function(){
+            var btn = document.getElementById('fb-local-enable');
+            if(!btn) return;
+            btn.addEventListener('click', function(){
+                try{
+                    const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent')||'{}'));
+                    const updated = Object.assign({}, current || {}, { marketing: true });
+                    localStorage.setItem('cookieConsent', JSON.stringify(updated));
+                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
+                } catch(e){
+                    localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
+                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
+                }
+            });
+        })();
+    </script>
 
     <script>
         (function() {
