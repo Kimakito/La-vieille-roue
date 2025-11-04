@@ -14,7 +14,14 @@ document.addEventListener('DOMContentLoaded', function(){
   ready(function(){
     const burger = document.getElementById('burgerMenu');
     const mobileMenu = document.getElementById('mobileMenu');
-    burger?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+    // Diagnostic logs to help debug mobile toggle issues (will appear in browser console)
+    try{
+      console.log('[navbar] init — burger found:', !!burger, ' mobileMenu found:', !!mobileMenu);
+    }catch(e){}
+    burger?.addEventListener('click', ()=>{
+      try{ console.log('[navbar] burger clicked'); }catch(e){}
+      if(mobileMenu) mobileMenu.classList.toggle('hidden');
+    });
 
     const currentPath = window.location.pathname;
     const links = document.querySelectorAll('.page');

@@ -59,10 +59,16 @@
 .delay-1000 { animation-delay: 1s; }
 
 /* Gallery & Lightbox styles moved from inline in templates */
-/* Compact homepage gallery */
-#jantes-gallery.compact { display: grid; grid-template-columns: repeat(2,1fr); gap:0.75rem; }
-@media (min-width:640px){ #jantes-gallery.compact { grid-template-columns: repeat(4,1fr); } }
-#jantes-gallery.compact img { height: 110px; object-fit:cover; }
+/* Compact homepage gallery - square thumbnails and responsive columns */
+#jantes-gallery.compact { column-gap: 0.75rem; -webkit-column-gap: 0.75rem; }
+/* Responsive column counts to create a compact masonry-like strip on homepage */
+#jantes-gallery.compact { column-count: 2; }
+@media (min-width:640px){ #jantes-gallery.compact { column-count: 4; } }
+
+/* Each item is an inline-block so columns flow like masonry; keep items square using .aspect-square */
+#jantes-gallery.compact .gallery-item { display: inline-block; width: 100%; margin: 0 0 0.75rem; break-inside: avoid; position: relative; overflow: hidden; border-radius: .5rem; }
+#jantes-gallery.compact .gallery-item .aspect-square { position: relative; width: 100%; padding-top: 100%; overflow: hidden; }
+#jantes-gallery.compact .gallery-item .aspect-square img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Enhanced gallery visuals (full gallery page) */
 #jantes-gallery { column-gap: 1rem; }

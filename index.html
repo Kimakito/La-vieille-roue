@@ -219,50 +219,65 @@ hero_preload: /assets/images/automobile-8217167_1280.png
                     Chambéry, Annecy</strong>, et tout le secteur Savoie - Haute-Savoie.
             </p>
 
-            <!-- Galerie masonry responsive (styles moved to src/input.css) -->
+            <!-- Galerie uniforme : vignettes carrées (aspect-square) -->
 
-            <div id="jantes-gallery" class="mt-8 compact">
-                <!-- Compact gallery: show a curated set on homepage -->
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="0" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/avant.webp" alt="Avant rénovation jante" loading="lazy"
-                            decoding="async" data-full="/assets/images/jantes/avant.webp"></button></figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="1" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/avant-mise-en-place.webp" alt="Mise en place jante"
-                            loading="lazy" decoding="async"
-                            data-full="/assets/images/jantes/avant-mise-en-place.webp"></button></figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="2" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/avant-jante-abimee.webp" alt="Jante abîmée" loading="lazy"
-                            decoding="async" data-full="/assets/images/jantes/avant-jante-abimee.webp"></button>
-                </figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="3" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/renovation-des-jantes.webp" alt="Rénovation des jantes"
-                            loading="lazy" decoding="async"
-                            data-full="/assets/images/jantes/renovation-des-jantes.webp"></button></figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="4" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/peinture.webp" alt="Peinture de jante" loading="lazy"
-                            decoding="async" data-full="/assets/images/jantes/peinture.webp"></button></figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="5" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/jantes-peintes.webp" alt="Jantes peintes" loading="lazy"
-                            decoding="async" data-full="/assets/images/jantes/jantes-peintes.webp"></button></figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="6" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/renovation.webp" alt="Rénovation jante" loading="lazy"
-                            decoding="async" data-full="/assets/images/jantes/renovation.webp"></button></figure>
-                <figure class="gallery-item"><button class="gallery-item-btn" data-index="7" aria-label="Voir image"
-                        style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;"><img
-                            src="/assets/images/jantes/renovation-jante-en-cours.jpg" alt="Jante en cours de rénovation"
-                            loading="lazy" decoding="async"
-                            data-full="/assets/images/jantes/renovation-jante-en-cours.jpg"></button></figure>
+            <style>
+                /* Galerie fallback responsive : auto-fit pour mobile */
+                .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.75rem}
+                .gallery-grid figure{width:100%}
+                /* Fallback aspect-square si utilitaire Tailwind manquant */
+                .aspect-square{position:relative}
+                .aspect-square::before{content:"";display:block;padding-top:100%}
+                .aspect-square > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+            </style>
+
+            <div id="jantes-gallery" class="mt-8 gallery-grid">
+                <!-- Chaque vignette est carrée grâce à .aspect-square; img utilise object-cover pour recadrage cohérent -->
+        <figure class="w-full"><button class="gallery-item-btn" data-index="0" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/avant.webp" alt="Avant rénovation jante" loading="lazy" decoding="async"
+                                data-full="/assets/images/jantes/avant.webp"></div>
+                    </button></figure>
+        <figure class="w-full"><button class="gallery-item-btn" data-index="1" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/avant-mise-en-place.webp" alt="Mise en place jante" loading="lazy"
+                                decoding="async" data-full="/assets/images/jantes/avant-mise-en-place.webp"></div>
+                    </button></figure>
+        <figure class="w-full"><button class="gallery-item-btn" data-index="2" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/avant-jante-abimee.webp" alt="Jante abîmée" loading="lazy"
+                                decoding="async" data-full="/assets/images/jantes/avant-jante-abimee.webp"></div>
+                    </button></figure>
+        <figure class="w-full"><button class="gallery-item-btn" data-index="3" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/renovation-des-jantes.webp" alt="Rénovation des jantes" loading="lazy"
+                                decoding="async" data-full="/assets/images/jantes/renovation-des-jantes.webp"></div>
+                    </button></figure>
+        <figure class="w-full"><button class="gallery-item-btn" data-index="4" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/peinture.webp" alt="Peinture de jante" loading="lazy" decoding="async"
+                                data-full="/assets/images/jantes/peinture.webp"></div>
+                    </button></figure>
+        <figure class="w-full"><button class="gallery-item-btn" data-index="5" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/jantes-peintes.webp" alt="Jantes peintes" loading="lazy" decoding="async"
+                                data-full="/assets/images/jantes/jantes-peintes.webp"></div>
+                    </button></figure>
+        <figure class="w-full"><button class="gallery-item-btn" data-index="6" aria-label="Voir image"
+            style="background:none;border:0;padding:0;display:block;width:100%;text-align:left;">
+                        <div class="aspect-square overflow-hidden rounded-lg"><img class="w-full h-full object-cover"
+                                src="/assets/images/jantes/renovation.webp" alt="Rénovation jante" loading="lazy" decoding="async"
+                                data-full="/assets/images/jantes/renovation.webp"></div>
+                    </button></figure>
             </div>
-
             <div class="text-center mt-3">
-                <a href="/jantes"
+                <a href="/jantes#jantes-gallery"
                     class="inline-block bg-primary-medium hover:bg-primary-dark text-text-light font-bold py-2 px-4 rounded"
                     aria-label="Voir la galerie complète">Voir la galerie complète et nos réalisations</a>
             </div>
