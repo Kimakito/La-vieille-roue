@@ -1,0 +1,660 @@
+{
+  "1": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/1-320@2x.avif",
+        "webp": "/assets/images/generated/1-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/1-480@2x.webp",
+        "avif": "/assets/images/generated/1-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/1-768@2x.webp",
+        "avif": "/assets/images/generated/1-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/1-1024@2x.avif",
+        "webp": "/assets/images/generated/1-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAQBQCdASoUABwAPu1kqE2ppaQiMBgMATAdiWwAnTKEcDejcVAG0qRznpEhVfcXvqZ4AOcy7mnjpgQynBUYEugB/bzpH3EQihb3vvJtG5CkEuRpSKC8L/2BoxiSMqMhZm5XijeLdcoQA01Ai/clQ0UI2uI7D8t7KgS4zurcjjQjG07on1EZ9FA4BbmEsNrs0kLqNsYxUL5wY8kXKqdxQAAA",
+    "original": {
+      "width": 1414,
+      "height": 2000
+    }
+  },
+  "2": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/2-320@2x.avif",
+        "webp": "/assets/images/generated/2-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/2-480@2x.webp",
+        "avif": "/assets/images/generated/2-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/2-768@2x.webp",
+        "avif": "/assets/images/generated/2-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/2-1024@2x.avif",
+        "webp": "/assets/images/generated/2-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADwBQCdASoUABwAPu1eqE6ppKOiMBgMATAdiWwAnTKEgQjT6zwC+MsE/jIlwHSmCWMNb/IuexIAAAD+dKySbEVBpcAoXeJHgWAjjYIo/v2eMnyowQqJRr+jz9k8Q84z1CQwwIZ3tIvTTWuNrac9d3H7kurcw6B7tjeecSHP8wYhDei05WfTwiSYeUDp9UK2OCk48NvbmVGVaQK26BtS66tCfb3s+UIwKFNIAA==",
+    "original": {
+      "width": 1414,
+      "height": 2000
+    }
+  },
+  "2-mecaniciens-experts": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/2-mecaniciens-experts-320@2x.avif",
+        "webp": "/assets/images/generated/2-mecaniciens-experts-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/2-mecaniciens-experts-480@2x.webp",
+        "avif": "/assets/images/generated/2-mecaniciens-experts-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/2-mecaniciens-experts-768@2x.webp",
+        "avif": "/assets/images/generated/2-mecaniciens-experts-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/2-mecaniciens-experts-1024@2x.avif",
+        "webp": "/assets/images/generated/2-mecaniciens-experts-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoUAAsAPu1mqk4ppaOiMAgBMB2JZQC3uCPpr5ycghYoDABgAP6+U6Tv7tIPTdeB+6VXxrroXOBg/4GK+gb5SZtsAtV8bX6nNm9lbgZmFG3WYbXx8AIlAAAA",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "accessoires-automobiles-de-collection": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/accessoires-automobiles-de-collection-320@2x.avif",
+        "webp": "/assets/images/generated/accessoires-automobiles-de-collection-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/accessoires-automobiles-de-collection-480@2x.webp",
+        "avif": "/assets/images/generated/accessoires-automobiles-de-collection-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/accessoires-automobiles-de-collection-768@2x.webp",
+        "avif": "/assets/images/generated/accessoires-automobiles-de-collection-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/accessoires-automobiles-de-collection-1024@2x.avif",
+        "webp": "/assets/images/generated/accessoires-automobiles-de-collection-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoUAAsAPu1kqk4ppaQiMAgBMB2JZQAAXBvmVpJgbJd8QpsAAP7u2jyTWASYNgLeBRnNGV0eVu4XEEEDNQNcVPRYzjvLIAAA",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "automobile-3298890_1280": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/automobile-3298890_1280-320@2x.avif",
+        "webp": "/assets/images/generated/automobile-3298890_1280-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/automobile-3298890_1280-480@2x.webp",
+        "avif": "/assets/images/generated/automobile-3298890_1280-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/automobile-3298890_1280-768@2x.webp",
+        "avif": "/assets/images/generated/automobile-3298890_1280-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/automobile-3298890_1280-1024@2x.avif",
+        "webp": "/assets/images/generated/automobile-3298890_1280-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoUAAoAPu1kqk4ppaQiMAgBMB2JYwCdABns7JF6e1bCnqYAAP7Z7iOHEXwRp7YjLGFu8zkJDCMhruhjZDUv8eAhhw8bgffLIAA=",
+    "original": {
+      "width": 1280,
+      "height": 631
+    }
+  },
+  "automobile-8217167_1280": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/automobile-8217167_1280-320@2x.avif",
+        "webp": "/assets/images/generated/automobile-8217167_1280-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/automobile-8217167_1280-480@2x.webp",
+        "avif": "/assets/images/generated/automobile-8217167_1280-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/automobile-8217167_1280-768@2x.webp",
+        "avif": "/assets/images/generated/automobile-8217167_1280-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/automobile-8217167_1280-1024@2x.avif",
+        "webp": "/assets/images/generated/automobile-8217167_1280-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoUAAsAPu1kqk4ppaQiMAgBMB2JZACdMoABCyctlc0CX5sAAP7qLBgjTP+bdmE19vsOkpxxi6VXxgIrK2/KvaLq9MXmTlqiP8wGmfyrp7imIUxB3MqgKMtYdN0Y6AIPYURCMAAA",
+    "original": {
+      "width": 1280,
+      "height": 717
+    }
+  },
+  "car-4202678_1280": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoUAA0APu1qrU8ppiQiMAgBMB2JZACdK78AwDKWcJwDcKpwNgAAyyegBc04wCNH5I9FRgpsQPqktIjIeNjH7PS0FSBby8f3cCZfNhrrJwc7Xc06MAAAAA==",
+    "original": {
+      "width": 1280,
+      "height": 853
+    }
+  },
+  "carte-de-visite-1": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/carte-de-visite-1-320@2x.avif",
+        "webp": "/assets/images/generated/carte-de-visite-1-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/carte-de-visite-1-480@2x.webp",
+        "avif": "/assets/images/generated/carte-de-visite-1-480@2x.avif"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBQCdASoUACMAPu1crE2ppKSiMBqqqTAdiUAZBAILwwsT9S6jYQg/fUTQ4ovfmsoAAP70MsaKE64ogLFiz5TuAhlUDWn1bmD9C32Obb7/rjtrs3Q22pnfeUayAAfd9fQGco0f9nZORlJh0zLctjxvwGTxuesiu8BQgH29BtkTEAAA",
+    "original": {
+      "width": 600,
+      "height": 1050
+    }
+  },
+  "carte-de-visite-2": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/carte-de-visite-2-320@2x.avif",
+        "webp": "/assets/images/generated/carte-de-visite-2-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/carte-de-visite-2-480@2x.webp",
+        "avif": "/assets/images/generated/carte-de-visite-2-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/carte-de-visite-2-768@2x.webp",
+        "avif": "/assets/images/generated/carte-de-visite-2-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/carte-de-visite-2-1024@2x.avif",
+        "webp": "/assets/images/generated/carte-de-visite-2-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JZgC7MoADgii2Ux9tAAD+3f+pHDkJPXjBBUw4Z4uCjde7fMymLCa9IVKE0ER5PnPrEbCAAAA=",
+    "original": {
+      "width": 1050,
+      "height": 600
+    }
+  },
+  "conciergerie": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/conciergerie-320@2x.avif",
+        "webp": "/assets/images/generated/conciergerie-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/conciergerie-480@2x.webp",
+        "avif": "/assets/images/generated/conciergerie-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/conciergerie-768@2x.webp",
+        "avif": "/assets/images/generated/conciergerie-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/conciergerie-1024@2x.avif",
+        "webp": "/assets/images/generated/conciergerie-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoUAAsAPu1kqk4ppaQiMAgBMB2JQBOiP/wHj+b3HsKWjRICAAD94l1WSvsKVNvvERZYWvgQFv/CjzOIaOMH12HHu0j8ZPMr8hAWNj8L82JL8VLDLDyJ8lpwAAA=",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "homme-dessous": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/homme-dessous-320@2x.avif",
+        "webp": "/assets/images/generated/homme-dessous-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/homme-dessous-480@2x.webp",
+        "avif": "/assets/images/generated/homme-dessous-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/homme-dessous-768@2x.webp",
+        "avif": "/assets/images/generated/homme-dessous-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/homme-dessous-1024@2x.avif",
+        "webp": "/assets/images/generated/homme-dessous-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAwCdASoUAA0APu1qrU8ppiQiMAgBMB2JaQAAUrobk7I4Z4SDaXAA/tw3WXp3NZ9kIjehFeJAzy57/1SugAAA",
+    "original": {
+      "width": 1280,
+      "height": 853
+    }
+  },
+  "image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-320@2x.avif",
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-480@2x.webp",
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-768@2x.webp",
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-1024@2x.avif",
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoUAAsAPu1iqk4ppaQiMAgBMB2JYwCdMoADUiMglwSe7Ve7YkAA4ii0/nt9t0Us5i2uMEjgQOCVKISG+KR6Yz4HNkvk7zIwtkznXl4NX3z4r883M7QAAA==",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-2": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoUAAsAPu1mq04ppaQiMAgBMB2JZQCdABe62KXUSiDa/bAA+/zGoV+oKi0s6fsxv03gNAAGwSogZUSZU/xSxPiX8HgyHMAA",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-3": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JZACdAA0KIBwxe6gAAN4qxusaotyJCZq3z/Im5iFFDH4ZL0uzRKUJWi03ROQfFJe6cdX/V2yGZ0KXTavIrPvM2ZJWcDYA",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-320@2x.avif",
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-480@2x.webp",
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-768@2x.webp",
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1024@2x.avif",
+        "webp": "/assets/images/generated/image-de-mantenance-et-diagnostic-de-voiture-ancienne-de-collection-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoUAAsAPu1mq04ppaQiMAgBMB2JZQC/OBbakNPBxhrGYkgA4ehkZeXB2tcqz5B68J7NEGadd1psNneCKCnWJfV/83NSLi5pC6sQ5oAA",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "jante-doree": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/jante-doree-320@2x.avif",
+        "webp": "/assets/images/generated/jante-doree-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/jante-doree-480@2x.webp",
+        "avif": "/assets/images/generated/jante-doree-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/jante-doree-768@2x.webp",
+        "avif": "/assets/images/generated/jante-doree-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/jante-doree-1024@2x.avif",
+        "webp": "/assets/images/generated/jante-doree-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoUAA0APu1iqk4ppaQiMAgBMB2JZgCxDDZCU/PFVQuqrdDwAP7uoB/bB5SZ6CwhK5tjlEVV1jJY5OnJJwl/qH/Rwh81gDMvfQgSnRuGRZP304TLMwC3LlYac/p/t/z+QAAAAA==",
+    "original": {
+      "width": 1280,
+      "height": 853
+    }
+  },
+  "jante-mercedes": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABQAwCdASoUAA0APu1yrU+pp6QiMAgBMB2JaQAAetDSB+igAAD+8I3EsDd1k2pjue5UUJp1D1H3AAAA",
+    "original": {
+      "width": 1280,
+      "height": 853
+    }
+  },
+  "jante-porsche": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/jante-porsche-320@2x.avif",
+        "webp": "/assets/images/generated/jante-porsche-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/jante-porsche-480@2x.webp",
+        "avif": "/assets/images/generated/jante-porsche-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/jante-porsche-768@2x.webp",
+        "avif": "/assets/images/generated/jante-porsche-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/jante-porsche-1024@2x.avif",
+        "webp": "/assets/images/generated/jante-porsche-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgAAYbQquboq53fAU3AA+6R5G15T8o0Hvg3B9D6nRk6ms4o0bwHMVU8FH+GNPK2QjVeJO31wIJOXOBJ/uTmH/ShHnehAd6tIdbGeOrTuR3oAejae9MTIKPrkmlPCvAtWQAAA",
+    "original": {
+      "width": 1280,
+      "height": 960
+    }
+  },
+  "jante": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/jante-320@2x.avif",
+        "webp": "/assets/images/generated/jante-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/jante-480@2x.webp",
+        "avif": "/assets/images/generated/jante-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/jante-768@2x.webp",
+        "avif": "/assets/images/generated/jante-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/jante-1024@2x.avif",
+        "webp": "/assets/images/generated/jante-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoUAA4APu1kqU2ppaOiMAgBMB2JQAAKlIrIwXDvRVcY0KAA/rY9HSRUmnN69i3FQn4mEIaM/3dj7+Rwr9LL+X2kXpfdYAAA",
+    "original": {
+      "width": 1280,
+      "height": 882
+    }
+  },
+  "la-vieille-roue": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {},
+      "1600": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoUAAsAPu1krU6ppaSiMAgBMB2JYwCdACHaiStGx6XBv4AAyz6T2zxL0MoALQ9UDc5eQaGCTD5U4reuxnV1ZcfBAiMgAAAA",
+    "original": {
+      "width": 2048,
+      "height": 1152
+    }
+  },
+  "la-vieille-roue_by-night": {
+    "variants": {
+      "320": {},
+      "480": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoUAAsAPu1oqk6ppiQiMAgBMB2JbACdMoR3Ff/gPFs6Zma8cxAA/vEZGbu/cUTyYbLiunIO3EyXr82+P7xCdtk1HtFlg/3QxRpsQ1xJCwS9tYp8AAA=",
+    "original": {
+      "width": 680,
+      "height": 383
+    }
+  },
+  "livraison-dune-voiture-de-sport": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/livraison-dune-voiture-de-sport-320@2x.avif",
+        "webp": "/assets/images/generated/livraison-dune-voiture-de-sport-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/livraison-dune-voiture-de-sport-480@2x.webp",
+        "avif": "/assets/images/generated/livraison-dune-voiture-de-sport-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/livraison-dune-voiture-de-sport-768@2x.webp",
+        "avif": "/assets/images/generated/livraison-dune-voiture-de-sport-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/livraison-dune-voiture-de-sport-1024@2x.avif",
+        "webp": "/assets/images/generated/livraison-dune-voiture-de-sport-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUAAsAPu1iqk2ppaQiMAgBMB2JQBOiP/wHkMSCwpRkVvPiwAD9/Fo2v/OAbafJx55+Z1gIbIjPENHGj/4sXOyQlYhDImixxEhcZ6RTGX3DOtU4AAA=",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "mecaniciens_experts": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/mecaniciens_experts-320@2x.avif",
+        "webp": "/assets/images/generated/mecaniciens_experts-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/mecaniciens_experts-480@2x.webp",
+        "avif": "/assets/images/generated/mecaniciens_experts-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/mecaniciens_experts-768@2x.webp",
+        "avif": "/assets/images/generated/mecaniciens_experts-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/mecaniciens_experts-1024@2x.avif",
+        "webp": "/assets/images/generated/mecaniciens_experts-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoUAAsAPu1kqU2ppaQiMAgBMB2JZwC2yCPpr5yWyN2OyAAA/r5TpO/u0g068ySu4kX7v4AjgWwZlyDzuowB2HQCxjkqjzy6TSkP1guHyaCyIEAFAiAAAA==",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "old_car_panoramic": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/old_car_panoramic-320@2x.avif",
+        "webp": "/assets/images/generated/old_car_panoramic-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/old_car_panoramic-480@2x.webp",
+        "avif": "/assets/images/generated/old_car_panoramic-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/old_car_panoramic-768@2x.webp",
+        "avif": "/assets/images/generated/old_car_panoramic-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/old_car_panoramic-1024@2x.avif",
+        "webp": "/assets/images/generated/old_car_panoramic-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAwCdASoUAAsAPu1kqU2ppaQiMAgBMB2JQAAJj9LLEcbBoLgA+3SSCUwNcIio/QxRj7tzhepcqZGwhaMCmXo11F650xeiwUzp8zA5CCSP2kbCLnYSgAAA",
+    "original": {
+      "width": 1280,
+      "height": 678
+    }
+  },
+  "old_crushed_car": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQBACdASoUABQAPu1eqk4ppKOiMBgMATAdiWUApxQKEAOO4NoVT0aelaRvrS7QQAD+hlnW+AKQDRqqXTH977sqdP6Qupy4Co/pPeBTC8fHTkXfTGSPORGjA56HgAAA",
+    "original": {
+      "width": 1280,
+      "height": 1280
+    }
+  },
+  "porsche-8343861_1280": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JQBOgAxL7l3d7IIAA/tD7sbbTmUWz3YsfTZlOX1kNQFr+YFxgAcH+lMZ9iBWibuEmAAAA",
+    "original": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "porsche-boxter-4032307_1280": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/porsche-boxter-4032307_1280-320@2x.avif",
+        "webp": "/assets/images/generated/porsche-boxter-4032307_1280-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/porsche-boxter-4032307_1280-480@2x.webp",
+        "avif": "/assets/images/generated/porsche-boxter-4032307_1280-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/porsche-boxter-4032307_1280-768@2x.webp",
+        "avif": "/assets/images/generated/porsche-boxter-4032307_1280-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/porsche-boxter-4032307_1280-1024@2x.avif",
+        "webp": "/assets/images/generated/porsche-boxter-4032307_1280-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACwBACdASoUABQAPu1kq0+ppSOqMBgIAUAdiWQAsR7ogaBe7DQ2cRPuFu3F33wAAP61/jGixoszfCIxdZdAI7oRxMyhWt/61UqAuGj1fiUIotlqJCXdEDKbcWEucjQrS6jkZSFCH4JDc7qmDHdTfcMyKbKwAA==",
+    "original": {
+      "width": 1280,
+      "height": 1280
+    }
+  },
+  "restauration-mecanique-voiture-de-sport": {
+    "variants": {
+      "320": {},
+      "480": {},
+      "768": {},
+      "1024": {}
+    },
+    "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoUAAsAPu1Ct1apoqakGAEwHYlmALsvAAWLSmhQrLa2BqiFOAAA/ZoaAMTzabuCxgAb+BA0Wmqh4y6NJDgv+LpGimAz7geoq+H4vvof9b/cn4qbcrYtZ8sG79Y3gRpn9YAAAA==",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "restauration": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/restauration-320@2x.avif",
+        "webp": "/assets/images/generated/restauration-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/restauration-480@2x.webp",
+        "avif": "/assets/images/generated/restauration-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/restauration-768@2x.webp",
+        "avif": "/assets/images/generated/restauration-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/restauration-1024@2x.avif",
+        "webp": "/assets/images/generated/restauration-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwBACdASoUAAsAPu1iqk4ppaQiMAgBMB2JYwCdMoADKuMOzL4tK7++917e0ADOB0Lv2rYMRWVdmkrcbmVyZ+Dl+OjL2wWkcxbcfZygWg1msjxy7YXAAA==",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "services": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/services-320@2x.avif",
+        "webp": "/assets/images/generated/services-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/services-480@2x.webp",
+        "avif": "/assets/images/generated/services-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/services-768@2x.webp",
+        "avif": "/assets/images/generated/services-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/services-1024@2x.avif",
+        "webp": "/assets/images/generated/services-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoUAAsAPu1kq04ppaQiMAgBMB2JYwC/OCE8b5HSalqE5gAAAOGa5filOpgntD/SHvwPEtMuqN3Naizu3b5+IXwxHW3uUQBLUFsAAA==",
+    "original": {
+      "width": 1472,
+      "height": 832
+    }
+  },
+  "soudure": {
+    "variants": {
+      "320": {
+        "avif": "/assets/images/generated/soudure-320@2x.avif",
+        "webp": "/assets/images/generated/soudure-320@2x.webp"
+      },
+      "480": {
+        "webp": "/assets/images/generated/soudure-480@2x.webp",
+        "avif": "/assets/images/generated/soudure-480@2x.avif"
+      },
+      "768": {
+        "webp": "/assets/images/generated/soudure-768@2x.webp",
+        "avif": "/assets/images/generated/soudure-768@2x.avif"
+      },
+      "1024": {
+        "avif": "/assets/images/generated/soudure-1024@2x.avif",
+        "webp": "/assets/images/generated/soudure-1024@2x.webp"
+      }
+    },
+    "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoUAA0APu1oqk6ppiQiMAgBMB2JYwAAWlenB+tj00orAAAA/vSLa65LOtAY/82vyoQ9RfE6RgMH7bWG9UvhNbkbgOAoawAA",
+    "original": {
+      "width": 1280,
+      "height": 853
+    }
+  }
+}

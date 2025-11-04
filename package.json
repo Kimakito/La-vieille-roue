@@ -10,6 +10,7 @@
     "jekyll:build": "bundle exec jekyll build",
     "start": "npm-run-all --parallel watch:tailwind jekyll:serve",
     "build": "npm run build:tailwind && npm run jekyll:build",
+  "postbuild": "node ./scripts/copygenerated_to_site.js",
     "images:generate": "node ./tools/generate-images.js"
   },
   "repository": {

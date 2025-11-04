@@ -40,7 +40,7 @@
         ],
         "items": [
           {
-            "url": "http://assets/images/jantes/avant.webp",
+            "url": "http:/assets/images/jantes/avant.webp",
             "resolution": "Allowed"
           }
         ]
@@ -940,7 +940,7 @@
             "entity": "Google Fonts"
           },
           {
-            "url": "http://assets/images/jantes/avant.webp",
+            "url": "http:/assets/images/jantes/avant.webp",
             "sessionTargetType": "page",
             "protocol": "",
             "rendererStartTime": 197.25199999660254,

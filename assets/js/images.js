@@ -2,7 +2,7 @@
 (function(){
   async function loadManifest(){
     try{
-      const res = await fetch('/assets/images/_generated/manifest.json');
+  const res = await fetch('/assets/images/generated/manifest.json');
       return await res.json();
     }catch(e){return null}
   }
@@ -25,8 +25,8 @@
 (function(){
   function ready(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
   ready(async function(){
-    let manifest = null;
-    try{ const res = await fetch('/assets/images/manifest.json'); if(res.ok) manifest = await res.json(); }catch(e){ /* manifest missing */ }
+  let manifest = null;
+  try{ const res = await fetch('/assets/images/generated/manifest.json'); if(res.ok) manifest = await res.json(); }catch(e){ /* manifest missing */ }
     // Hero and other images marked with data-img-key
     const imgs = document.querySelectorAll('img[data-img-key]');
     imgs.forEach(img => {
