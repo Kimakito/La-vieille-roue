@@ -32,29 +32,6 @@
     </nav>
   </div>
 </header>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.getElementById("burgerMenu");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    // Toggle menu mobile
-    burger?.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    // Activer lien courant (desktop + mobile)
-    const currentPath = window.location.pathname;
-    const links = document.querySelectorAll(".page");
-
-    links.forEach(link => {
-      if (link.getAttribute("href") === currentPath) {
-        link.classList.add("text-accent", "underline");
-      } else {
-        link.classList.remove("text-accent", "underline");
-      }
-    });
-  });
-</script>
+<script src="/assets/js/navbar.js" defer></script>
 <!-- {% include banner.html %} -->
 

@@ -9,7 +9,7 @@ hero_preload: /assets/images/old_car_panoramic.webp
     <!-- Hero image: picture/img for prioritized loading -->
     <picture aria-hidden="true">
         <source type="image/webp" srcset="/assets/images/old_car_panoramic.webp">
-        <img src="/assets/images/old_car_panoramic.webp" alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+        <img data-img-key="old_car_panoramic" src="/assets/images/old_car_panoramic.webp" alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
     </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-60 flex items-center justify-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-4xl mx-auto">
@@ -130,91 +130,8 @@ hero_preload: /assets/images/old_car_panoramic.webp
     <div class="rounded-xl border border-neutral-light p-2 sm:p-4" style="width:100%;height:100%;min-height:400px;overflow:auto"
         id="my-cal-inline-rdv-jantes"></div>
 
-    <!-- Consent-aware Cal.com embed: load only after marketing consent or user action -->
-    <script type="text/javascript">
-        (function(){
-            const calContainerId = 'my-cal-inline-rdv-jantes';
-
-            function loadCalScriptAndInit(){
-                if (window.Cal && window.Cal.loaded) { initCal(); return; }
-                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                // allow a short delay for the external script to load before initializing
-                setTimeout(initCal, 600);
-            }
-
-            function initCal(){
-                try {
-                    Cal("init", "rdv-jantes", { origin: "https://app.cal.com" });
-                    Cal.ns["rdv-jantes"]("inline", {
-                        elementOrSelector: "#"+calContainerId,
-                        config: { 
-                            "layout": "month_view",
-                            "styles": {
-                                "branding": { "shouldDisplayBranding": false },
-                                "enableResponsive": true
-                            }
-                        },
-                        calLink: "la-vieille-roue/rdv-jantes",
-                    });
-
-                    Cal.ns["rdv-jantes"]("ui", { 
-                        "hideEventTypeDetails": false, 
-                        "layout": "month_view",
-                        "styles": {
-                            "enableResponsive": true
-                        }
-                    });
-                } catch(e){ console.warn('Cal init failed', e); }
-            }
-
-            function checkConsentAndMaybeLoad() {
-                let consent = null;
-                try {
-                    if (typeof window.getCookieConsent === 'function') consent = window.getCookieConsent();
-                    else {
-                        const raw = localStorage.getItem('cookieConsent');
-                        consent = raw ? JSON.parse(raw) : null;
-                    }
-                } catch(e){ consent = null; }
-                if (consent && consent.marketing === true) {
-                    loadCalScriptAndInit();
-                    return true;
-                }
-                return false;
-            }
-
-            const loaded = checkConsentAndMaybeLoad();
-
-            if (!loaded) {
-                const container = document.getElementById(calContainerId);
-                if (container) {
-                    container.innerHTML = '<div class="p-6 text-center"><p class="mb-3">Module de prise de rendez-vous désactivé (consentement requis).</p></div>';
-                    const btn = document.createElement('button');
-                    btn.className = 'mt-4 bg-accent text-primary-dark font-bold py-2 px-4 rounded';
-                    btn.textContent = 'Afficher le module de rendez-vous (autoriser)';
-                    btn.onclick = function(){
-                        try {
-                            const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent')||'{}'));
-                            const updated = Object.assign({}, current || {}, { marketing: true });
-                            localStorage.setItem('cookieConsent', JSON.stringify(updated));
-                            window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
-                        } catch(e){
-                            localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
-                            window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
-                        }
-                        loadCalScriptAndInit();
-                    };
-                    container.appendChild(btn);
-
-                    // Listen for consent changes from the cookie banner
-                    window.addEventListener('cookieConsentChanged', function(e){
-                        const detail = e && e.detail ? e.detail : null;
-                        if (detail && detail.marketing === true) loadCalScriptAndInit();
-                    });
-                }
-            }
-        })();
-    </script>
+    <!-- Cal.com embed: moved to external script (consent-aware) -->
+    <script src="/assets/js/cal.js" defer></script>
     <!-- Début de widget en ligne Calendly -->
     <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/lavieilleroue/rdv-renovation-de-jante" style="min-width:320px;height:700px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
@@ -239,7 +156,7 @@ hero_preload: /assets/images/old_car_panoramic.webp
             <div id="fb-fallback" class="fb-card" role="region" aria-label="Fil Facebook — La Vieille Roue">
                 <div class="meta">
                     <div class="logo" aria-hidden="true">
-                        <img src="/assets/logo/favicon-96x96.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                        <img src="/assets/favicon/favicon-96x96.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
                     </div>
                     <div>
                         <div class="title">La Vieille Roue — Facebook</div>
@@ -254,142 +171,8 @@ hero_preload: /assets/images/old_car_panoramic.webp
         </div>
     </div>
 
-    <script>
-        // Bind our local enable button to the cookie consent change so the FB loader will pick it up
-        (function(){
-            var btn = document.getElementById('fb-local-enable');
-            if(!btn) return;
-            btn.addEventListener('click', function(){
-                try{
-                    const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent')||'{}'));
-                    const updated = Object.assign({}, current || {}, { marketing: true });
-                    localStorage.setItem('cookieConsent', JSON.stringify(updated));
-                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
-                } catch(e){
-                    localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
-                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
-                }
-            });
-        })();
-    </script>
-
-    <script>
-        (function() {
-            const pageUrl = 'https://www.facebook.com/profile.php?id=61581564816236';
-
-            function loadFacebookSDK() {
-                if (document.getElementById('facebook-jssdk')) return;
-                var js = document.createElement('script');
-                js.id = 'facebook-jssdk';
-                js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v16.0';
-                js.async = true;
-                js.defer = true;
-                document.body.appendChild(js);
-            }
-
-            function renderPagePlugin() {
-                const container = document.getElementById('fb-container');
-                if (!container) return;
-                container.innerHTML = '';
-
-                const wrapper = document.createElement('div');
-                wrapper.className = 'fb-page';
-                wrapper.setAttribute('data-href', pageUrl);
-                wrapper.setAttribute('data-tabs', 'timeline');
-                // Let Facebook adapt to container width by avoiding fixed data-width/data-height
-                wrapper.setAttribute('data-small-header', 'false');
-                wrapper.setAttribute('data-adapt-container-width', 'true');
-                wrapper.setAttribute('data-hide-cover', 'false');
-                wrapper.setAttribute('data-show-facepile', 'true');
-                // Apply responsive inline styles to ensure the plugin stays inside the card
-                wrapper.style.cssText = 'width:100%; min-height:360px; max-width:100%; overflow:hidden; display:inline-block; margin:0 auto;';
-
-                const fbBlockquote = document.createElement('blockquote');
-                fbBlockquote.className = 'fb-xfbml-parse-ignore';
-                fbBlockquote.innerHTML = `<a href="${pageUrl}" target="_blank" rel="noopener noreferrer">La Vieille Roue</a>`;
-
-                wrapper.appendChild(fbBlockquote);
-                container.appendChild(wrapper);
-
-                // Render (if FB is ready)
-                if (window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function') {
-                    FB.XFBML.parse(container);
-                }
-            }
-
-            // Cookie consent integration note:
-            // If you use a cookie-consent manager, call loadFacebookSDK() only after user accepts marketing/social cookies.
-
-            // Integrate with cookie banner: load SDK only when marketing/social consent is given.
-            function checkConsentAndMaybeLoad() {
-                try {
-                    var consent = null;
-                    if (typeof window.getCookieConsent === 'function') {
-                        consent = window.getCookieConsent();
-                    } else {
-                        const raw = localStorage.getItem('cookieConsent');
-                        consent = raw ? JSON.parse(raw) : null;
-                    }
-
-                    if (consent && (consent.marketing === true || consent.social === true)) {
-                        loadFacebookSDK();
-                        window.addEventListener('fb_init', renderPagePlugin);
-                        setTimeout(renderPagePlugin, 1200);
-                        return true;
-                    }
-                } catch (e) {
-                    console.warn('Facebook integration: consent check failed', e);
-                }
-                return false;
-            }
-
-            // Initial check
-            var loadedByConsent = checkConsentAndMaybeLoad();
-
-            // If not loaded yet, offer a manual button (fallback) and listen for consent changes
-            if (!loadedByConsent) {
-                const fallback = document.getElementById('fb-fallback');
-                const enableBtn = document.createElement('button');
-                enableBtn.className = 'mt-4 bg-accent text-primary-dark font-bold py-2 px-4 rounded';
-                enableBtn.textContent = 'Afficher le fil Facebook (autoriser)';
-                enableBtn.onclick = function() {
-                    try {
-                        // Set marketing consent if possible
-                        const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent') || '{}'));
-                        const updated = Object.assign({}, current || {}, { marketing: true });
-                        localStorage.setItem('cookieConsent', JSON.stringify(updated));
-                        window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
-                    } catch (e) {
-                        localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
-                        window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
-                    }
-                    loadFacebookSDK();
-                    setTimeout(renderPagePlugin, 800);
-                };
-                fallback.appendChild(document.createElement('br'));
-                fallback.appendChild(enableBtn);
-
-                // Listen for consent changes from the cookie banner
-                window.addEventListener('cookieConsentChanged', function(e) {
-                    const detail = e && e.detail ? e.detail : null;
-                    if (detail && (detail.marketing === true || detail.social === true)) {
-                        loadFacebookSDK();
-                        setTimeout(renderPagePlugin, 1000);
-                    }
-                });
-            }
-
-            // Listen for FB SDK ready (the SDK itself doesn't emit a simple event, so we patch it when loaded)
-            var observer = new MutationObserver(function(mutationsList, observer) {
-                if (window.FB && FB.XFBML && typeof FB.XFBML.parse === 'function') {
-                    // dispatch a custom event once FB is ready
-                    window.dispatchEvent(new Event('fb_init'));
-                    observer.disconnect();
-                }
-            });
-            observer.observe(document.documentElement, { childList: true, subtree: true });
-        })();
-    </script>
+    <!-- Facebook & embeds behavior handled by /assets/js/embeds.js -->
+    <script src="/assets/js/embeds.js" defer></script>
 
     <!-- End Facebook section -->
 

@@ -30,7 +30,7 @@ hero_preload: /assets/images/car-4202678_1280.webp
     <!-- Hero image: picture/img for prioritized loading -->
     <picture aria-hidden="true">
         <source type="image/webp" srcset="/assets/images/car-4202678_1280.webp">
-        <img src="/assets/images/car-4202678_1280.webp" alt="Restauration automobile La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+        <img data-img-key="car-4202678_1280" src="/assets/images/car-4202678_1280.webp" alt="Restauration automobile La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
     </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-75 flex items-center justify-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
@@ -99,7 +99,7 @@ hero_preload: /assets/images/car-4202678_1280.webp
 
 <section class="py-16 container mx-auto bg-cover bg-center relative overflow-hidden">      
     <div class="relative group opacity-0 max-w-4xl mx-auto" data-animate="fade-in" data-delay="500">
-        <img src="/assets/images/homme-dessous.webp" 
+        <img src="/assets/images/homme-dessous-800.webp" 
             alt="Carrosserie de voiture classique en restauration dans l'atelier d'Albertville"
             class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-105 transition duration-500 ease-in-out" / loading="lazy" decoding="async" fetchpriority="low">
         <div class="absolute bottom-6 left-6 right-6">
@@ -209,32 +209,7 @@ hero_preload: /assets/images/car-4202678_1280.webp
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const animateElements = document.querySelectorAll('[data-animate]');
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const element = entry.target;
-                    const animationType = element.dataset.animate;
-                    const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
-
-                    setTimeout(() => {
-                        element.classList.remove('opacity-0');
-                        element.classList.add(`animate-${animationType}`);
-                    }, delay);
-                    observer.unobserve(element); // Arrête d'observer une fois l'animation déclenchée
-                }
-            });
-        }, { threshold: 0.1 }); // Déclenche l'animation quand 10% de l'élément est visible
-
-        animateElements.forEach(element => {
-            element.classList.add('opacity-0'); // Cache l'élément au chargement
-            observer.observe(element);
-        });
-    });
-</script>
+<!-- Animation observer moved to /assets/js/observer.js -->
 
 
 

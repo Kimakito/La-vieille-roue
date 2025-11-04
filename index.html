@@ -26,7 +26,7 @@ keywords:
   - Savoie
   - Isère
   - Haute-Savoie
-image_share: /assets/logo/logo-vieille-roue.png
+image_share: /assets/logo/logo.png
 hero_preload: /assets/images/automobile-8217167_1280.png
 ---
 <script type="application/ld+json">
@@ -107,7 +107,7 @@ hero_preload: /assets/images/automobile-8217167_1280.png
     <!-- Hero image: use picture/img for better LCP control (fetchpriority, loading, webp source) -->
     <picture aria-hidden="true">
         <source type="image/webp" srcset="/assets/images/automobile-8217167_1280.png">
-        <img src="/assets/images/automobile-8217167_1280.png" alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+        <img data-img-key="automobile-8217167_1280" src="/assets/images/automobile-8217167_1280.png" alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
     </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-70 flex items-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
@@ -266,7 +266,11 @@ hero_preload: /assets/images/automobile-8217167_1280.png
     </nav>
 </section>
 
-<script src="/assets/js/utils.js" defer></script>
+<script src="/assets/js/images.js" defer></script>
+<script src="/assets/js/gallery.js" defer></script>
+<script src="/assets/js/embeds.js" defer></script>
+<script src="/assets/js/slider.js" defer></script>
+<script src="/assets/js/observer.js" defer></script>
 <section id="restauration-section"
     class="relative flex items-center justify-center text-text-light text-center px-4 md:px-8 py-6 md:py-24"
     style="
@@ -369,7 +373,7 @@ hero_preload: /assets/images/automobile-8217167_1280.png
                 <div class="meta">
                     <div class="logo" aria-hidden="true">
                         <!-- optional small logo; keep empty if not present -->
-                        <img src="/assets/logo/favicon-96x96.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
+                        <img src="/assets/favicon/favicon-96x96.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
                     </div>
                     <div>
                         <div class="title">La Vieille Roue — Facebook</div>
@@ -385,55 +389,7 @@ hero_preload: /assets/images/automobile-8217167_1280.png
         </div>
     </div>
 
-    <script>
-        // Hook progressive-enable button to dispatch the same consent change as the interactive enable created by the inline script
-        (function(){
-            var btn = document.getElementById('fb-local-enable');
-            if(!btn) return;
-            btn.addEventListener('click', function(){
-                try{
-                    const current = (typeof window.getCookieConsent === 'function') ? window.getCookieConsent() : (JSON.parse(localStorage.getItem('cookieConsent')||'{}'));
-                    const updated = Object.assign({}, current || {}, { marketing: true });
-                    localStorage.setItem('cookieConsent', JSON.stringify(updated));
-                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: updated }));
-                } catch(e){
-                    localStorage.setItem('cookieConsent', JSON.stringify({ essential:true, analytics:false, marketing:true }));
-                    window.dispatchEvent(new CustomEvent('cookieConsentChanged', { detail: { essential:true, analytics:false, marketing:true } }));
-                }
-            });
-        })();
-    </script>
-
-            <!-- Facebook script moved to /assets/js/utils.js -->
-
-    <!-- End Facebook section -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const animateElements = document.querySelectorAll('[data-animate]');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const element = entry.target;
-                        const animationType = element.dataset.animate;
-                        const delay = element.dataset.delay ? parseInt(element.dataset.delay) : 0;
-
-                        setTimeout(() => {
-                            element.classList.remove('opacity-0');
-                            element.classList.add(`animate-${animationType}`);
-                        }, delay);
-                        observer.unobserve(element); // Arrête d'observer une fois l'animation déclenchée
-                    }
-                });
-            }, { threshold: 0.1 }); // Déclenche l'animation quand 10% de l'élément est visible
-
-            animateElements.forEach(element => {
-                element.classList.add('opacity-0'); // Cache l'élément au chargement
-                observer.observe(element);
-            });
-        });
-    </script>
+    <!-- Facebook and animation behavior handled by /assets/js/embeds.js and /assets/js/observer.js -->
 
 
 
