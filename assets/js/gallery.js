@@ -1,11 +1,3 @@
-// Minimal gallery / lightbox glue: open image in new tab for now
-document.addEventListener('click', function(e){
-  const btn = e.target.closest && e.target.closest('.gallery-item-btn');
-  if(!btn) return;
-  const img = btn.querySelector('img') || btn.dataset && document.querySelector(btn.dataset.full);
-  const src = (img && (img.dataset.full || img.src)) || btn.getAttribute('data-full');
-  if(src){ window.open(src, '_blank'); }
-});
 // gallery.js — lightbox & gallery behaviors
 (function(){
   function ready(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
