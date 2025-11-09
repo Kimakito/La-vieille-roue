@@ -48,6 +48,36 @@
 
 /* Classes pour ajouter des retards aux animations, créant un effet de séquence */
 .delay-100 { animation-delay: 0.1s; }
+
+/* Stylisation de la marque Jantes 73 */
+.brand-jantes73 {
+    @apply font-bold text-primary-dark;
+    background: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #1e3a8a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+    font-weight: 700;
+    letter-spacing: 0.025em;
+}
+
+/* Signature complète avec style distinctif */
+.brand-signature {
+    @apply font-semibold;
+}
+
+.brand-signature .brand-jantes73 {
+    @apply text-primary-dark font-bold;
+}
+
+.brand-signature .brand-by {
+    @apply text-neutral-medium text-sm font-normal italic mx-1;
+    opacity: 0.8;
+}
+
+.brand-signature .brand-company {
+    @apply text-text-dark font-medium;
+}
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
