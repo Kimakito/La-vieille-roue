@@ -531,6 +531,35 @@
     color: #6b7280 !important;
 }
 
+/* Background optimisé pour section restauration */
+.restauration-hero {
+    background-image: url('/assets/images/generated/porsche-8343861_1280-1024.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Support AVIF avec fallback WebP et JPEG */
+@supports (background-image: url('image.avif')) {
+    .restauration-hero {
+        background-image: url('/assets/images/generated/porsche-8343861_1280-1024.avif');
+    }
+}
+
+/* Responsive backgrounds */
+@media (max-width: 768px) {
+    .restauration-hero {
+        background-image: url('/assets/images/generated/porsche-8343861_1280-768.webp');
+        background-attachment: scroll; /* Améliore perf mobile */
+    }
+    
+    @supports (background-image: url('image.avif')) {
+        .restauration-hero {
+            background-image: url('/assets/images/generated/porsche-8343861_1280-768.avif');
+        }
+    }
+}
+
 .review-stars {
     display: flex;
     gap: 3px;

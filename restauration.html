@@ -24,16 +24,29 @@ keywords:
 - restauration châssis Albertville
 - moteur ancien réparation Savoie
 image_share: /assets/images/car-4202678_1280.jpg
-hero_preload: /assets/images/car-4202678_1280.jpg
+hero_preload: /assets/images/generated/car-4202678_1280-1024.webp
 ---
 <section class="w-full h-[75vh] relative overflow-hidden p-5" role="banner"
     aria-label="Restauration d'automobiles de légende à Albertville">
-    <!-- Hero image: picture/img for prioritized loading -->
+    <!-- Hero image: Responsive optimized versions -->
     <picture aria-hidden="true">
-        <source type="image/webp" srcset="/assets/images/car-4202678_1280.jpg">
-        <img data-img-key="car-4202678_1280" src="/assets/images/car-4202678_1280.jpg"
-            alt="Restauration automobile La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover"
-            loading="eager" fetchpriority="high" decoding="async" />
+        <source type="image/avif" 
+                srcset="/assets/images/generated/car-4202678_1280-480.avif 480w,
+                        /assets/images/generated/car-4202678_1280-768.avif 768w,
+                        /assets/images/generated/car-4202678_1280-1024.avif 1024w,
+                        /assets/images/generated/car-4202678_1280-1200.avif 1200w"
+                sizes="100vw">
+        <source type="image/webp" 
+                srcset="/assets/images/generated/car-4202678_1280-480.webp 480w,
+                        /assets/images/generated/car-4202678_1280-768.webp 768w,
+                        /assets/images/generated/car-4202678_1280-1024.webp 1024w,
+                        /assets/images/generated/car-4202678_1280-1200.webp 1200w"
+                sizes="100vw">
+        <img src="/assets/images/generated/car-4202678_1280-1024.webp"
+            alt="Restauration automobile de collection par La Vieille Roue à Albertville Savoie" 
+            class="hero-img absolute inset-0 w-full h-full object-cover"
+            loading="eager" fetchpriority="high" decoding="async" 
+            width="1024" height="576" />
     </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-75 flex items-center justify-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
@@ -99,10 +112,22 @@ hero_preload: /assets/images/car-4202678_1280.jpg
             </p>
         </div>
         <div class="relative group opacity-0" data-animate="fade-in" data-delay="500">
-            <img src="/assets/images/old_crushed_car.jpg"
-                alt="Carrosserie de voiture classique en restauration dans l'atelier d'Albertville"
-                class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-102 transition duration-500 ease-in-out"
-                / loading="lazy" decoding="async" fetchpriority="low">
+            <picture>
+                <source type="image/avif" 
+                        srcset="/assets/images/generated/old_crushed_car-480.avif 480w,
+                                /assets/images/generated/old_crushed_car-768.avif 768w,
+                                /assets/images/generated/old_crushed_car-1024.avif 1024w"
+                        sizes="(max-width: 768px) 100vw, 1024px">
+                <source type="image/webp" 
+                        srcset="/assets/images/generated/old_crushed_car-480.webp 480w,
+                                /assets/images/generated/old_crushed_car-768.webp 768w,
+                                /assets/images/generated/old_crushed_car-1024.webp 1024w"
+                        sizes="(max-width: 768px) 100vw, 1024px">
+                <img src="/assets/images/generated/old_crushed_car-768.webp"
+                    alt="Carrosserie de voiture classique en restauration dans l'atelier La Vieille Roue à Albertville"
+                    class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-102 transition duration-500 ease-in-out"
+                    loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
+            </picture>
             <div
                 class="absolute bottom-6 left-6 bg-background-dark text-text-light px-5 py-3 rounded-lg text-base md:text-lg opacity-90 font-jakarta shadow-lg">
                 Toute une histoire restaurée à <strong>Albertville</strong>.
@@ -113,10 +138,22 @@ hero_preload: /assets/images/car-4202678_1280.jpg
 
 <section class="py-16 container mx-auto bg-cover bg-center relative overflow-hidden">
     <div class="relative group opacity-0 max-w-4xl mx-auto" data-animate="fade-in" data-delay="500">
-        <img src="/assets/images/homme-dessous.jpg"
-            alt="Carrosserie de voiture classique en restauration dans l'atelier d'Albertville"
-            class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-105 transition duration-500 ease-in-out"
-            / loading="lazy" decoding="async" fetchpriority="low">
+        <picture>
+            <source type="image/avif" 
+                    srcset="/assets/images/generated/homme-dessous-480.avif 480w,
+                            /assets/images/generated/homme-dessous-768.avif 768w,
+                            /assets/images/generated/homme-dessous-1024.avif 1024w"
+                    sizes="(max-width: 768px) 100vw, 1024px">
+            <source type="image/webp" 
+                    srcset="/assets/images/generated/homme-dessous-480.webp 480w,
+                            /assets/images/generated/homme-dessous-768.webp 768w,
+                            /assets/images/generated/homme-dessous-1024.webp 1024w"
+                    sizes="(max-width: 768px) 100vw, 1024px">
+            <img src="/assets/images/generated/homme-dessous-768.webp"
+                alt="Mécanicien spécialisé travaillant sous une voiture de collection à l'atelier La Vieille Roue Albertville"
+                class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-105 transition duration-500 ease-in-out"
+                loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
+        </picture>
         <div class="absolute bottom-6 left-6 right-6">
             <h2
                 class="bg-none text-text-light px-6 py-4 rounded-lg text-xl md:text-2xl opacity-95 font-jakarta  text-center transform group-hover:scale-102 transition duration-300">
@@ -149,10 +186,22 @@ hero_preload: /assets/images/car-4202678_1280.jpg
                 </p>
 
                 <div class="relative group opacity-0 max-w-3xl mx-auto mb-6" data-animate="fade-in" data-delay="500">
-                    <img src="/assets/images/porsche-8343861_1280.jpg"
-                        alt="Porsche en cours de restauration dans un atelier spécialisé à Albertville"
-                        class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-[1.02] transition duration-500 ease-in-out object-cover"
-                        / loading="lazy" decoding="async" fetchpriority="low">
+                    <picture>
+                        <source type="image/avif" 
+                                srcset="/assets/images/generated/porsche-8343861_1280-480.avif 480w,
+                                        /assets/images/generated/porsche-8343861_1280-768.avif 768w,
+                                        /assets/images/generated/porsche-8343861_1280-1024.avif 1024w"
+                                sizes="(max-width: 768px) 100vw, 768px">
+                        <source type="image/webp" 
+                                srcset="/assets/images/generated/porsche-8343861_1280-480.webp 480w,
+                                        /assets/images/generated/porsche-8343861_1280-768.webp 768w,
+                                        /assets/images/generated/porsche-8343861_1280-1024.webp 1024w"
+                                sizes="(max-width: 768px) 100vw, 768px">
+                        <img src="/assets/images/generated/porsche-8343861_1280-768.webp"
+                            alt="Porsche en cours de restauration dans l'atelier spécialisé La Vieille Roue à Albertville"
+                            class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-[1.02] transition duration-500 ease-in-out object-cover"
+                            loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
+                    </picture>
                 </div>
 
                 <p class="text-base sm:text-lg md:text-xl text-center mb-6 opacity-90 font-semibold font-jakarta px-2">

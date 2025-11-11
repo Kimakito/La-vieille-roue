@@ -27,7 +27,7 @@ keywords:
 - Isère
 - Haute-Savoie
 image_share: /assets/logo/logo.png
-hero_preload: /assets/images/automobile-8217167_1280.png
+hero_preload: /assets/images/generated/automobile-8217167_1280-1024.webp
 ---
 <script type="application/ld+json">
 {
@@ -105,12 +105,28 @@ hero_preload: /assets/images/automobile-8217167_1280.png
 </script>
 <section class="w-full h-[75vh] relative overflow-hidden p-5" role="banner"
     aria-label="Présentation de La Vieille Roue">
-    <!-- Hero image: use picture/img for better LCP control (fetchpriority, loading, webp source) -->
+    <!-- Hero image: Responsive optimized versions -->
     <picture aria-hidden="true">
-        <source type="image/webp" srcset="/assets/images/automobile-8217167_1280.png">
-        <img data-img-key="automobile-8217167_1280" src="/assets/images/automobile-8217167_1280.png"
-            alt="Atelier La Vieille Roue" class="hero-img absolute inset-0 w-full h-full object-cover" loading="eager"
-            fetchpriority="high" decoding="async" />
+        <source type="image/avif" 
+                srcset="/assets/images/generated/automobile-8217167_1280-480.avif 480w,
+                        /assets/images/generated/automobile-8217167_1280-768.avif 768w,
+                        /assets/images/generated/automobile-8217167_1280-1024.avif 1024w,
+                        /assets/images/generated/automobile-8217167_1280-1200.avif 1200w"
+                sizes="100vw">
+        <source type="image/webp" 
+                srcset="/assets/images/generated/automobile-8217167_1280-480.webp 480w,
+                        /assets/images/generated/automobile-8217167_1280-768.webp 768w,
+                        /assets/images/generated/automobile-8217167_1280-1024.webp 1024w,
+                        /assets/images/generated/automobile-8217167_1280-1200.webp 1200w"
+                sizes="100vw">
+        <img src="/assets/images/generated/automobile-8217167_1280-1024.webp"
+            alt="Atelier La Vieille Roue spécialisé en rénovation de jantes et restauration véhicules anciens" 
+            class="hero-img absolute inset-0 w-full h-full object-cover" 
+            loading="eager"
+            fetchpriority="high" 
+            decoding="async" 
+            width="1024" 
+            height="576" />
     </picture>
     <div class="absolute inset-0 bg-background-dark bg-opacity-70 flex items-center p-4 md:p-8">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
@@ -349,12 +365,8 @@ hero_preload: /assets/images/automobile-8217167_1280.png
 <script src="/assets/js/observer.js" defer></script>
 <script src="/assets/js/google-reviews.js" defer></script>
 <section id="restauration-section"
-    class="relative flex items-center justify-center text-text-light text-center px-4 md:px-8 py-6 md:py-24" style="
-            background-image: url('/assets/images/porsche-8343861_1280.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        " aria-labelledby="restauration-heading">
+    class="restauration-hero relative flex items-center justify-center text-text-light text-center px-4 md:px-8 py-6 md:py-24"
+    aria-labelledby="restauration-heading">
     <div class="absolute inset-0 bg-background-dark bg-opacity-75"></div>
     <div class="relative z-10 max-w-4xl mx-auto py-12 md:py-20">
         <h2 id="restauration-heading"
@@ -459,9 +471,22 @@ hero_preload: /assets/images/automobile-8217167_1280.png
         <h2 id="contact-heading" class="text-4xl md:text-5xl font-extrabold mb-6 font-k2d leading-tight">
             Votre <span class="text-primary-dark">Véhicule d'Exception</span> Mérite l'Excellence
         </h2>
-        <img src="/assets/images/la-vieille-roue.jpeg" alt="l'atelier La Vieille Roue à Albertville"
-            class="w-full h-auto rounded-xl mx-auto mb-6 border-4 border-accent shadow-lg object-cover" loading="lazy"
-            decoding="async" fetchpriority="low">
+        <picture>
+            <source type="image/avif" 
+                    srcset="/assets/images/generated/la-vieille-roue-480.avif 480w,
+                            /assets/images/generated/la-vieille-roue-768.avif 768w,
+                            /assets/images/generated/la-vieille-roue-1024.avif 1024w"
+                    sizes="(max-width: 768px) 100vw, 1024px">
+            <source type="image/webp" 
+                    srcset="/assets/images/generated/la-vieille-roue-480.webp 480w,
+                            /assets/images/generated/la-vieille-roue-768.webp 768w,
+                            /assets/images/generated/la-vieille-roue-1024.webp 1024w"
+                    sizes="(max-width: 768px) 100vw, 1024px">
+            <img src="/assets/images/generated/la-vieille-roue-768.webp" 
+                alt="L'atelier La Vieille Roue à Albertville - Spécialiste jantes et restauration automobile Savoie"
+                class="w-full h-auto rounded-xl mx-auto mb-6 border-4 border-accent shadow-lg object-cover" 
+                loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
+        </picture>
         <p class="text-lg md:text-xl mb-10 font-jakarta opacity-90">
             À<strong> Albertville, en Savoie</strong>, nous sommes votre expert local pour la <strong>rénovation de
                 jantes</strong> et la <strong>restauration automobile</strong>. Contactez-nous dès aujourd'hui pour
