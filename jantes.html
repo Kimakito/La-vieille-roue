@@ -379,10 +379,22 @@ hero_preload: /assets/images/jante-mercedes.jpg
                 Découvrez la rénovation de jantes
             </a>
         </div>
-        <img src="/assets/images/jante-doree.webp"
-            alt="Carrosserie de voiture classique en restauration dans l'atelier d'Albertville"
-            class="relative w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-105 transition duration-500 ease-in-out"
-            loading="lazy" decoding="async" fetchpriority="low">
+        <picture>
+            <source type="image/avif" 
+                    srcset="/assets/images/generated/jante-doree-480.avif 480w,
+                            /assets/images/generated/jante-doree-768.avif 768w,
+                            /assets/images/generated/jante-doree-1024.avif 1024w"
+                    sizes="(max-width: 768px) 100vw, 1024px">
+            <source type="image/webp" 
+                    srcset="/assets/images/generated/jante-doree-480.webp 480w,
+                            /assets/images/generated/jante-doree-768.webp 768w,
+                            /assets/images/generated/jante-doree-1024.webp 1024w"
+                    sizes="(max-width: 768px) 100vw, 1024px">
+            <img src="/assets/images/generated/jante-doree-768.webp"
+                alt="Jante dorée rénovée par les experts de Jantes 73 - La Vieille Roue Albertville"
+                class="relative w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-105 transition duration-500 ease-in-out"
+                loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
+        </picture>
     </div>
 </section>
 
