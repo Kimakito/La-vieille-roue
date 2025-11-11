@@ -363,3 +363,318 @@
 /* Make the FB plugin itself sit inside a card-like container */
 #facebook-section .fb-page { border-radius: .6rem; overflow: hidden; }
 #facebook-section .fb-page iframe { border-radius: .6rem; }
+
+/* Google Reviews Section Styles */
+.reviews-section {
+    position: relative;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+    overflow: hidden;
+}
+
+/* Background decorative elements */
+.reviews-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 70%, rgba(34, 197, 94, 0.06) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.reviews-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(251, 191, 36, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(239, 68, 68, 0.02) 0%, transparent 40%),
+        linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Floating animation for background */
+@keyframes float {
+    0%, 100% { transform: rotate(0deg) translateY(0px); }
+    33% { transform: rotate(1deg) translateY(-10px); }
+    66% { transform: rotate(-1deg) translateY(5px); }
+}
+
+/* Stars decoration */
+.reviews-section .stars-decoration {
+    position: absolute;
+    color: rgba(251, 191, 36, 0.1);
+    font-size: 1.5rem;
+    animation: twinkle 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.reviews-section .stars-decoration:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.reviews-section .stars-decoration:nth-child(2) { top: 20%; right: 20%; animation-delay: 1s; }
+.reviews-section .stars-decoration:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 2s; }
+.reviews-section .stars-decoration:nth-child(4) { bottom: 15%; right: 15%; animation-delay: 1.5s; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+}
+
+/* Update text colors for dark background */
+.reviews-section h2 {
+    color: #f8fafc !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.reviews-section p {
+    color: #e2e8f0 !important;
+}
+
+.reviews-section .reviews-rating-display,
+.reviews-section .reviews-count-display {
+    color: #f1f5f9 !important;
+}
+
+.review-card {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(255, 255, 255, 0.85) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 2px 8px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.review-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        transparent 50%, 
+        rgba(59, 130, 246, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.review-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg) translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.review-card:hover::before {
+    opacity: 1;
+}
+
+.review-card:hover::after {
+    transform: rotate(45deg) translateX(100%);
+}
+
+.review-card:hover {
+    transform: translateY(-16px) scale(1.03);
+    box-shadow: 
+        0 32px 64px rgba(0, 0, 0, 0.15),
+        0 8px 24px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%, 
+        rgba(255, 255, 255, 0.92) 100%);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* Forcer les couleurs sombres dans les cartes d'avis */
+.review-card .text-primary,
+.review-card p,
+.review-card strong,
+.review-card span {
+    color: #1f2937 !important;
+}
+
+.review-card .opacity-75 {
+    color: #6b7280 !important;
+}
+
+.review-stars {
+    display: flex;
+    gap: 3px;
+}
+
+.review-star {
+    color: #f59e0b;
+    font-size: 1.25rem;
+    text-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.4));
+}
+
+.review-card:hover .review-star {
+    color: #f59e0b;
+    transform: scale(1.1);
+    text-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.6));
+}
+
+.review-text {
+    font-style: italic;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 0.95rem;
+}
+
+.review-date {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.google-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4285f4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.google-badge:hover {
+    background: #3367d6;
+    color: white;
+    text-decoration: none;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+@media (max-width: 640px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .review-card {
+        padding: 1rem;
+    }
+}
+
+/* Animation for review cards entrance */
+.review-card {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.review-card:nth-child(1) { animation-delay: 0.2s; }
+.review-card:nth-child(2) { animation-delay: 0.4s; }
+.review-card:nth-child(3) { animation-delay: 0.6s; }
+.review-card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Amélioration de l'animation fadeInUp */
+@keyframes fadeInUpImproved {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.review-card {
+    animation: fadeInUpImproved 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Decorative circles with pulse animation */
+.reviews-section::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.reviews-section::before {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.1), transparent 70%);
+    animation: pulse 3s ease-in-out infinite reverse;
+    pointer-events: none;
+}
+
+/* Styles pour les étoiles d'avis */
+.review-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.review-star {
+    color: #fbbf24;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.review-star.opacity-30 {
+    opacity: 0.3;
+}
