@@ -195,6 +195,11 @@
     transform: scale(1.05);
 }
 
+/* Masquer les captions automatiques sur la galerie masonry de la page d'accueil */
+.masonry-gallery .gallery-item .caption {
+    display: none !important;
+}
+
 /* Compact homepage gallery - square thumbnails and responsive columns */
 #jantes-gallery.compact { column-gap: 0.75rem; -webkit-column-gap: 0.75rem; }
 /* Responsive column counts to create a compact masonry-like strip on homepage */
@@ -221,6 +226,78 @@
 @media (min-width: 640px) { #jantes-gallery { column-count: 2; } }
 @media (min-width: 900px) { #jantes-gallery { column-count: 3; } }
 @media (min-width: 1280px) { #jantes-gallery { column-count: 4; } }
+
+/* Responsive improvements for better mobile/tablet experience */
+/* Hero sections responsive text scaling */
+.hero-title-responsive {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.hero-subtitle-responsive {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.4;
+}
+
+/* Form responsiveness improvements */
+@media (max-width: 639px) {
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .form-grid > div {
+        width: 100%;
+    }
+}
+
+@media (min-width: 640px) {
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Contact page map responsiveness */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Button text scaling for mobile */
+@media (max-width: 479px) {
+    .btn-responsive-text {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Marquage laser section responsive grid */
+.marquage-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .marquage-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+}
 
 /* Flyers thumbnails styling */
 .flyer-item-btn img { width:140px; height:auto; border-radius:.5rem; box-shadow:0 8px 20px rgba(0,0,0,0.12); transition: transform .18s ease; }

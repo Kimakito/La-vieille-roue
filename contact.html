@@ -32,7 +32,7 @@ hero_preload: /assets/images/old_car_panoramic.webp
     </div>
 </section>
 <section class="container mx-auto py-16 px-4 md:px-8 text-text-dark">
-    <div class="flex gap-4 sm:gap-8 flex-col md:flex-row">
+    <div class="contact-grid">
         <div class="bg-white p-4 sm:p-8 rounded-lg shadow-xl mb-6 sm:mb-10 border border-neutral-medium flex-1">
             <h3 class="text-xl sm:text-2xl font-bold mb-4 text-primary-dark">
                 Nos Coordonnées
@@ -88,43 +88,43 @@ hero_preload: /assets/images/old_car_panoramic.webp
             discussion approfondie. Chaque voiture est unique et nous privilégions
             un contact direct pour mieux cerner vos attentes.
         </p>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" class="form-grid">
             <div>
-                <label for="name" class="block text-base sm:text-lg font-medium text-text-dark">Nom Complet</label>
+                <label for="name" class="block text-base sm:text-lg font-medium text-text-dark mb-2">Nom Complet</label>
                 <input type="text" id="name" name="name"
-                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
+                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
                     placeholder="Votre nom" required />
             </div>
             <div>
-                <label for="email" class="block text-base sm:text-lg font-medium text-text-dark">Email</label>
+                <label for="email" class="block text-base sm:text-lg font-medium text-text-dark mb-2">Email</label>
                 <input type="email" id="email" name="email"
-                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
+                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
                     placeholder="votre.email@exemple.com" required />
             </div>
             <div>
-                <label for="phone" class="block text-base sm:text-lg font-medium text-text-dark">Téléphone
+                <label for="phone" class="block text-base sm:text-lg font-medium text-text-dark mb-2">Téléphone
                     (recommandé)</label>
                 <input type="tel" id="phone" name="phone"
-                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
+                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
                     placeholder="+33 X XX XX XX XX" />
             </div>
             <div>
-                <label for="vehicle_type" class="block text-base sm:text-lg font-medium text-text-dark">Type de véhicule
+                <label for="vehicle_type" class="block text-base sm:text-lg font-medium text-text-dark mb-2">Type de véhicule
                     (Marque, Modèle, Année)</label>
                 <input type="text" id="vehicle_type" name="vehicle_type"
-                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
+                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
                     placeholder="Ex: Porsche 911 (1972)" required />
             </div>
-            <div>
-                <label for="message" class="block text-base sm:text-lg font-medium text-text-dark">Votre message</label>
+            <div class="md:col-span-2">
+                <label for="message" class="block text-base sm:text-lg font-medium text-text-dark mb-2">Votre message</label>
                 <textarea id="message" name="message" rows="6"
-                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light "
+                    class="mt-1 block w-full px-3 sm:px-4 py-2 border border-neutral-medium rounded-md shadow-sm focus:ring-primary-dark focus:border-primary-dark text-sm sm:text-base bg-background-light"
                     placeholder="Décrivez les travaux envisagés : carrosserie, peinture, éléments spécifiques..."
                     required></textarea>
             </div>
-            <div>
+            <div class="md:col-span-2">
                 <button type="submit"
-                    class="w-full bg-accent hover:bg-accent-hover text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent/30 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg">
+                    class="w-full bg-accent hover:bg-accent-hover text-primary-dark focus:outline-none focus:ring-4 focus:ring-accent/30 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg btn-responsive-text">
                     Envoyer ma demande de restauration
                 </button>
             </div>
