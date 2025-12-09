@@ -191,6 +191,9 @@
     font-weight: normal;
     letter-spacing: 0.02em;
     font-size: 1.1em;
+    display: inline-block !important; /* Force l'affichage */
+    opacity: 1 !important; /* Force l'opacité à 100% */
+    visibility: visible !important; /* Force la visibilité */
 }
 
 /* Signature complète avec style distinctif */
