@@ -12,8 +12,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
+                raleway: ['"Raleway"', "sans-serif"],
+                lato: ['"Lato"', "sans-serif"],
                 k2d: ['"K2D"', "sans-serif"],
-                jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
             },
             backgroundImage: {
                 'gradient-body': 'linear-gradient(90deg, #2B3ABF 0%, #61D4E8 100%)',
