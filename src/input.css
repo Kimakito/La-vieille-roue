@@ -135,6 +135,7 @@
 .brand-vieilleroue {
     font-family: 'K2D', sans-serif;
     font-weight: 800;
+    color: #FFB703; /* Couleur jaune vif */
 }
 
 /* Styles personnalisés */
@@ -185,11 +186,8 @@
 /* Stylisation de la marque Jantes 73 */
 .brand-jantes73 {
     font-family: 'Brakshoo', cursive;
-    background: linear-gradient(135deg, rgb(39, 154, 211) 0%, rgb(21, 30, 89) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 8px rgba(39, 154, 211, 0.3);
+    color: rgb(21, 30, 89) !important; /* Bleu foncé uni - force l'application */
+    text-shadow: none; /* Pas d'ombre sur fond blanc */
     font-weight: normal;
     letter-spacing: 0.02em;
     font-size: 1.1em;
