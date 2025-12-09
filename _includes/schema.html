@@ -1,0 +1,197 @@
+<!-- Schema.org JSON-LD pour SEO local et rich snippets Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Jantes 73 by La Vieille Roue",
+  "alternateName": ["La Vieille Roue", "Jantes 73"],
+  "image": "{{ site.url }}/assets/logo/logo.png",
+  "logo": "{{ site.url }}/assets/logo/logo.png",
+  "@id": "{{ site.url }}",
+  "url": "{{ site.url }}",
+  "telephone": "0479326063",
+  "email": "lavieilleroue@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "229-397 Rue des Glières",
+    "addressLocality": "Grignon",
+    "addressRegion": "Savoie",
+    "postalCode": "73200",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "45.6544",
+    "longitude": "6.3728"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Albertville",
+      "@id": "https://www.wikidata.org/wiki/Q201019"
+    },
+    {
+      "@type": "City",
+      "name": "Chambéry",
+      "@id": "https://www.wikidata.org/wiki/Q165618"
+    },
+    {
+      "@type": "City",
+      "name": "Annecy",
+      "@id": "https://www.wikidata.org/wiki/Q50189"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Savoie"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "07:30",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "14:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "07:30",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "14:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "€€",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61581564816236"
+  ],
+  "description": "Jantes 73 by La Vieille Roue est votre expert en rénovation de jantes et restauration de véhicules anciens à Albertville, Chambéry, Annecy et toute la Savoie. Service professionnel et particuliers.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de rénovation automobile",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation de jantes",
+          "description": "Rénovation, peinture, dévoilage, soudure et personnalisation de jantes alu et acier pour professionnels et particuliers",
+          "areaServed": ["Albertville", "Chambéry", "Annecy", "Savoie"],
+          "provider": {
+            "@type": "AutomotiveBusiness",
+            "name": "Jantes 73"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Restauration de véhicules anciens",
+          "description": "Restauration complète de véhicules de collection, prestige, sport et young timers : carrosserie, peinture, mécanique",
+          "areaServed": ["Albertville", "Chambéry", "Annecy", "Savoie"],
+          "provider": {
+            "@type": "AutomotiveBusiness",
+            "name": "La Vieille Roue"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Carrosserie et peinture",
+          "description": "Carrosserie, débosselage, peinture pour véhicules anciens et de prestige",
+          "areaServed": ["Albertville", "Chambéry", "Annecy", "Savoie"]
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- LocalBusiness Schema pour Google Maps -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jantes 73 by La Vieille Roue",
+  "image": "{{ site.url }}/assets/logo/logo.png",
+  "@id": "{{ site.url }}",
+  "url": "{{ site.url }}",
+  "telephone": "0479326063",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "229-397 Rue des Glières",
+    "addressLocality": "Grignon",
+    "addressRegion": "Savoie",
+    "postalCode": "73200",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "45.6544",
+    "longitude": "6.3728"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "07:30",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "14:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "07:30",
+      "closes": "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "14:00",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
+
+<!-- BreadcrumbList pour navigation -->
+{% if page.url != "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.title }}",
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
+{% endif %}

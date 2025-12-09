@@ -43,6 +43,9 @@
     {% endif %}
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <title>{{ page.title }}</title>
+    
+    <!-- Schema.org structured data for SEO -->
+    {% include schema.html %}
 </head>
 
 
