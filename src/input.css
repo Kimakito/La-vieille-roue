@@ -1,8 +1,20 @@
 /* input.css */
-/* Directives Tailwind (assurez-vous qu'elles sont présentes et au début) */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Variables personnalisées pour les couleurs */
+@theme {
+  --color-primary-light: #D4AF37;
+  --color-primary-medium: #B8860B;
+  --color-primary-dark: #8B6F00;
+  --color-text-dark: #1a1a1a;
+  --color-text-medium: #4a4a4a;
+  --color-text-light: #6b6b6b;
+  --color-neutral-light: #f5f5f5;
+  --color-neutral-medium: #e0e0e0;
+  --color-neutral-dark: #2a2a2a;
+  --color-background: #ffffff;
+}
 
 /* Font Brakshoo pour la marque Jantes 73 */
 @font-face {
