@@ -186,14 +186,17 @@
 /* Stylisation de la marque Jantes 73 */
 .brand-jantes73 {
     font-family: 'Brakshoo', cursive;
-    color: rgb(21, 30, 89) !important; /* Bleu foncé uni - force l'application */
-    text-shadow: none; /* Pas d'ombre sur fond blanc */
+    background: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
     font-weight: normal;
     letter-spacing: 0.02em;
     font-size: 1.1em;
-    display: inline-block !important; /* Force l'affichage */
-    opacity: 1 !important; /* Force l'opacité à 100% */
-    visibility: visible !important; /* Force la visibilité */
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Signature complète avec style distinctif */
