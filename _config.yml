@@ -7,7 +7,6 @@ url: "https://lavieilleroue.fr"
 baseurl: ""
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 # Ensure the generated images folder (starts with underscore) is copied to the site

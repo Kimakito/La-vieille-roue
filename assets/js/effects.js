@@ -90,6 +90,11 @@
             const heroImages = document.querySelectorAll('.hero-img');
             if (heroImages.length === 0) return;
             
+            // Désactiver parallax sur la page jantes
+            if (window.location.pathname.includes('/jantes')) {
+                return;
+            }
+            
             let ticking = false;
             
             function updateParallax() {
