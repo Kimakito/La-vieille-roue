@@ -14,6 +14,7 @@
   --neutral-medium: #e0e0e0;
   --neutral-dark: #2a2a2a;
   --background: #ffffff;
+  --background-dark: #1a1a2e;
 }
 
 @layer utilities {
@@ -23,6 +24,12 @@
   .bg-neutral-light { background-color: var(--neutral-light); }
   .bg-neutral-medium { background-color: var(--neutral-medium); }
   .bg-neutral-dark { background-color: var(--neutral-dark); }
+  .bg-background-dark { background-color: var(--background-dark); }
+  .bg-background-dark\/80 { background-color: rgba(26, 26, 46, 0.8); }
+  
+  .bg-gradient-body {
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+  }
   
   .text-primary-light { color: var(--primary-light); }
   .text-primary-medium { color: var(--primary-medium); }
