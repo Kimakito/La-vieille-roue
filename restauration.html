@@ -161,54 +161,99 @@ hero_preload: /assets/images/generated/car-4202678_1280-1024.webp
     </div>
 </section>
 
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-background-light " aria-labelledby="etendue-prestations-heading">
-    <div class="max-w-7xl mx-auto">
-        <div class="bg-primary-m text-text-light rounded-lg shadow-2xl p-4 sm:p-6 lg:p-8 col-span-1 md:col-span-2 lg:col-span-3 carrosserie-card-md-span-2 carrosserie-card-lg-span-3 card-hover transition-all duration-300 relative overflow-hidden opacity-0 max-w-7xl mx-auto w-full break-words"
-            data-animate="fade-in-up" data-delay="500">
-            <div
-                class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-medium to-primary-light opacity-90">
+<section class="relative py-20 px-4 md:px-8 overflow-hidden" aria-labelledby="etendue-prestations-heading">
+    <!-- Fond dégradé moderne -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-medium to-primary-light opacity-95"></div>
+    
+    <!-- Pattern décoratif subtil -->
+    <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    
+    <div class="container mx-auto relative z-10">
+        <div class="text-center mb-16">
+            <h2 id="etendue-prestations-heading" class="text-4xl md:text-5xl font-extrabold text-text-light mb-6 drop-shadow-lg font-raleway opacity-0" data-animate="fade-in-up">
+                L'Étendue de Nos Prestations de <strong>Restauration en Savoie</strong>
+            </h2>
+            <p class="text-xl md:text-2xl text-text-light drop-shadow-md max-w-4xl mx-auto opacity-0" data-animate="fade-in-up" data-delay="100">
+                Un Service Intégral pour Vos <span class="text-accent font-bold">Automobiles d'Exception</span>
+            </p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <!-- Colonne gauche : Image Porsche -->
+            <div class="relative group opacity-0" data-animate="fade-in" data-delay="200">
+                <picture>
+                    <source type="image/avif" srcset="/assets/images/generated/porsche-8343861_1280-480.avif 480w,
+                                    /assets/images/generated/porsche-8343861_1280-768.avif 768w,
+                                    /assets/images/generated/porsche-8343861_1280-1024.avif 1024w"
+                        sizes="(max-width: 768px) 100vw, 768px">
+                    <source type="image/webp" srcset="/assets/images/generated/porsche-8343861_1280-480.webp 480w,
+                                    /assets/images/generated/porsche-8343861_1280-768.webp 768w,
+                                    /assets/images/generated/porsche-8343861_1280-1024.webp 1024w"
+                        sizes="(max-width: 768px) 100vw, 768px">
+                    <img src="/assets/images/generated/porsche-8343861_1280-768.webp"
+                        alt="Porsche en cours de restauration dans l'atelier spécialisé La Vieille Roue à Albertville"
+                        class="w-full h-auto rounded-2xl shadow-2xl transform group-hover:scale-105 transition duration-500 ease-in-out"
+                        loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
+                </picture>
             </div>
-
-            <div class="relative z-10 max-w-6xl mx-auto px-4">
-                <h2 id="etendue-prestations-heading"
-                    class="text-4xl sm:text-5xl font-extrabold text-center text-accent mb-12 font-raleway opacity-0"
-                    data-animate="fade-in-up">
-                    L'Étendue de Nos Prestations de <strong>Restauration en Savoie</strong> : Un Service Intégral
-                </h2>
-
-                <p class="text-xl text-center font-bold mb-16 max-w-3xl mx-auto font-lato opacity-0"
-                    data-animate="fade-in-up" data-delay="100">
-                    Chez <span class="brand-signature"><span
-                            class="brand-jantes73 inline-block px-4 py-2 rounded-lg bg-white backdrop-blur-md shadow-xl">Jantes
-                            73</span> <span class="italic">by</span> <span class="brand-vieilleroue">La Vieille
-                            Roue</span></span>, chaque service est une promesse d'excellence, dédiée à la pérennité et à
-                    l'éclat de vos <strong>automobiles de collection à Albertville</strong> et dans toute la
-                    <strong>Savoie</strong>.
-                </p>
-
-                <div class="relative group opacity-0 max-w-3xl mx-auto mb-6" data-animate="fade-in" data-delay="500">
-                    <picture>
-                        <source type="image/avif" srcset="/assets/images/generated/porsche-8343861_1280-480.avif 480w,
-                                        /assets/images/generated/porsche-8343861_1280-768.avif 768w,
-                                        /assets/images/generated/porsche-8343861_1280-1024.avif 1024w"
-                            sizes="(max-width: 768px) 100vw, 768px">
-                        <source type="image/webp" srcset="/assets/images/generated/porsche-8343861_1280-480.webp 480w,
-                                        /assets/images/generated/porsche-8343861_1280-768.webp 768w,
-                                        /assets/images/generated/porsche-8343861_1280-1024.webp 1024w"
-                            sizes="(max-width: 768px) 100vw, 768px">
-                        <img src="/assets/images/generated/porsche-8343861_1280-768.webp"
-                            alt="Porsche en cours de restauration dans l'atelier spécialisé La Vieille Roue à Albertville"
-                            class="w-full h-auto rounded-xl shadow-2xl border-4 border-neutral-medium transform group-hover:scale-[1.02] transition duration-500 ease-in-out object-cover"
-                            loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
-                    </picture>
+            
+            <!-- Colonne droite : Contenu texte -->
+            <div class="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl opacity-0" data-animate="fade-in-up" data-delay="300">
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <span class="text-accent text-3xl flex-shrink-0">🔧</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Carrosserie Complète</h3>
+                            <p class="text-text-dark leading-relaxed">
+                                Débosselage, soudure, remplacement de panneaux et restructuration complète du châssis pour vos <strong>véhicules de collection</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <span class="text-accent text-3xl flex-shrink-0">🎨</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Peinture d'Exception</h3>
+                            <p class="text-text-dark leading-relaxed">
+                                Préparation méticuleuse, peinture aux teintes d'origine et finitions vernies haute brillance pour un résultat parfait.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <span class="text-accent text-3xl flex-shrink-0">✨</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Polissage & Lustrage</h3>
+                            <p class="text-text-dark leading-relaxed">
+                                Correction des défauts de peinture, élimination des micro-rayures et protection céramique longue durée.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <span class="text-accent text-3xl flex-shrink-0">🛡️</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary-dark mb-2">Protection & Traitement</h3>
+                            <p class="text-text-dark leading-relaxed">
+                                Sablage, traitement antirouille, protection des bas de caisse et revêtements anticorrosion pour la pérennité.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="text-base sm:text-lg md:text-xl text-center mb-6 opacity-90 font-semibold font-lato px-2">
-                    Redonnez à la carrosserie de votre <strong>automobile de collection</strong> son éclat et sa
-                    perfection d'origine. Chaque détail compte dans notre atelier d'<strong>Albertville</strong>.
-                </p>
-
+                
+                <div class="mt-8 bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg">
+                    <p class="text-sm text-text-dark">
+                        <strong>Notre engagement :</strong> Chez <span class="brand-signature"><span class="brand-jantes73">Jantes 73</span> <span class="italic">by</span> <span class="brand-vieilleroue">La Vieille Roue</span></span>, chaque service est une promesse d'excellence, dédiée à la pérennité et à l'éclat de vos <strong>automobiles de collection à Albertville</strong> et dans toute la <strong>Savoie</strong>.
+                    </p>
+                </div>
             </div>
+        </div>
+        
+        <!-- Citation en bas -->
+        <div class="mt-16 text-center opacity-0" data-animate="fade-in-up" data-delay="400">
+            <p class="text-xl md:text-2xl text-text-light drop-shadow-md max-w-4xl mx-auto italic">
+                "Redonnez à la carrosserie de votre <strong>automobile de collection</strong> son éclat et sa perfection d'origine. Chaque détail compte dans notre atelier d'<strong>Albertville</strong>."
+            </p>
         </div>
     </div>
 </section>
