@@ -267,7 +267,9 @@
     overflow: hidden;
     vertical-align: middle; /* Alignement vertical avec le texte autour */
     line-height: 1; /* Évite les décalages verticaux */
-    animation: slideInFromLeft 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation: slideInFromLeft 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.5s;
+    opacity: 0; /* Commence invisible pour voir l'animation complète */
 }
 
 /* Animation d'arrivée depuis la gauche avec effet de vitesse */
@@ -294,13 +296,13 @@
     width: 50%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-    animation: shine 3s ease-in-out infinite;
-    animation-delay: 2s;
+    animation: shine 8s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
 @keyframes shine {
     0% { left: -100%; }
-    50% { left: 150%; }
+    20% { left: 150%; }
     100% { left: 150%; }
 }
 
