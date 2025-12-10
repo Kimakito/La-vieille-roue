@@ -32,7 +32,7 @@ keywords:
 - customisation jantes Albertville
 image_share: /assets/images/jantes/jante-renovee.jpg
 hero_preload: /assets/images/generated/jante-mercedes-1024.webp
-hero_preload: /assets/images/jante-mercedes.jpg
+hero_preload: /assets/images/jante-mercedes.webp
 ---
 <section class="w-full h-[75vh] relative p-5" role="banner"
     aria-label="Expertise en rénovation et personnalisation de jantes">
@@ -52,7 +52,7 @@ hero_preload: /assets/images/jante-mercedes.jpg
             decoding="async" width="1024" height="576" />
     </picture>
     <div
-        class="absolute inset-0 z-10 flex items-center justify-center p-4 md:p-8" style="background: linear-gradient(to bottom, rgba(13,26,47,0.85) 0%, rgba(13,26,47,0.75) 50%, rgba(13,26,47,0.85) 100%);">
+        class="absolute inset-0 z-10 flex items-center justify-center p-4 md:p-8 overlay-subtle">
         <div class="text-center text-text-light max-w-4xl mx-auto">
             <h1
                 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 leading-tight hero-title-responsive">
@@ -83,57 +83,110 @@ hero_preload: /assets/images/jante-mercedes.jpg
 </section>
 
 <!-- Nouveau service: Marquage au laser -->
-<section id="marquage-laser" class="container mx-auto py-16 px-4 md:px-8 bg-background-light rounded-xl shadow-inner"
+<section id="marquage-laser" class="relative py-20 px-4 md:px-8 overflow-hidden"
     aria-labelledby="marquage-laser-heading">
-    <h3 id="marquage-laser-heading" class="text-3xl md:text-4xl font-extrabold text-center text-primary-dark mb-4">
-        Marquage au laser sur jantes</h3>
-    <div class="max-w-5xl mx-auto marquage-grid">
-        <div>
-            <p class="text-lg leading-relaxed mb-4 text-text-dark">Nous inaugurons un service hautement demandé et rare
-                chez nos concurrents : le <strong>marquage au laser</strong> sur jantes en aluminium. Grâce à notre
-                graveuse, nous réalisons des gravures précises, résistantes et esthétiques —
-                parfaites pour reproduire les sigles « GT », « RS », « Alpine » ou tout autre logo.</p>
-            <ul class="list-disc pl-5 text-sm text-text-dark mb-4">
-                <li><strong>Précision industrielle :</strong> détails fidèles et finitions nettes, idéales après usinage
-                    ou réusinage.</li>
-                <li><strong>Temps de cycle courts :</strong> production rapide et répétable pour flottes
-                    professionnelles.</li>
-                <li><strong>Procédé propre et contrôlé :</strong> adapté aux jantes en aluminium, limite l'impact
-                    mécanique.</li>
-                <li><strong>Personnalisation :</strong> reproduction de sigles, numéros, monogrammes ou codes internes.
-                </li>
-            </ul>
-            <p class="text-sm text-neutral-medium">Exemples d'usage : marquage d'identifiants pour gestion de parc,
-                personnalisation esthétique après réparation, ajout de logos pour modèles spécifiques.</p>
-            <div class="mt-4 text-sm text-neutral-dark">Demandez un échantillon ou une simulation : <a
-                    href="tel:0479326063" class="underline text-primary-dark">04 79 32 60 63</a> — ou <a
-                    href="mailto:lavieilleroue@gmail.com" class="underline text-primary-dark">envoyez un mail</a>.</div>
+    <!-- Fond dégradé moderne -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-medium to-primary-light opacity-95"></div>
+    <!-- Pattern décoratif subtil -->
+    <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    
+    <div class="container mx-auto relative z-10">
+        <div class="text-center mb-12">
+            <h3 id="marquage-laser-heading" class="text-4xl md:text-5xl font-extrabold text-text-light mb-4 drop-shadow-lg">
+                <span class="inline-block px-4 py-2 bg-accent rounded-lg text-primary-dark shadow-xl">⚡ Nouveau Service</span>
+            </h3>
+            <p class="text-3xl md:text-4xl font-bold text-text-light mt-6 drop-shadow-md">Marquage Laser sur Jantes</p>
         </div>
-        <div class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <figure class="rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="/assets/images/jantes/gravage-laser/whatsapp-image-2025-10-28-a-18.06.28_23a13fb1.jpg"
-                        alt="Gravure laser sur jante - vue rapprochée" class="w-full h-48 object-cover" loading="lazy"
-                        decoding="async" fetchpriority="low">
-                    <figcaption class="text-xs text-center text-neutral-medium p-2">Exemple de gravure détaillée après
-                        réusinage</figcaption>
-                </figure>
-                <figure class="rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="/assets/images/jantes/gravage-laser/whatsapp-image-2025-10-28-a-18.06.28_35074ab6.jpg"
-                        alt="Gravure laser sur jante - motif logo" class="w-full h-48 object-cover" loading="lazy"
-                        decoding="async" fetchpriority="low">
-                    <figcaption class="text-xs text-center text-neutral-medium p-2">Reproduction de sigles (Audi Sport,
-                        GT, RS, Alpine...)</figcaption>
-                </figure>
+        
+        <div class="max-w-6xl mx-auto marquage-grid gap-8">
+            <!-- Colonne texte -->
+            <div class="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl">
+                <p class="text-lg leading-relaxed mb-6 text-text-dark">
+                    Nous inaugurons un service hautement demandé et rare chez nos concurrents : le <strong class="text-primary-dark">marquage au laser</strong> sur jantes en aluminium. Grâce à notre graveuse, nous réalisons des gravures précises, résistantes et esthétiques — parfaites pour reproduire les sigles « GT », « RS », « Alpine » ou tout autre logo.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div class="flex items-start gap-3">
+                        <span class="text-accent text-2xl">✓</span>
+                        <div>
+                            <strong class="text-primary-dark">Précision industrielle</strong>
+                            <p class="text-sm text-neutral-dark">Détails fidèles et finitions nettes, idéales après usinage</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-accent text-2xl">⚡</span>
+                        <div>
+                            <strong class="text-primary-dark">Rapidité</strong>
+                            <p class="text-sm text-neutral-dark">Production rapide et répétable pour flottes pro</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-accent text-2xl">🎯</span>
+                        <div>
+                            <strong class="text-primary-dark">Procédé contrôlé</strong>
+                            <p class="text-sm text-neutral-dark">Adapté à l'aluminium, limite l'impact mécanique</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-accent text-2xl">🎨</span>
+                        <div>
+                            <strong class="text-primary-dark">Personnalisation</strong>
+                            <p class="text-sm text-neutral-dark">Sigles, logos, numéros ou codes internes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg">
+                    <p class="text-sm text-text-dark">
+                        <strong>Exemples d'usage :</strong> Marquage d'identifiants pour gestion de parc, personnalisation esthétique après réparation, ajout de logos pour modèles spécifiques.
+                    </p>
+                </div>
             </div>
-            <div class="bg-background-medium p-4 rounded-lg">
-                <p class="font-semibold mb-2 text-text-dark">Pourquoi choisir le marquage laser chez nous ?</p>
-                <ol class="list-decimal pl-5 text-sm text-text-dark">
-                    <li>Matériel professionnel.</li>
-                    <li>Contrôle qualité post-gravure et possibilités de finition (vernis de protection si nécessaire).
-                    </li>
-                    <li>Conseil et mise en conformité pour marquages réglementaires ou d'identification.</li>
-                </ol>
+            
+            <!-- Colonne images et CTA -->
+            <div class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <figure class="rounded-xl overflow-hidden shadow-2xl bg-white transform hover:scale-105 transition duration-300">
+                        <img src="/assets/images/jantes/gravage-laser/whatsapp-image-2025-10-28-a-18.06.28_23a13fb1.jpg"
+                            alt="Gravure laser sur jante - vue rapprochée" class="w-full h-48 object-cover" loading="lazy"
+                            decoding="async" fetchpriority="low">
+                        <figcaption class="text-xs text-center text-neutral-medium p-3 bg-white">Gravure détaillée après réusinage</figcaption>
+                    </figure>
+                    <figure class="rounded-xl overflow-hidden shadow-2xl bg-white transform hover:scale-105 transition duration-300">
+                        <img src="/assets/images/jantes/gravage-laser/whatsapp-image-2025-10-28-a-18.06.28_35074ab6.jpg"
+                            alt="Gravure laser sur jante - motif logo" class="w-full h-48 object-cover" loading="lazy"
+                            decoding="async" fetchpriority="low">
+                        <figcaption class="text-xs text-center text-neutral-medium p-3 bg-white">Sigles Audi Sport, GT, RS, Alpine...</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl">
+                    <p class="font-bold text-xl mb-4 text-primary-dark">Pourquoi nous choisir ?</p>
+                    <ol class="space-y-2 text-text-dark">
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent font-bold">1.</span>
+                            <span>Matériel professionnel de pointe</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent font-bold">2.</span>
+                            <span>Contrôle qualité post-gravure et finition vernis possible</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent font-bold">3.</span>
+                            <span>Conseil pour marquages réglementaires</span>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="text-center">
+                    <a href="tel:0479326063" 
+                        class="inline-block bg-accent hover:bg-accent-hover text-primary-dark font-bold py-4 px-8 rounded-full shadow-2xl text-lg transition duration-300 transform hover:scale-105">
+                        📞 Demandez un échantillon : 04 79 32 60 63
+                    </a>
+                    <p class="text-text-light text-sm mt-3">
+                        Ou <a href="mailto:lavieilleroue@gmail.com" class="underline text-accent hover:text-accent-hover">envoyez-nous un mail</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
