@@ -1748,6 +1748,17 @@ a:hover .icon-mail {
     }
 }
 
+/* Gallery button reset */
+.gallery-item-btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
 /* Performance : réduire les animations si préférence utilisateur */
 @media (prefers-reduced-motion: reduce) {
 
