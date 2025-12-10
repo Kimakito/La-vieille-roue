@@ -4,47 +4,70 @@
 
 /* Variables personnalisées pour les couleurs */
 :root {
-  --primary-light: #D4AF37;
-  --primary-medium: #B8860B;
-  --primary-dark: #8B6F00;
-  --text-dark: #1a1a1a;
-  --text-medium: #4a4a4a;
-  --text-light: #6b6b6b;
-  --neutral-light: #f5f5f5;
-  --neutral-medium: #e0e0e0;
-  --neutral-dark: #2a2a2a;
-  --background: #ffffff;
-  --background-dark: #0d1a2f;
+  /* Couleurs principales */
+  --primary-light: #61D4E8;
+  --primary-medium: #3B5BDC;
+  --primary-dark: #2B3ABF;
+  
+  /* Couleurs de fond et texte */
+  --background-light: #F7FBFD;
+  --background-dark: #0D1A2F;
+  --text-dark: #1C1F2E;
+  --text-light: #F2F8FA;
+  
+  /* Couleur d'accent */
+  --accent: #FFB703;
+  --accent-hover: #E89C02;
+  
+  /* Couleurs secondaires/neutres */
+  --neutral-light: #F2F2F2;
+  --neutral-medium: #C0C0C0;
+  --neutral-dark: #4A4A4A;
+  
+  /* Couleurs d'état */
+  --success: #3CB371;
+  --error: #DC143C;
+  --warning: #FFD700;
 }
 
 @layer utilities {
+  /* Backgrounds */
   .bg-primary-light { background-color: var(--primary-light); }
   .bg-primary-medium { background-color: var(--primary-medium); }
   .bg-primary-dark { background-color: var(--primary-dark); }
+  .bg-background-light { background-color: var(--background-light); }
+  .bg-background-dark { background-color: var(--background-dark); }
+  .bg-background-dark\/80 { background-color: rgba(13, 26, 47, 0.8); }
   .bg-neutral-light { background-color: var(--neutral-light); }
   .bg-neutral-medium { background-color: var(--neutral-medium); }
   .bg-neutral-dark { background-color: var(--neutral-dark); }
-  .bg-background-dark { background-color: var(--background-dark); }
-  .bg-background-dark\/80 { background-color: rgba(13, 26, 47, 0.8); }
+  .bg-accent { background-color: var(--accent); }
   
   .bg-gradient-body {
-    background-image: linear-gradient(90deg, rgb(43, 58, 191), rgb(97, 212, 232));
+    background-image: linear-gradient(90deg, #2B3ABF 0%, #61D4E8 100%);
   }
   
+  /* Text colors */
   .text-primary-light { color: var(--primary-light); }
   .text-primary-medium { color: var(--primary-medium); }
   .text-primary-dark { color: var(--primary-dark); }
   .text-text-dark { color: var(--text-dark); }
-  .text-text-medium { color: var(--text-medium); }
   .text-text-light { color: var(--text-light); }
   .text-neutral-light { color: var(--neutral-light); }
   .text-neutral-medium { color: var(--neutral-medium); }
   .text-neutral-dark { color: var(--neutral-dark); }
+  .text-accent { color: var(--accent); }
   
+  /* Border colors */
   .border-primary-light { border-color: var(--primary-light); }
   .border-primary-medium { border-color: var(--primary-medium); }
   .border-primary-dark { border-color: var(--primary-dark); }
   .border-neutral-medium { border-color: var(--neutral-medium); }
+  .border-accent { border-color: var(--accent); }
+  
+  /* Hover states */
+  .hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
+  .hover\:text-accent-hover:hover { color: var(--accent-hover); }
 }
 
 /* Font Brakshoo pour la marque Jantes 73 */
