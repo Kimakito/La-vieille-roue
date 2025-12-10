@@ -197,11 +197,51 @@
     display: inline-block !important;
     opacity: 1 !important;
     visibility: visible !important;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle; /* Alignement vertical avec le texte autour */
+    line-height: 1; /* Évite les décalages verticaux */
+    animation: slideInFromLeft 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Animation d'arrivée depuis la gauche avec effet de vitesse */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-150%) skewX(-10deg);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(0) skewX(5deg);
+    }
+    100% {
+        transform: translateX(0) skewX(0deg);
+        opacity: 1;
+    }
+}
+
+/* Effet de brillance qui traverse le logo */
+.brand-jantes73::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: shine 3s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
 }
 
 /* Signature complète avec style distinctif */
 .brand-signature {
     @apply font-semibold;
+    line-height: 1.5;
 }
 
 .brand-signature .brand-jantes73 {
@@ -216,6 +256,25 @@
 .brand-signature .brand-company {
     @apply text-text-dark font-medium;
 }
+
+/* Animation subtile sur La Vieille Roue */
+.brand-vieilleroue {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.brand-vieilleroue:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 183, 3, 0.5));
+}
+
+/* Alignement du mot "by" */
+span.italic {
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
@@ -225,6 +284,27 @@
 .delay-800 { animation-delay: 0.8s; }
 .delay-900 { animation-delay: 0.9s; }
 .delay-1000 { animation-delay: 1s; }
+
+/* Animation de pulsation douce pour les boutons CTA */
+@keyframes pulse-gentle {
+    0%, 100% { 
+        transform: scale(1); 
+        box-shadow: 0 10px 25px rgba(255, 183, 3, 0.3);
+    }
+    50% { 
+        transform: scale(1.03); 
+        box-shadow: 0 15px 35px rgba(255, 183, 3, 0.5);
+    }
+}
+
+/* Appliquer la pulsation aux boutons principaux */
+.bg-accent {
+    animation: pulse-gentle 2.5s ease-in-out infinite;
+}
+
+.bg-accent:hover {
+    animation: none;
+}
 
 /* Gallery & Lightbox styles moved from inline in templates */
 /* Homepage masonry gallery with 2-3-2 pattern */
@@ -327,6 +407,19 @@
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
+    animation: zoomInImage 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes zoomInImage {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .masonry-gallery .gallery-item:hover .aspect-square img {
@@ -709,13 +802,26 @@
     text-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
     transition: all 0.3s ease;
     filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.4));
+    animation: twinkle 2s ease-in-out infinite;
 }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(0.95); }
+}
+
+.review-star:nth-child(1) { animation-delay: 0s; }
+.review-star:nth-child(2) { animation-delay: 0.2s; }
+.review-star:nth-child(3) { animation-delay: 0.4s; }
+.review-star:nth-child(4) { animation-delay: 0.6s; }
+.review-star:nth-child(5) { animation-delay: 0.8s; }
 
 .review-card:hover .review-star {
     color: #f59e0b;
     transform: scale(1.1);
     text-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
     filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.6));
+    animation: none;
 }
 
 .review-text {
@@ -787,7 +893,31 @@
 .review-card:nth-child(3) { animation-delay: 0.6s; }
 .review-card:nth-child(4) { animation-delay: 0.8s; }
 
-/* Amélioration de l'animation fadeInUp */
+/* Animation pour les ic\u00f4nes - rotation douce au survol */
+.icon-phone, .icon-mail, svg {
+    transition: transform 0.3s ease;
+}
+
+a:hover .icon-phone {
+    animation: ring 0.5s ease-in-out;
+}
+
+a:hover .icon-mail {
+    animation: bounce-mail 0.6s ease;
+}
+
+@keyframes ring {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+}
+
+@keyframes bounce-mail {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Am\u00e9lioration de l'animation fadeInUp */
 @keyframes fadeInUpImproved {
     0% {
         opacity: 0;
@@ -844,4 +974,126 @@
 
 .review-star.opacity-30 {
     opacity: 0.3;
+}
+
+/* ========== EFFETS VISUELS AVANCÉS ========== */
+
+/* Barre de progression du scroll en haut */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFB703, #FB8500, #FFB703);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+    z-index: 9999;
+    width: 0%;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 2px 8px rgba(255, 183, 3, 0.5);
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Conteneur de particules dorées */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Particules individuelles */
+.particle {
+    position: absolute;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(255, 183, 3, 0.8), rgba(251, 133, 0, 0.4));
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatUp 20s ease-in infinite;
+    box-shadow: 0 0 10px rgba(255, 183, 3, 0.6);
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Effet de traînée lumineuse sur les boutons */
+.button-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 70%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    animation: rippleEffect 0.6s ease-out;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rippleEffect {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+/* Amélioration des cartes pour l'effet 3D */
+.review-card, .masonry-gallery .gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+/* Optimisation responsive - désactiver certains effets sur mobile */
+@media (max-width: 768px) {
+    .particles-container {
+        display: none;
+    }
+    
+    .button-ripple {
+        display: none;
+    }
+    
+    .hero-img {
+        transform: none !important;
+    }
+}
+
+/* Performance : réduire les animations si préférence utilisateur */
+@media (prefers-reduced-motion: reduce) {
+    .particle,
+    .button-ripple,
+    .scroll-progress-bar,
+    .brand-jantes73 {
+        animation: none !important;
+    }
+    
+    .hero-img {
+        transform: none !important;
+    }
 }
