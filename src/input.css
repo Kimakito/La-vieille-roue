@@ -38,6 +38,9 @@
   .bg-background-light { background-color: var(--background-light); }
   .bg-background-dark { background-color: var(--background-dark); }
   .bg-background-dark\/80 { background-color: rgba(13, 26, 47, 0.8); }
+  .bg-background-dark\/85 { background-color: rgba(13, 26, 47, 0.85); }
+  .bg-background-dark\/90 { background-color: rgba(13, 26, 47, 0.9); }
+  .bg-background-dark\/75 { background-color: rgba(13, 26, 47, 0.75); }
   .bg-neutral-light { background-color: var(--neutral-light); }
   .bg-neutral-medium { background-color: var(--neutral-medium); }
   .bg-neutral-dark { background-color: var(--neutral-dark); }
@@ -45,6 +48,47 @@
   
   .bg-gradient-body {
     background-image: linear-gradient(90deg, #2B3ABF 0%, #61D4E8 100%);
+  }
+  
+  /* Gradient directions */
+  .bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  }
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  .bg-gradient-to-t {
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  }
+  
+  /* Gradient stops for background-dark */
+  .from-background-dark\/85 {
+    --tw-gradient-from: rgba(13, 26, 47, 0.85) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(13, 26, 47, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .from-background-dark\/90 {
+    --tw-gradient-from: rgba(13, 26, 47, 0.9) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(13, 26, 47, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .via-background-dark\/75 {
+    --tw-gradient-to: rgba(13, 26, 47, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(13, 26, 47, 0.75) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+  .via-background-dark\/80 {
+    --tw-gradient-to: rgba(13, 26, 47, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(13, 26, 47, 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+  .via-background-dark\/85 {
+    --tw-gradient-to: rgba(13, 26, 47, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(13, 26, 47, 0.85) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+  .to-background-dark\/85 {
+    --tw-gradient-to: rgba(13, 26, 47, 0.85) var(--tw-gradient-to-position);
+  }
+  .to-background-dark\/90 {
+    --tw-gradient-to: rgba(13, 26, 47, 0.9) var(--tw-gradient-to-position);
   }
   
   /* Text colors */
