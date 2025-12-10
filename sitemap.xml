@@ -7,7 +7,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-  <image:loc>https://lavieilleroue.fr/assets/images/automobile-8217167_1280.png</image:loc>
+      <image:loc>https://lavieilleroue.fr/assets/images/generated/jante-doree-768.webp</image:loc>
       <image:caption>La Vieille Roue - Jantes Savoie - Rénovation de jantes à Albertville</image:caption>
       <image:title>Spécialiste jantes Savoie</image:title>
     </image:image>
@@ -18,7 +18,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-  <image:loc>https://lavieilleroue.fr/assets/images/jantes/jante-renovee.jpg</image:loc>
+  <image:loc>https://lavieilleroue.fr/assets/images/jantes/jante-renovee-recadree.webp</image:loc>
       <image:caption>Jantes Savoie - Exemple rénovation professionnelle</image:caption>
       <image:title>Rénovation jantes Savoie</image:title>
     </image:image>
@@ -28,12 +28,22 @@
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://lavieilleroue.fr/assets/images/generated/porsche-8343861_1280-768.webp</image:loc>
+      <image:caption>La Vieille Roue - Restauration automobile Savoie</image:caption>
+      <image:title>Restauration véhicules anciens</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://lavieilleroue.fr/contact</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://lavieilleroue.fr/assets/images/generated/la-vieille-roue-768.webp</image:loc>
+      <image:caption>La Vieille Roue - Garage spécialisé Albertville Savoie</image:caption>
+      <image:title>Contact garage Albertville</image:title>
+    </image:image>
   </url>
 </urlset>
 
