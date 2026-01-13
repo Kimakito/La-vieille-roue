@@ -1,37 +1,37 @@
-<header id="navbar" class="bg-background-dark/80 backdrop-blur-md text-text-light font-lato shadow-lg w-full fixed top-0 z-50 p-3">
-  <div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8 lg:py-3">
+<header id="navbar" class="bg-background-dark/80 backdrop-blur-md text-text-light font-lato shadow-lg w-full fixed top-0 z-50 p-2 md:p-3">
+  <div class="container mx-auto flex items-center justify-between px-2 py-2 sm:px-4 sm:py-3 md:px-6 md:py-3 lg:px-8 lg:py-3">
     
     <!-- Logo + Nom entreprise -->
-    <a href="/" class="flex items-center space-x-3 transition-transform duration-300 hover:scale-105" aria-label="Retour à l'accueil">
-  <img src="/assets/logo/LOGO.svg" alt="logo La Vieille Roue" class="h-20 w-auto" loading="lazy" decoding="async" fetchpriority="low">
-  <div class="flex flex-col leading-tight text-xl lg:text-2xl tracking-wide">
-    <span class="brand-jantes73 px-2 py-0.5 rounded bg-white/80 backdrop-blur-sm">Jantes 73</span> <span class="italic">by</span>
-    <span class="font-bold text-accent brand-vieilleroue">La Vieille Roue</span>
+    <a href="/" class="flex items-center space-x-2 sm:space-x-3 transition-transform duration-300 hover:scale-105" aria-label="Retour à l'accueil - Jantes 73 by La Vieille Roue">
+  <img src="/assets/logo/LOGO.svg" alt="logo La Vieille Roue" class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto" loading="lazy" decoding="async" fetchpriority="low">
+  <div class="flex flex-col leading-tight text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide">
+    <span class="brand-jantes73 px-1.5 sm:px-2 py-0.5 rounded bg-white/80 backdrop-blur-sm whitespace-nowrap">Jantes 73</span> <span class="italic text-sm sm:text-base">by</span>
+    <span class="font-bold text-accent brand-vieilleroue whitespace-nowrap">La Vieille Roue</span>
   </div>
 </a>
 
-    <!-- Burger menu (mobile only) -->
-    <button id="burgerMenu" class="lg:hidden text-text-light focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-text-light focus-visible:ring-offset-2 focus-visible:ring-offset-background-dark" aria-label="Ouvrir le menu">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Burger menu (mobile & tablet) -->
+    <button id="burgerMenu" class="lg:hidden text-text-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background-dark rounded p-2 transition-colors hover:bg-white/10" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
 
     <!-- Menu Desktop -->
-    <nav class="hidden lg:flex space-x-6 text-base font-medium">
-  <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
-  <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Restauration de véhicules</a>
-  <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    <nav class="hidden lg:flex space-x-4 xl:space-x-6 text-sm xl:text-base font-medium" aria-label="Navigation principale">
+  <a href="/jantes" class="hover:text-accent focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-2 py-1 transition-colors duration-300 page whitespace-nowrap">Réparation de jantes</a>
+  <a href="/restauration" class="hover:text-accent focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-2 py-1 transition-colors duration-300 page whitespace-nowrap">Restauration de véhicules</a>
+  <a href="/contact" class="hover:text-accent focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-2 py-1 transition-colors duration-300 page">Contactez-nous</a>
     </nav>
   </div>
 
-  <!-- Menu Mobile -->
+  <!-- Menu Mobile & Tablet -->
   <div id="mobileMenu" class="lg:hidden hidden bg-background-dark text-text-light px-4 pb-4 pt-2 transition-all duration-300 ease-in-out">
-    <nav class="flex flex-col space-y-2">
-  <a href="/jantes" class="hover:text-accent transition-colors duration-300 page">Réparation de jantes</a>
-  <a href="/restauration" class="hover:text-accent transition-colors duration-300 page">Restauration de véhicules</a>
-  <a href="/contact" class="hover:text-accent transition-colors duration-300 page">Contactez-nous</a>
+    <nav class="flex flex-col space-y-3" aria-label="Navigation mobile">
+  <a href="/jantes" class="hover:text-accent focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-3 py-2 transition-colors duration-300 page">Réparation de jantes</a>
+  <a href="/restauration" class="hover:text-accent focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-3 py-2 transition-colors duration-300 page">Restauration de véhicules</a>
+  <a href="/contact" class="hover:text-accent focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded px-3 py-2 transition-colors duration-300 page">Contactez-nous</a>
     </nav>
   </div>
 </header>

@@ -589,6 +589,22 @@ span.italic {
     animation: none;
 }
 
+/* Respect de prefers-reduced-motion pour l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .bg-accent {
+        animation: none;
+    }
+}
+
 /* Gallery & Lightbox styles moved from inline in templates */
 /* Homepage masonry gallery with 2-3-2 pattern */
 .masonry-gallery {
@@ -991,7 +1007,7 @@ span.italic {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 9999; /* Plus haut z-index - au-dessus de tout */
     opacity: 0;
     pointer-events: none;
     transition: opacity .18s ease;
@@ -1043,6 +1059,17 @@ span.italic {
     padding: .6rem .9rem;
     border-radius: 0.25rem;
     cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lightbox .controls button:hover,
+.lightbox .controls button:focus {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.lightbox .controls button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .lightbox .close {
@@ -1053,6 +1080,20 @@ span.italic {
     border: 0;
     color: #fff;
     font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s ease;
+}
+
+.lightbox .close:hover,
+.lightbox .close:focus {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lightbox .close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 /* Facebook Page plugin layout fixes (extracted from inline <style> in index.html and contact.html)
@@ -1632,6 +1673,15 @@ a:hover .icon-mail {
 
 /* ========== EFFETS VISUELS AVANCÃ‰S ========== */
 
+/* ========== HIÃ‰RARCHIE DES Z-INDEX ========== */
+/* 
+ * Organisation des couches z-index pour éviter les chevauchements :
+ * 1-10: Contenu de base et overlays de sections
+ * 40-50: Navigation et header
+ * 60-80: Éléments flottants (scroll-top, cookies)
+ * 9000+: Modales, lightbox et éléments prioritaires
+ */
+
 /* Barre de progression du scroll en haut */
 .scroll-progress-bar {
     position: fixed;
@@ -1641,7 +1691,7 @@ a:hover .icon-mail {
     background: linear-gradient(90deg, #FFB703, #FB8500, #FFB703);
     background-size: 200% 100%;
     animation: shimmer 2s linear infinite;
-    z-index: 9999;
+    z-index: 9998; /* Juste en dessous du lightbox mais au-dessus de tout le reste */
     width: 0%;
     transition: width 0.1s ease-out;
     box-shadow: 0 2px 8px rgba(255, 183, 3, 0.5);
@@ -1723,6 +1773,64 @@ a:hover .icon-mail {
         width: 100px;
         height: 100px;
         opacity: 0;
+    }
+}
+
+/* ========== MEDIA QUERIES POUR TABLETTE (768px - 1024px) ========== */
+
+/* Optimisations spécifiques pour tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Navbar : réduire légèrement les paddings sur tablette */
+    #navbar .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Hero section : ajuster la hauteur pour tablette */
+    section[role="banner"] {
+        min-height: 60vh;
+    }
+    
+    /* Texte hero : sizes optimisées pour tablette */
+    .hero-title-responsive {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+    
+    .hero-subtitle-responsive {
+        font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+    }
+    
+    /* Galerie masonry : espacement optimisé tablette */
+    .masonry-gallery {
+        max-width: 700px;
+        gap: 0.875rem;
+    }
+    
+    /* Cards et encarts : meilleur espacement */
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Footer : optimiser la grille */
+    footer .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Media query pour améliorer le responsive sur petites tablettes en portrait */
+@media (min-width: 640px) and (max-width: 767px) {
+    /* Logo navbar plus petit sur petites tablettes */
+    #navbar img {
+        height: 3.5rem;
+    }
+    
+    /* Encarts : passer en colonne */
+    .marquage-grid {
+        grid-template-columns: 1fr;
+    }
+}
     }
 }
 

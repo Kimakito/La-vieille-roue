@@ -1,35 +1,35 @@
-<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-background-dark text-text-light p-6 shadow-2xl z-50 transform translate-y-full transition-transform duration-500 ease-out">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<div id="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" class="fixed bottom-0 left-0 right-0 bg-background-dark text-text-light p-4 sm:p-6 shadow-2xl z-[60] transform translate-y-full transition-transform duration-500 ease-out">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
         <div class="flex-grow text-center md:text-left">
-            <h3 class="text-2xl font-bold mb-2 text-primary-dark">Gérez vos préférences de cookies</h3>
-            <p class="text-lg leading-relaxed">
+            <h3 id="cookie-banner-title" class="text-xl sm:text-2xl font-bold mb-2 text-primary-dark">Gérez vos préférences de cookies</h3>
+            <p id="cookie-banner-desc" class="text-base sm:text-lg leading-relaxed">
                 Notre site utilise des cookies pour le fonctionnement essentiel, l'analyse et les réseaux sociaux.
                 Vous pouvez activer ou désactiver chaque catégorie ci-dessous. Les cookies non essentiels ne seront
                 chargés qu'après votre consentement.
             </p>
-            <p class="mt-3 text-lg">Consultez notre <a href="/politique-confidentialite.html" class="text-primary-dark hover:underline font-semibold">Politique de Confidentialité</a> pour plus de détails.</p>
+            <p class="mt-3 text-sm sm:text-base">Consultez notre <a href="/politique-confidentialite.html" class="text-primary-dark hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded font-semibold">Politique de Confidentialité</a> pour plus de détails.</p>
         </div>
 
         <div class="w-full md:w-auto">
             <div class="flex flex-col gap-3 text-sm text-text-dark bg-background-light p-4 rounded-md mb-4">
                 <label class="flex items-center justify-between gap-4">
                     <span class="font-medium">Essentiels</span>
-                    <input type="checkbox" id="cookie-essential" disabled checked class="w-5 h-5" />
+                    <input type="checkbox" id="cookie-essential" disabled checked class="w-5 h-5" aria-label="Cookies essentiels (toujours actifs)" />
                 </label>
                 <label class="flex items-center justify-between gap-4">
                     <span class="font-medium">Analytics</span>
-                    <input type="checkbox" id="cookie-analytics" class="w-5 h-5" />
+                    <input type="checkbox" id="cookie-analytics" class="w-5 h-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Cookies analytics" />
                 </label>
                 <label class="flex items-center justify-between gap-4">
                     <span class="font-medium">Marketing / Social</span>
-                    <input type="checkbox" id="cookie-marketing" class="w-5 h-5" />
+                    <input type="checkbox" id="cookie-marketing" class="w-5 h-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Cookies marketing et réseaux sociaux" />
                 </label>
             </div>
 
-            <div class="flex gap-3">
-                <button id="save-cookies" class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-dark focus-visible:ring-offset-2">Sauvegarder</button>
-                <button id="accept-all-cookies" class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2">Accepter tout</button>
-                <button id="reject-all-cookies" class="bg-neutral-medium hover:bg-neutral-dark text-text-light font-bold py-3 px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-neutral-dark focus-visible:ring-offset-2">Refuser tout</button>
+            <div class="flex flex-wrap gap-2 sm:gap-3">
+                <button id="save-cookies" class="bg-primary-dark hover:bg-primary-medium text-text-light font-bold py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-dark focus-visible:ring-offset-2 text-sm sm:text-base" aria-label="Sauvegarder mes préférences de cookies">Sauvegarder</button>
+                <button id="accept-all-cookies" class="bg-accent hover:bg-accent-hover text-primary-dark font-bold py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 text-sm sm:text-base" aria-label="Accepter tous les cookies">Accepter tout</button>
+                <button id="reject-all-cookies" class="bg-neutral-medium hover:bg-neutral-dark text-text-light font-bold py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-lg transition duration-300 transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-dark focus-visible:ring-offset-2 text-sm sm:text-base" aria-label="Refuser tous les cookies non essentiels">Refuser tout</button>
             </div>
         </div>
     </div>
