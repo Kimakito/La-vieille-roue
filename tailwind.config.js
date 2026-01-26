@@ -33,6 +33,7 @@ module.exports = {
                 // Couleur d'accent (complémentaire dynamique)
                 accent: "#FFB703",       // orange vif, bon contraste avec le bleu
                 "accent-hover": "#E89C02", // orange plus foncé au survol
+                "accent-dark": "#CC9302",   // version plus foncée pour meilleur contraste sur fond clair
 
                 // Couleurs secondaires / neutres
                 "neutral-light": "#F2F2F2", // gris argent clair
@@ -40,7 +41,7 @@ module.exports = {
                 "neutral-dark": "#4A4A4A",   // anthracite
 
                 // Couleurs d'état (inchangées car universelles)
-                success: "#3CB371",
+                success: "#1F7A48",      // Version très foncée pour atteindre 4.5:1 avec blanc
                 error: "#DC143C",
                 warning: "#FFD700",
             },
