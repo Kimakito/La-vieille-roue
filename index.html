@@ -110,7 +110,7 @@ hero_preload: /assets/images/generated/automobile-8217167_1280-1024.webp
   "keywords": ["jantes savoie", "rénovation jantes", "jantes albertville", "réparation jantes savoie"]
 }
 </script>
-<section class="w-full h-[75vh] relative overflow-hidden p-5" role="banner"
+<section class="w-full h-screen min-h-[600px] relative overflow-hidden" role="banner"
     aria-label="Présentation de La Vieille Roue">
     <!-- Hero image: Responsive optimized versions -->
     <picture aria-hidden="true">
@@ -137,42 +137,47 @@ hero_preload: /assets/images/generated/automobile-8217167_1280-1024.webp
     </picture>
     <div class="absolute inset-0 z-10 flex items-center p-4 md:p-8 overlay-medium">
         <div class="text-center text-text-light max-w-5xl mx-auto z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl mb-6 leading-tight font-raleway"
-                data-animate="fade-in">
-                <span class="brand-jantes73 inline-block px-4 py-2 rounded-md bg-white backdrop-blur-md shadow-xl">Jantes 73</span> 
-                <br><span class="italic font-normal text-accent accent-contrast-subtle">by</span> 
-                <br><span class="font-extrabold brand-vieilleroue text-accent accent-contrast-lg">La Vieille Roue</span>
-            </h1>
-            <p class="text-lg md:text-2xl mb-8 opacity-90 font-lato drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" data-animate="fade-in-up" data-delay="100">
-                Basée à <strong>Albertville</strong> et intervenant dans <strong>toute la Savoie</strong>, l'équipe de <span class="brand-vieilleroue text-accent accent-contrast">La Vieille Roue</span>
-                est votre spécialiste de la <strong>rénovation de jantes pour professionnels</strong> et particuliers,
-                ainsi que de la <strong>restauration de véhicules de collection, de prestige et young timers</strong>.
-                Nous redonnons vie aux légendes sur roues avec passion et expertise.
+            <p class="text-xs sm:text-sm tracking-[0.3em] uppercase text-accent mb-6 opacity-0 font-lato"
+                data-animate="fade-in" data-delay="0">
+                Albertville &bull; Savoie &bull; Depuis 2024
             </p>
-            <nav class="flex flex-wrap gap-3 md:gap-6 justify-center" aria-label="Navigation principale">
+            <h1 class="text-5xl sm:text-6xl md:text-8xl mb-8 leading-none tracking-tight font-raleway"
+                data-animate="fade-in">
+                <span class="brand-jantes73 inline-block px-5 py-2 rounded bg-black/40 backdrop-blur-sm">Jantes 73</span> 
+                <span class="block text-2xl sm:text-3xl md:text-4xl italic font-light text-accent/80 mt-3 mb-1 tracking-widest">by</span>
+                <span class="font-extrabold brand-vieilleroue">La Vieille Roue</span>
+            </h1>
+            <p class="text-base md:text-xl mb-12 opacity-80 font-lato tracking-wide max-w-2xl mx-auto leading-relaxed" data-animate="fade-in-up" data-delay="100">
+                Spécialiste de la <strong>rénovation de jantes</strong> et de la
+                <strong>restauration de véhicules de collection</strong> en Savoie.
+                Passion, précision, prestige.
+            </p>
+            <nav class="flex flex-wrap gap-4 md:gap-6 justify-center" aria-label="Navigation principale">
                 <a href="/jantes"
-                    class="mt-10 bg-accent hover:bg-accent-hover text-primary-dark focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 font-bold py-3 px-8 rounded-md shadow-xl text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl active:scale-95 inline-block font-raleway opacity-0"
+                    class="mt-2 border border-accent text-accent hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 font-semibold py-3 px-10 rounded-none shadow-lg text-base tracking-widest uppercase transition-all duration-300 hover:shadow-accent/30 inline-block font-raleway opacity-0"
                     data-animate="fade-in-up" data-delay="200" aria-label="Découvrir la réparation de jantes">
-                    Rénovation de Jantes
+                    Jantes
                 </a>
                 <a href="/restauration"
-                    class="mt-10 bg-accent hover:bg-accent-hover text-primary-dark focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 font-bold py-3 px-8 rounded-md shadow-xl text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl active:scale-95 inline-block font-raleway opacity-0"
-                    data-animate="fade-in-up" data-delay="200"
+                    class="mt-2 border border-white/40 text-white hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-offset-2 font-semibold py-3 px-10 rounded-none shadow-lg text-base tracking-widest uppercase transition-all duration-300 inline-block font-raleway opacity-0"
+                    data-animate="fade-in-up" data-delay="300"
                     aria-label="Découvrir la restauration de véhicules anciens">
-                    Restauration Véhicules Anciens
+                    Restauration
                 </a>
             </nav>
         </div>
     </div>
 </section>
 
-<section id="jantes-section" class="container mx-auto py-16 px-4 md:px-8 text-text-dark"
+<section id="jantes-section" class="bg-background-light container mx-auto py-16 px-4 md:px-8 text-text-dark"
     aria-labelledby="jantes-heading">
     <h2 id="jantes-heading"
         class="text-4xl sm:text-5xl font-extrabold mb-8 text-text-dark text-center font-raleway opacity-0"
         data-animate="fade-in-up">
-        <span class="brand-jantes73">Jantes 73</span> <span class="italic">by</span> <span class="text-accent brand-vieilleroue accent-contrast">La
-            Vieille Roue</span> : Rénovation et Réparation en Savoie
+        <span class="brand-jantes73">Jantes 73</span>
+        <span class="italic font-light text-3xl sm:text-4xl text-neutral-dark mx-2">by</span>
+        <span class="brand-vieilleroue text-accent">La Vieille Roue</span>
+        <span class="block text-2xl sm:text-3xl font-normal tracking-wide mt-2">Rénovation &amp; Réparation de Jantes en Savoie</span>
     </h2>
 
     <!-- Rappel informatif : transport pro gratuit (discret, non-CTA) -->
@@ -417,67 +422,49 @@ hero_preload: /assets/images/generated/automobile-8217167_1280-1024.webp
 </section>
 
 <!-- Section Avis Clients Google -->
-<section id="reviews-section" class="py-16 px-4 md:px-8 reviews-section" aria-labelledby="reviews-heading">
-    <!-- Decorative stars -->
-    <div class="stars-decoration">⭐</div>
-    <div class="stars-decoration">✨</div>
-    <div class="stars-decoration">⭐</div>
-    <div class="stars-decoration">✨</div>
-    
-    <div class="container mx-auto max-w-6xl relative z-10">
-        <div class="text-center mb-12">
-            <h2 id="reviews-heading" class="text-4xl md:text-5xl font-extrabold mb-4 text-primary-dark font-raleway opacity-0"
-                data-animate="fade-in-up">
-                Nos Clients Témoignent
-            </h2>
-            <p class="text-lg md:text-xl text-text-dark mb-6 opacity-0" data-animate="fade-in-up" data-delay="100">
-                Découvrez pourquoi <span class="font-semibold brand-vieilleroue text-accent">La Vieille Roue</span> est la référence en 
-                <strong>rénovation de jantes</strong> et <strong>restauration automobile</strong> en <strong>Savoie</strong>
-            </p>
-            <div class="flex justify-center items-center gap-4 mb-8 opacity-0" data-animate="fade-in-up" data-delay="200">
-                <div class="flex items-center gap-2">
-                    <div class="review-stars">
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                    </div>
-                    <span class="text-lg font-semibold text-primary-dark reviews-rating-display">4.9/5</span>
-                </div>
-                <span class="text-neutral-medium">•</span>
-                <span class="text-text-dark font-medium reviews-count-display">Basé sur nos avis Google</span>
+<section id="reviews-section" class="py-20 reviews-section" aria-labelledby="reviews-heading">
+
+    <div class="container mx-auto max-w-5xl px-4 text-center mb-12 opacity-0" data-animate="fade-in-up">
+        <p class="text-accent uppercase tracking-widest text-sm font-semibold mb-3">Ce qu'ils disent</p>
+        <h2 id="reviews-heading" class="text-4xl md:text-5xl font-extrabold font-raleway mb-6" style="color:#F2F8FA;">
+            Nos clients témoignent
+        </h2>
+        <div class="flex justify-center items-center gap-3 mb-2">
+            <div class="review-stars">
+                <span class="review-star">★</span>
+                <span class="review-star">★</span>
+                <span class="review-star">★</span>
+                <span class="review-star">★</span>
+                <span class="review-star">★</span>
             </div>
+            <span class="font-bold text-xl reviews-rating-display" style="color:#F2F8FA;">4.9/5</span>
         </div>
-
-        <div class="reviews-grid opacity-0" data-animate="fade-in-up" data-delay="300">
-            <!-- Avis 1 -->
-
-        <div class="text-center mt-12 opacity-0" data-animate="fade-in-up" data-delay="400">
-            <a href="https://www.google.com/maps/place/La+Vieille+Roue/@45.6543748,6.3708008,17z/data=!3m1!4b1!4m6!3m5!1s0x478bc36f51ae9ca1:0x3a9d33fd3aeff573!8m2!3d45.6543711!4d6.3733811!16s%2Fg%2F11xsrfdbvx" 
-               target="_blank" rel="noopener noreferrer" class="google-badge">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-                Voir tous nos avis Google
-            </a>
-            <p class="text-sm text-neutral-medium mt-2">
-                Votre avis nous aide à nous améliorer !
-            </p>
-        </div>
+        <p class="reviews-count-display text-sm" style="color:rgba(238,234,228,0.55);">11 avis Google</p>
     </div>
+
+    <!-- Le JS injecte .reviews-track ici -->
+    <div class="reviews-marquee-wrapper" aria-label="Défilement des avis clients"></div>
+
+    <div class="text-center mt-12 opacity-0" data-animate="fade-in-up" data-delay="200">
+        <a href="https://www.google.com/maps/place/La+Vieille+Roue/@45.6543748,6.3708008,17z/data=!3m1!4b1!4m6!3m5!1s0x478bc36f51ae9ca1:0x3a9d33fd3aeff573!8m2!3d45.6543711!4d6.3733811!16s%2Fg%2F11xsrfdbvx"
+            target="_blank" rel="noopener noreferrer" class="google-badge">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Voir tous nos avis Google
+        </a>
+    </div>
+
 </section>
 
-<section id="contact-section" class="py-20 px-4 md:px-8 relative overflow-hidden"
+
+<section id="contact-section" class="bg-background-light py-20 px-4 md:px-8 relative overflow-hidden"
     aria-labelledby="contact-heading">
-    <!-- Fond dégradé élégant -->
-    <div class="absolute inset-0 bg-gradient-to-br from-neutral-light via-background-light to-neutral-light"></div>
-    
     <!-- Pattern décoratif subtil -->
-    <div class="absolute inset-0 opacity-5" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232B3ABF' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+    <div class="absolute inset-0 opacity-5" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239E7B3E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
     
     <!-- Facebook SDK root -->
     <div id="fb-root"></div>
@@ -496,31 +483,7 @@ hero_preload: /assets/images/generated/automobile-8217167_1280-1024.webp
                 À <strong class="text-primary-dark">Albertville et dans toute la Savoie</strong>, nous sommes votre expert local pour la <strong class="text-primary-dark">rénovation de jantes</strong> et la <strong class="text-primary-dark">restauration automobile</strong>.
             </p>
             
-            <!-- Image centrale avec badge -->
-            <div class="max-w-4xl mx-auto mb-16 opacity-0" data-animate="fade-in" data-delay="100">
-                <div class="relative rounded-md overflow-hidden shadow-2xl">
-                    <picture>
-                        <source type="image/avif" 
-                                srcset="/assets/images/generated/la-vieille-roue-480.avif 480w,
-                                        /assets/images/generated/la-vieille-roue-768.avif 768w,
-                                        /assets/images/generated/la-vieille-roue-1024.avif 1024w"
-                                sizes="(max-width: 768px) 100vw, 1024px">
-                        <source type="image/webp" 
-                                srcset="/assets/images/generated/la-vieille-roue-480.webp 480w,
-                                        /assets/images/generated/la-vieille-roue-768.webp 768w,
-                                        /assets/images/generated/la-vieille-roue-1024.webp 1024w"
-                                sizes="(max-width: 768px) 100vw, 1024px">
-                        <img src="/assets/images/generated/la-vieille-roue-768.webp" 
-                            alt="L'atelier La Vieille Roue à Albertville - Spécialiste jantes et restauration automobile Savoie"
-                            class="w-full h-auto object-cover" 
-                            loading="lazy" decoding="async" fetchpriority="low" width="768" height="432">
-                    </picture>
-                    <!-- Badge accent sur l'image -->
-                    <!-- <div class="absolute top-6 right-6 bg-accent text-primary-dark px-6 py-3 rounded-md font-bold text-lg shadow-xl animate-pulse">
-                        ⚡ Devis Gratuit
-                    </div> -->
-                </div>
-            </div>
+
         </div>
 
         <!-- Grid 2 colonnes sous l'image -->
